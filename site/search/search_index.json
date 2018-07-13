@@ -1,0 +1,14 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Welcome to the Mythril Developer Guide\n\n\nThis guide is aimed at developers seeking to build Mythril tools.",
+            "title": "Welcome to the Mythril Developer Guide"
+        },
+        {
+            "location": "/#welcome-to-the-mythril-developer-guide",
+            "text": "This guide is aimed at developers seeking to build Mythril tools.",
+            "title": "Welcome to the Mythril Developer Guide"
+        }
+    ]
+}
