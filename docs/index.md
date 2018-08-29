@@ -1,17 +1,3 @@
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-
-**Table of Contents**
-
-- [Welcome to the Mythril Developer Guide](#welcome-to-the-mythril-developer-guide)
-- [Quick Start to using Mythril API](#quick-start-to-using-mythril-api)
-    - [Submitting a EVM bytecode(s)](#submitting-a-evm-bytecodes)
-    - [Checking the status of analysis submission](#checking-the-status-of-analysis-submission)
-    - [Retrieving Analysis Reports](#retrieving-analysis-reports)
-    - [Getting the Mythirl API version number](#getting-the-mythirl-api-version-number)
-    - [More Information](#more-information)
-
-<!-- markdown-toc end -->
-
 # Welcome to the Mythril Developer Guide
 
 This guide is aimed at developers seeking to build Mythril tools.
