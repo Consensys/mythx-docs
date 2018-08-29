@@ -7,24 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="None">
   
-  <link rel="shortcut icon" href="./img/favicon.ico">
+  <link rel="shortcut icon" href="img/favicon.ico">
   <title>Quick Start to Using Mythril API - Mythril Developer Guide</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="./css/highlight.css">
+  <link rel="stylesheet" href="css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Quick Start to Using Mythril API";
     var mkdocs_page_input_path = "index.md";
-    var mkdocs_page_url = "/";
+    var mkdocs_page_url = null;
   </script>
   
-  <script src="./js/jquery-2.1.1.min.js"></script>
-  <script src="./js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -38,7 +39,7 @@
         <a href="." class="icon icon-home"> Mythril Developer Guide</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -56,7 +57,7 @@
     
         <ul>
         
-            <li><a class="toctree-l3" href="#submitting-a-evm-bytecodes">Submitting a EVM bytecode(s)</a></li>
+            <li><a class="toctree-l3" href="#submitting-evm-bytecode">Submitting EVM bytecode</a></li>
         
             <li><a class="toctree-l3" href="#checking-the-status-of-a-submission">Checking the Status of a Submission</a></li>
         
@@ -105,17 +106,20 @@
             <div class="section">
               
                 <h1 id="quick-start-to-using-mythril-api">Quick Start to Using Mythril API</h1>
+<p>`</p>
 <p><strong>Note: API key behavior will be changing shortly</strong></p>
 <p>After you get your Mythril API key, you can use it to:</p>
 <ul>
-<li>Submit evm bytecode for analysis and</li>
+<li>Submit EVM bytecode for analysis, and</li>
 <li>Review the results of previous submissions</li>
 </ul>
+<p>Without an API key you can query the latest
+API version, or retrieve the Mythril-API specification.</p>
 <p>We will use <a href="https://curl.haxx.se/">curl</a> commands here, but there
 will be language binding for various programming languages.</p>
 <p>To follow the examples below, set the environment variable <code>$MYTHRIL_API_KEY</code>
 to your Mythril Platform API key.</p>
-<h2 id="submitting-a-evm-bytecodes">Submitting a EVM bytecode(s)</h2>
+<h2 id="submitting-evm-bytecode">Submitting EVM bytecode</h2>
 <p>To start an analysis, you need to submit the EVM bytecode of one or multiple
 smart contracts. Send a HTTP POST request to the <code>mythril/v1/analysis</code> endpoint:</p>
 <pre><code class="console">$ EVM_BYTECODE='0x3f'  # replace with a real contract
@@ -147,9 +151,9 @@ $
 
 <h2 id="checking-the-status-of-a-submission">Checking the Status of a Submission</h2>
 <p>In the previous section we kicked off an vulnerability analysis job
-which is run asynchronously. To check the status of the analysis job 
+which is run asynchronously. To check the status of the analysis job
 use the uuid returned in the HTTP response. The uuid received in the
-last section was <code>df946130-a25c-4268-b2d0-e3ccc592f7c0</code>. Send a HTTP
+last section was <code>df946130-a25c-4268-b2d0-e3ccc592f7c0</code>. Send an
 HTTP GET request to <code>/mythril/v1/analysis/$UUID</code>:</p>
 <pre><code class="console">$ UUID=df946130-a25c-4268-b2d0-e3ccc592f7c0
 $ curl -i -X GET https://api.mythril.ai/mythril/v1/analysis/$UUID \
@@ -237,7 +241,7 @@ contract IntegerOverflow {
 </code></pre>
 
 <h2 id="getting-the-mythril-api-version-number">Getting the Mythril API version number</h2>
-<p>If you want to see what the current Mythril API version string is, issue a HTTP GET resquest to
+<p>If you want to see what the current Mythril API version string is, issue a HTTP GET request to
 the URL <code>mythril/vi/version</code>:</p>
 <pre><code class="console">$ curl -X GET https://api.mythril.ai/mythril/v1/version
 </code></pre>
@@ -280,14 +284,13 @@ the URL <code>mythril/vi/version</code>:</p>
     </span>
 </div>
     <script>var base_url = '.';</script>
-    <script src="./js/theme.js"></script>
-      <script src="./search/require.js"></script>
-      <script src="./search/search.js"></script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
 
 </body>
 </html>
 
 <!--
-MkDocs version : 0.17.5
-Build Date UTC : 2018-08-29 03:19:39
+MkDocs version : 1.0.2
+Build Date UTC : 2018-08-29 11:12:06
 -->
