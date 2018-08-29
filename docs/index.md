@@ -13,7 +13,7 @@ will be language binding for various programming languages.
 To follow the examples below, set the environment variable `$MYTHRIL_API_KEY`
 to your Mythril Platform API key.
 
-## Submitting a EVM bytecode(s)
+## Submitting EVM bytecode
 
 To start an analysis, you need to submit the EVM bytecode of one or multiple
 smart contracts. Send a HTTP POST request to the `mythril/v1/analysis` endpoint:
