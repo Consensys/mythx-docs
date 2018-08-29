@@ -8,7 +8,7 @@
   <meta name="description" content="None">
   
   <link rel="shortcut icon" href="./img/favicon.ico">
-  <title>Welcome to the Mythril Developer Guide - Mythril Developer Guide</title>
+  <title>Quick Start to using Mythril API - Mythril Developer Guide</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="./css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Welcome to the Mythril Developer Guide";
+    var mkdocs_page_name = "Quick Start to using Mythril API";
     var mkdocs_page_input_path = "index.md";
     var mkdocs_page_url = "/";
   </script>
@@ -49,10 +49,24 @@
           
             <li class="toctree-l1 current">
 		
-    <a class="current" href=".">Welcome to the Mythril Developer Guide</a>
+    <a class="current" href=".">Quick Start to using Mythril API</a>
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#welcome-to-the-mythril-developer-guide">Welcome to the Mythril Developer Guide</a></li>
+    <li class="toctree-l2"><a href="#quick-start-to-using-mythril-api">Quick Start to using Mythril API</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#submitting-a-evm-bytecodes">Submitting a EVM bytecode(s)</a></li>
+        
+            <li><a class="toctree-l3" href="#checking-the-status-of-analysis-submission">Checking the status of analysis submission</a></li>
+        
+            <li><a class="toctree-l3" href="#retrieving-analysis-reports">Retrieving Analysis Reports</a></li>
+        
+            <li><a class="toctree-l3" href="#getting-the-mythril-api-version-number">Getting the Mythril API version number</a></li>
+        
+            <li><a class="toctree-l3" href="#more-information">More Information</a></li>
+        
+        </ul>
     
 
     </ul>
@@ -80,7 +94,7 @@
     
       
     
-    <li>Welcome to the Mythril Developer Guide</li>
+    <li>Quick Start to using Mythril API</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -90,8 +104,151 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="welcome-to-the-mythril-developer-guide">Welcome to the Mythril Developer Guide</h1>
-<p>This guide is aimed at developers seeking to build Mythril tools.</p>
+                <h1 id="quick-start-to-using-mythril-api">Quick Start to using Mythril API</h1>
+<p><strong>Note: API key behavior will be changing shortly</strong></p>
+<p>After you get your Mythril API key, you can use it to:</p>
+<ul>
+<li>Submit evm bytecode for analysis and</li>
+<li>Review the results of previous submissions</li>
+</ul>
+<p>We will use <a href="https://curl.haxx.se/">curl</a> commands here, but there
+will be language binding for various programming languages.</p>
+<p>To follow the examples below, set the environment variable <code>$MYTHRIL_API_KEY</code>
+to your Mythril Platform API key.</p>
+<h2 id="submitting-a-evm-bytecodes">Submitting a EVM bytecode(s)</h2>
+<p>To start an analysis, you need to submit the EVM bytecode of one or multiple
+smart contracts. Send a HTTP POST request to the <code>mythril/v1/analysis</code> endpoint:</p>
+<pre><code class="console">$ EVM_BYTECODE='0x3f'  # replace with a real contract
+$ curl -i -X POST https://api.mythril.ai/mythril/v1/analysis \
+  -H &quot;Authorization: Bearer $MYTHRIL_API_KEY&quot; \
+  -H 'Content-Type: application/json' \
+  -d &quot;{ \&quot;type\&quot;: \&quot;bytecode\&quot;,  \&quot;contract\&quot;: \&quot;$EVM_BYTECODE\&quot; }&quot;
+</code></pre>
+
+<p>This should return the response:</p>
+<pre><code class="console">HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Date: Tue, 28 Aug 2018 21:07:22 GMT
+ETag: W/&quot;41-IC6lt17lHup/pxONgTVPHzOnYKQ&quot;
+Server: nginx/1.12.1
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Content-Type-Options: nosniff
+X-DNS-Prefetch-Control: off
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 65
+Connection: keep-alive
+
+{&quot;result&quot;:&quot;Queued&quot;,&quot;uuid&quot;:&quot;df946130-a25c-4268-b2d0-e3ccc592f7c0&quot;}
+$
+</code></pre>
+
+<h2 id="checking-the-status-of-analysis-submission">Checking the status of analysis submission</h2>
+<p>In the previous section we kicked off an vulnerability analysis job
+which is run asynchronously. To check the status of the analysis job 
+use the uuid returned in the HTTP response. The uuid received in the
+last section was <code>df946130-a25c-4268-b2d0-e3ccc592f7c0</code>. Send a HTTP
+HTTP GET request to <code>/mythril/v1/analysis/$UUID</code>:</p>
+<pre><code class="console">$ UUID=df946130-a25c-4268-b2d0-e3ccc592f7c0
+$ curl -i -X GET https://api.mythril.ai/mythril/v1/analysis/$UUID \
+  -H &quot;Authorization: Bearer $MYTHRIL_API_KEY&quot;
+</code></pre>
+
+<p>If the job has run successfully, you should get the following response:</p>
+<pre><code class="console">HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Date: Tue, 28 Aug 2018 21:16:59 GMT
+ETag: W/&quot;43-jqZkT/RfYhCeqpXFo7NYY2rqqjM&quot;
+Server: nginx/1.12.1
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Content-Type-Options: nosniff
+X-DNS-Prefetch-Control: off
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 67
+Connection: keep-alive
+
+{&quot;result&quot;:&quot;Finished&quot;,&quot;uuid&quot;:&quot;df946130-a25c-4268-b2d0-e3ccc592f7c0&quot;}
+</code></pre>
+
+<p>Notice that the status result says "Finished". Another result could have been "Error". For example changing the ending <code>c0</code> to <code>cb</code> in the UUID returns:</p>
+<pre><code class="console">{&quot;result&quot;:&quot;Error&quot;,&quot;message&quot;:&quot;Analysis does not exist with id: df946130-a25c-4268-b2d0-e3ccc592f7cb&quot;}
+</code></pre>
+
+<h2 id="retrieving-analysis-reports">Retrieving Analysis Reports</h2>
+<p>Once we've verified that the job with our UUID has finished, we can retrieve reports. To
+receive the results, send a HTTP GET request with URI <code>/mythril/v1/analysis/${UUID}/issues</code>:</p>
+<pre><code class="console">$ curl -i -X GET https://api.mythril.ai/mythril/v1/analysis/$UUID/issues \
+-H &quot;Authorization: Bearer $MYTHRIL_API_KEY&quot;
+</code></pre>
+
+<p>The returns:</p>
+<pre><code class="console">HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Content-Type: application/json; charset=utf-8
+Date: Tue, 28 Aug 2018 21:27:05 GMT
+ETag: W/&quot;2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w&quot;
+Server: nginx/1.12.1
+Strict-Transport-Security: max-age=15552000; includeSubDomains
+X-Content-Type-Options: nosniff
+X-DNS-Prefetch-Control: off
+X-Download-Options: noopen
+X-Frame-Options: SAMEORIGIN
+X-XSS-Protection: 1; mode=block
+Content-Length: 2
+Connection: keep-alive
+
+[]
+</code></pre>
+
+<p>No issues were detected, so the result is an empty list <code>[]</code>.</p>
+<p>However, for a real contract like this one:</p>
+<pre><code class="solidity">pragma solidity ^0.4.23;
+
+contract IntegerOverflow {
+    uint public count = 1955;
+
+    function run(uint256 input) public {
+        count *= input;
+    }
+}
+</code></pre>
+
+<p>Which produces the EVM bytecode:</p>
+<pre><code>&quot;0x60806040526107a360005534801561001657600080fd5b5060e4806100256000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306661abd14604e578063a444f5e9146076575b600080fd5b348015605957600080fd5b50606060a0565b6040518082815260200191505060405180910390f35b348015608157600080fd5b50609e6004803603810190808035906020019092919050505060a6565b005b60005481565b806000808282540292505081905550505600a165627a7a72305820ebde511764d3e81b205e4cd886a3996c87262aff0d4aedbfc501ab93c761b2b80029&quot;
+</code></pre>
+
+<p>You should get the following result (formatted with <a href="https://stedolan.github.io/jq/">jq</a>:</p>
+<pre><code class="json">[
+  {
+    &quot;address&quot;: 174,
+    &quot;contract&quot;: &quot;MAIN&quot;,
+    &quot;debug&quot;: &quot;calldata_MAIN[4]: 0xf005c0ffff870000000000000000000000001fffffffffffffffffffffffbde7\nstorage_0: 0x7d18af89c36b8e2a88e90ad37012dedc916f009ecb9b9a648c567a6508469000\ncalldata_MAIN[0]: 0xa444f5e900000000000000000000000000000000000000000000000000000000\ncalldatasize_MAIN: 0x4\ncallvalue: 0x0\n&quot;,
+    &quot;description&quot;: &quot;A possible integer overflow exists in the function `_function_0xa444f5e9`.\nThe addition or multiplication may result in a value higher than the maximum representable integer.&quot;,
+    &quot;function&quot;: &quot;_function_0xa444f5e9&quot;,
+    &quot;title&quot;: &quot;Integer Overflow&quot;,
+    &quot;type&quot;: &quot;Warning&quot;
+  }
+]
+</code></pre>
+
+<h2 id="getting-the-mythril-api-version-number">Getting the Mythril API version number</h2>
+<p>If you want to see what the current Mythril API version string is, issue a HTTP GET resquest to
+the URL <code>mythril/vi/version</code>:</p>
+<pre><code class="console">$ curl -X GET https://api.mythril.ai/mythril/v1/version
+</code></pre>
+
+<p>This will return a version string such as <code>v1.02</code> (you don't need to supply an API key in order to run this).</p>
+<h2 id="more-information">More Information</h2>
+<p>You can download the <a href="https://en.wikipedia.org/wiki/OpenAPI_Specification">openapi specification</a> for the Mythril API via <code>mythril/vi/openapi.yaml</code>:</p>
+<pre><code class="console">$ curl -X GET https://api.mythril.ai/mythril/v1/openapi.yaml
+</code></pre>
+
+<p>See also <a href="https://mythril.ai/docs">Mythril API (v1)</a> and the <a href="https://mythril.ai/">Mythril Home Page</a>.</p>
               
             </div>
           </div>
@@ -132,5 +289,5 @@
 
 <!--
 MkDocs version : 0.17.5
-Build Date UTC : 2018-07-13 17:29:51
+Build Date UTC : 2018-08-29 03:17:03
 -->
