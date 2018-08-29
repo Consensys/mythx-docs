@@ -5,8 +5,11 @@ __Note: API key behavior will be changing shortly__
 
 After you get your Mythril API key, you can use it to:
 
-* Submit evm bytecode for analysis and
+* Submit EVM bytecode for analysis, and
 * Review the results of previous submissions
+
+Without an API key you can query the latest
+API version, or retrieve the Mythril-API specification.
 
 We will use [curl](https://curl.haxx.se/) commands here, but there
 will be language binding for various programming languages.
@@ -52,9 +55,9 @@ $
 ## Checking the Status of a Submission
 
 In the previous section we kicked off an vulnerability analysis job
-which is run asynchronously. To check the status of the analysis job 
+which is run asynchronously. To check the status of the analysis job
 use the uuid returned in the HTTP response. The uuid received in the
-last section was `df946130-a25c-4268-b2d0-e3ccc592f7c0`. Send a HTTP
+last section was `df946130-a25c-4268-b2d0-e3ccc592f7c0`. Send an
 HTTP GET request to `/mythril/v1/analysis/$UUID`:
 
 ```console
@@ -160,7 +163,7 @@ You should get the following result (formatted with [jq](https://stedolan.github
 
 ## Getting the Mythril API version number
 
-If you want to see what the current Mythril API version string is, issue a HTTP GET resquest to
+If you want to see what the current Mythril API version string is, issue a HTTP GET request to
 the URL `mythril/vi/version`:
 
 ```console
