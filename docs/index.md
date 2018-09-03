@@ -20,11 +20,11 @@ to your Mythril Platform API key.
 ## Submitting EVM bytecode
 
 To start an analysis, you need to submit the EVM bytecode of one or multiple
-smart contracts. Send a HTTP POST request to the `mythril/v1/analysis` endpoint:
+smart contracts. Send a HTTP POST request to the `/v1/analyses` endpoint:
 
 ```console
 $ EVM_BYTECODE='0x3f'  # replace with a real contract
-$ curl -i -X POST https://api.mythril.ai/mythril/v1/analysis \
+$ curl -i -X POST https://api.mythril.ai/v1/analyses \
   -H "Authorization: Bearer $MYTHRIL_API_KEY" \
   -H 'Content-Type: application/json' \
   -d "{ \"type\": \"bytecode\",  \"contract\": \"$EVM_BYTECODE\" }"
@@ -48,7 +48,7 @@ X-XSS-Protection: 1; mode=block
 Content-Length: 65
 Connection: keep-alive
 
-{"result":"Queued","uuid":"df946130-a25c-4268-b2d0-e3ccc592f7c0"}
+{"status":"Queued","uuid":"df946130-a25c-4268-b2d0-e3ccc592f7c0"}
 $
 ```
 
@@ -58,11 +58,11 @@ In the previous section we kicked off an vulnerability analysis job
 which is run asynchronously. To check the status of the analysis job
 use the uuid returned in the HTTP response. The uuid received in the
 last section was `df946130-a25c-4268-b2d0-e3ccc592f7c0`. Send an
-HTTP GET request to `/mythril/v1/analysis/$UUID`:
+HTTP GET request to `/v1/analyses/$UUID`:
 
 ```console
 $ UUID=df946130-a25c-4268-b2d0-e3ccc592f7c0
-$ curl -i -X GET https://api.mythril.ai/mythril/v1/analysis/$UUID \
+$ curl -i -X GET https://api.mythril.ai/v1/analyses/$UUID \
   -H "Authorization: Bearer $MYTHRIL_API_KEY"
 ```
 If the job has run successfully, you should get the following response:
@@ -83,22 +83,22 @@ X-XSS-Protection: 1; mode=block
 Content-Length: 67
 Connection: keep-alive
 
-{"result":"Finished","uuid":"df946130-a25c-4268-b2d0-e3ccc592f7c0"}
+{"status":"Finished","uuid":"df946130-a25c-4268-b2d0-e3ccc592f7c0"}
 ```
 
 Notice that the status result says "Finished". Another result could have been "Error". For example changing the ending `c0` to `cb` in the UUID returns:
 
 ```console
-{"result":"Error","message":"Analysis does not exist with id: df946130-a25c-4268-b2d0-e3ccc592f7cb"}
+{"status":"Error","message":"Analysis does not exist with id: df946130-a25c-4268-b2d0-e3ccc592f7cb"}
 ```
 
 ## Retrieving Analysis Reports
 
 Once we've verified that the job with our UUID has finished, we can retrieve reports. To
-receive the results, send a HTTP GET request with URI `/mythril/v1/analysis/${UUID}/issues`:
+receive the results, send a HTTP GET request with URI `/v1/analyses/${UUID}/issues`:
 
 ```console
-$ curl -i -X GET https://api.mythril.ai/mythril/v1/analysis/$UUID/issues \
+$ curl -i -X GET https://api.mythril.ai/v1/analyses/$UUID/issues \
 -H "Authorization: Bearer $MYTHRIL_API_KEY"
 ```
 The returns:
@@ -167,7 +167,7 @@ If you want to see what the current Mythril API version string is, issue a HTTP 
 the URL `mythril/vi/version`:
 
 ```console
-$ curl -X GET https://api.mythril.ai/mythril/v1/version
+$ curl -X GET https://api.mythril.ai/v1/version
 ```
 
 This will return a version string such as `v1.02` (you don't need to supply an API key in order to run this).
@@ -178,7 +178,7 @@ This will return a version string such as `v1.02` (you don't need to supply an A
 You can download the [openapi specification](https://en.wikipedia.org/wiki/OpenAPI_Specification) for the Mythril API via `mythril/vi/openapi.yaml`:
 
 ```console
-$ curl -X GET https://api.mythril.ai/mythril/v1/openapi.yaml
+$ curl -X GET https://api.mythril.ai/v1/openapi.yaml
 ```
 
 See also [Mythril API (v1)](https://mythril.ai/docs) and the [Mythril Home Page](https://mythril.ai/).
