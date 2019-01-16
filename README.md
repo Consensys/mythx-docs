@@ -18,3 +18,5 @@ $ pip recommonmark # allow for Markdown input
 $ cd docs
 $ make html
 ```
+
+The resulting top-level HTML page will be in `docs/build/html/SmartContract-developer.html`.
