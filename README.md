@@ -3,7 +3,7 @@
 A guide for MythX contributors, partners, and developers.
 
 
-## setup for working on the docs
+## Setup for working on the docs
 
 Have Python installed. Then
 
