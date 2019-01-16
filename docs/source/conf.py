@@ -23,7 +23,7 @@ source_parsers = {'.md': CommonMarkParser}
 
 # -- Project information -----------------------------------------------------
 
-project = 'MythX Developer\'s Guide'
+project = 'MythX Contributor, Developer, and Partner Guide'
 copyright = '2019, The MythX team'
 author = 'The MythX team'
 
