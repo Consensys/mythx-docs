@@ -1,4 +1,4 @@
-# MythX Developer Guide
+# MythX Developer, Partner, and Contributor Guide
 
 A guide for partners and developers using MythX.
 
