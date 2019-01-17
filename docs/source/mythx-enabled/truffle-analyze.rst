@@ -15,19 +15,6 @@ We have written a `truffle "run" plugin
 that runs `MythX <https://mythx.io>`_ Smart Contract analyses on
 truffle projects.
 
-Here is some sample output
-$ truffle run analyze
-
-::
-
-  /tmp/TokenSaleChallenge.sol
-  1:426  error  This binary multiply operation can result in integer overflow  SWC-101
-  1:465  error  This binary add operation can result in integer overflow       SWC-101
-  1:680  error  This binary multiply operation can result in integer overflow  SWC-101
-
-  3 problems (3 errors, 0 warnings)
-
-
 .. seealso::
 
   * `npm package info <https://www.npmjs.com/package/truffle-analyze>`_
