@@ -25,7 +25,7 @@ $ truffle run analyze
   1:465  error  This binary add operation can result in integer overflow       SWC-101
   1:680  error  This binary multiply operation can result in integer overflow  SWC-101
 
-  ✖ 3 problems (3 errors, 0 warnings)
+  3 problems (3 errors, 0 warnings)
 
 
 .. seealso::
