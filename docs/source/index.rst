@@ -26,3 +26,8 @@ The first section below covers information needed by everyone, and the following
    SmartContract-developer
    MythX-extension
    vertical-integration
+
+Index
+=====
+
+* :ref:`genindex`
