@@ -17,9 +17,9 @@ truffle projects.
 
 Here is some sample output
 
-::
-  $ truffle run analyze
+.. code-block:: bash
 
+   $ truffle run analyze
   /tmp/TokenSaleChallenge.sol
     1:426  error  This binary multiply operation can result in integer overflow  SWC-101
     1:465  error  This binary add operation can result in integer overflow       SWC-101
@@ -30,8 +30,6 @@ Here is some sample output
 
 .. seealso::
 
-  * `npm package info <https://www.npmjs.com/package/truffle-analyze>`_
+  * `npm package <https://www.npmjs.com/package/truffle-analyze>`_
   * `gitub project <https://github.com/consensys/truffle-analyze>`_
-  * [npmjs project](https://npmjs.org/truffle-analyze)
-  * [github project](https://github.com/consensys/truffle-analyze)
   * :ref:`VSCode MythX-enabled <vscode-truffle>`
