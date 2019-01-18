@@ -30,5 +30,5 @@ Here is some sample output
 .. seealso::
 
   * `npm package <https://www.npmjs.com/package/truffle-analyze>`_
-  * `gitub project <https://github.com/consensys/truffle-analyze>`_
+  * `github project <https://github.com/consensys/truffle-analyze>`_
   * :ref:`VSCode MythX-enabled <vscode-truffle>`
