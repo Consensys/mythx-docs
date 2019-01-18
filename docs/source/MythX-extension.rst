@@ -16,4 +16,5 @@ However we have some libraries to facilitate using the API.
    :maxdepth: 2
 
    language-bindings/javascript
+   language-bindings/golang
    language-bindings/shell-script

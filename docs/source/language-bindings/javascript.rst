@@ -3,7 +3,7 @@
 JavaScript API Interface
 ========================
 
-If you want to add MythX analysis into a Javacscript-based program as
+If you want to add MythX analysis into a JavaScript-based program as
 we have done to truffle in `truffle-analyze <../mythx-enabled/truffle-analyze>`_, or
 `vscode-solidity <../mythx-enabled/vscode-solidity>`_, you can use the same libraries that we use.
 
