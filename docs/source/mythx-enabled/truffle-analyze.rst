@@ -7,8 +7,7 @@
 "Truffle" is a world-class development environment, testing framework
 and asset pipeline for blockchains using the Ethereum Virtual Machine
 (EVM), aiming to make life as a developer easier. Read more about it
-on the [truffle suite
-website](https://truffleframework.com/docs/truffle/overview).
+on the `truffle suite website <https://truffleframework.com/docs/truffle/overview>`_.
 
 We have written a `truffle "run" plugin
 <https://truffleframework.com/docs/truffle/getting-started/writing-external-scripts>`_
