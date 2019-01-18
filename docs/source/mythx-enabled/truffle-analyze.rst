@@ -18,7 +18,7 @@ Here is some sample output
 
 .. code-block:: bash
 
-   $ truffle run analyze
+  $ truffle run analyze
   /tmp/TokenSaleChallenge.sol
     1:426  error  This binary multiply operation can result in integer overflow  SWC-101
     1:465  error  This binary add operation can result in integer overflow       SWC-101
