@@ -10,8 +10,7 @@ MythX Contributor, Developer, and Partner Guide
 smart contracts. It powers tools that bring security into the
 smart contract SDLC.
 
-Join the MythX community at `MythX Discord
-<https://discord.gg/kktn8Wt> for more information.
+Join the MythX community at `MythX Discord <https://discord.gg/kktn8Wt>`_ for more information.
 
 This guide is aimed at these classes of uses:
 
@@ -23,7 +22,7 @@ This guide is aimed at these classes of uses:
 The first section below covers information needed by everyone, and the following sections cover those listed above in order.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
    4all
