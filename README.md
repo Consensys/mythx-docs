@@ -9,8 +9,6 @@ Have Python installed. Then
 
 ```console
 $ pip install sphinx
-$ pip install recommonmark # allow for Markdown input
-
 
 ## Previewing changes
 
