@@ -9,6 +9,7 @@ Have Python installed. Then
 
 ```console
 $ pip install sphinx
+```
 
 ## Previewing changes
 
