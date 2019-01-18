@@ -8,7 +8,7 @@ This guide covers all sorts of ways to use, develop and interact with MythX.
 
 `MythX <https://mythx.io>`_ is a security analysis API for Ethereum
 smart contracts. It powers tools that bring security into the
-smart contract SDLC.
+smart-contract software development life cycle.
 
 Join the MythX community at `MythX Discord <https://discord.gg/kktn8Wt>`_ for more information.
 
@@ -32,4 +32,3 @@ The first section below covers information needed by everyone, and the following
    vertical-integration
 
 * :ref:`genindex`
-
