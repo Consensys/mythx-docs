@@ -20,13 +20,13 @@
 
 project = 'MythX Contributor, Developer, and Partner Guide'
 copyright = '2019, The MythX team'
-author = 'The MythX team'
+author = 'The MythX Team'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.0.1'
 
+release = '0.0.2
 
 # -- General configuration ---------------------------------------------------
 
@@ -49,7 +49,7 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-source_suffix = ['.rst', '.md']
+source_suffix = ['.rst']
 
 # The master toctree document.
 master_doc = 'index'

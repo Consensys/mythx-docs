@@ -1,10 +1,10 @@
+
 .. MythX Contributor, Developer, and Partner Guide master file, created by
    sphinx-quickstart on Mon Jan 14 19:56:15 2019.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-MythX Contributor, Developer, and Partner Guide
-===============================================
+This guide covers all sorts of ways to use, develop and interact with MythX.
 
 `MythX <https://mythx.io>`_ is a security analysis API for Ethereum
 smart contracts. It powers tools that bring security into the
@@ -31,7 +31,5 @@ The first section below covers information needed by everyone, and the following
    MythX-extension
    vertical-integration
 
-Index
-=====
-
 * :ref:`genindex`
+
