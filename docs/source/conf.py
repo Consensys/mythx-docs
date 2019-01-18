@@ -24,8 +24,8 @@ author = 'The MythX Team'
 
 # The short X.Y version
 version = ''
-# The full version, including alpha/beta/rc tags
 
+# The full version, including alpha/beta/rc tags
 release = '0.0.2'
 
 # -- General configuration ---------------------------------------------------

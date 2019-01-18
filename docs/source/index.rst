@@ -17,16 +17,18 @@ This guide is aimed at these classes of uses:
 - I want to contribute to existing MythX development (I think it is cool)
 - I want to use MythX as a developer in my development/project workflow
 - I have a security tool that I would like to integrate into the MythX backend
-- I have a complete product or service that I want to add MythX security into
+- I have a complete product or service that I want to integrate with MythX
 
-The first section below covers information needed by everyone, and the following sections cover those listed above in order.
+The first section below covers information needed by everyone, and the
+following sections cover those listed above in order.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    4all
    MythX-contributor
+   MythX-partner
    SmartContract-developer
    MythX-extension
    vertical-integration
