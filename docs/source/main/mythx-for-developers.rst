@@ -201,7 +201,7 @@ Installation (unstable)
 
 .. code-block:: console
 
-    snap install --devmode --edge shard
+    $ snap install --devmode --edge shard
 
 Configuration
 ^^^^^^^^^^^^^
@@ -244,6 +244,7 @@ As any with any tool, the help command can be very useful
     Use "shard [command] --help" for more information about a command.
 
 To analyze a contract execute:
+
 .. code-block:: console
 
     $ shard analyze 0x606b...
@@ -273,7 +274,7 @@ time period.
 Quickstart
 ^^^^^^^^^^
 
-.. code-block:: bash
+.. code-block:: console
 
   $ truffle run analyze
   /tmp/TokenSaleChallenge.sol
@@ -308,7 +309,7 @@ truffle are planned so that in the future you can specifiy this globally.
 Get an ETH address from `MetaMask <https://metamask.io>`_. Set the following enviromment variables,
 adjust for your ETH address and password:
 
-.. code-block:: console
+.. code-block:: bash
 
     export MYTHRIL_ETH_ADDRESS=0x1234567891235678900000000000000000000000
     export MYTHRIL_PASSWORD='Put your password in here!'
