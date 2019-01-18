@@ -16,7 +16,6 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-
 # -- Project information -----------------------------------------------------
 
 project = 'MythX Contributor, Developer, and Partner Guide'
@@ -26,8 +25,8 @@ author = 'The MythX Team'
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = '0.0.2'
 
+release = '0.0.2
 
 # -- General configuration ---------------------------------------------------
 
