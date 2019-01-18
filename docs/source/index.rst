@@ -22,7 +22,7 @@ This guide is aimed at these classes of uses:
 The first section below covers information needed by everyone, and the following sections cover those listed above in order.
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    4all
