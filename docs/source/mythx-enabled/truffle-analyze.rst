@@ -14,7 +14,13 @@ We have written a `truffle "run" plugin
 that runs `MythX <https://mythx.io>`_ Smart Contract analyses on
 truffle projects.
 
-Here is some sample output
+*Note:* This is alpha code. You will not be able to use this without a MythX
+account, and will be more generally distributed in the January-February
+time period.
+
+
+Quickstart
+----------
 
 .. code-block:: bash
 
@@ -26,6 +32,22 @@ Here is some sample output
 
   ✖ 3 problems (3 errors, 0 warnings)
 
+Setup
+-----
+
+1. Package install
+.. code-block:: bash
+
+  $ npm install truffle-analyze
+
+2. Enable the plugin
+.. code-block:: javascript
+
+  module.exports = {
+    plugins: [ "truffle-analyze" ]
+  };
+
+3.
 
 .. seealso::
 

@@ -23,13 +23,13 @@ The first section below covers information needed by everyone, and the
 following sections cover those listed above in order.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
    4all
+   SmartContract-developer
    MythX-contributor
    MythX-partner
-   SmartContract-developer
    MythX-extension
    vertical-integration
 

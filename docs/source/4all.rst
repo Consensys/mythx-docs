@@ -63,11 +63,11 @@ subscription.
 .. image:: _static/mythx-account.png
 
 
-Ready to start security analysis of your smart contracts
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+What Comes Next?
+----------------
+
 Now that you have created your MythX account and chosen a subscription plan
 you are ready to begin experiencing the power of the MythX. In the next
-section of this developer user guide you will see three example use cases
-showing how you as a developer can use MythX to thoroughly analyze your
-Ethereum smart contracts.
-
+section, :ref:`SCDevOverview`, you will
+see three example use cases showing how you as a developer can use MythX to
+thoroughly analyze your Ethereum smart contracts.
