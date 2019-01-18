@@ -8,7 +8,7 @@ A guide for MythX contributors, partners, and developers.
 Have Python installed. Then
 
 ```console
-$ pip install sphinx
+$ pip install sphinx sphinx_rtd_theme
 ```
 
 ## Previewing changes
