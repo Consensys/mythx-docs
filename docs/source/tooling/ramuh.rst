@@ -30,6 +30,7 @@ analysis request is sent to the MythX API endpoint. If any security issue is
 detected, it will be shown to you as a desktop notification.
 
 This video shows how all this works:
+
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/MQxYBHuYeEA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

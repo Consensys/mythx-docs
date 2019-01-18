@@ -31,11 +31,13 @@ also in experimenting with MythX at the API level. Note however that
 some programming languages like JavaScript there is already a library
 that can simplify interaction with MythX.
 
+Check out the `API curl scripts <https://github.com/rocky/mythril-api-curl>`_.
 
-Installation
+
+Requirements
 ^^^^^^^^^^^^
 
-To run the shell scirpt here, you need a couple of command-line utility
+To run the shell script here, you need a couple of command-line utility
 programs:
 
 * `bash <https://www.gnu.org/software/bash/>`_,
