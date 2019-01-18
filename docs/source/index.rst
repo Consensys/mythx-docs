@@ -6,7 +6,12 @@
 MythX Contributor, Developer, and Partner Guide
 ===============================================
 
-This guide covers all sorts of ways to use, develop and interact with MythX.
+`MythX <https://mythx.io>`_ is a security analysis API for Ethereum
+smart contracts. It powers tools that bring security into the
+smart contract SDLC.
+
+Join the MythX community at `MythX Discord
+<https://discord.gg/kktn8Wt> for more information.
 
 This guide is aimed at these classes of uses:
 
