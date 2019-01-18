@@ -11,7 +11,9 @@ A thin wrapper around the MythX API is called `armlet`. We are also working on
 a more beefy software development kit for Javascript called `mythx-js-sdk`.
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   sdk/armlet
-   sdk/mythx-js-sdk
+    sdk/armlet
+    sdk/mythx-js-sdk
+    sdk/ramuh
+    sdk/sabre
