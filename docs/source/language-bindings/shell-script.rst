@@ -1,5 +1,4 @@
 .. index:: curl
-.. _curl:
 
 MythX API via Curl
 ==================

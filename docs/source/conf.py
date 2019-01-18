@@ -18,7 +18,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'MythX Contributor, Developer, and Partner Guide'
+project = 'MythX Docs'
 copyright = '2019, The MythX team'
 author = 'The MythX Team'
 
@@ -102,7 +102,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'MythXDevelopersGuide'
+htmlhelp_basename = 'MythXDocs'
 
 
 # -- Options for LaTeX output ------------------------------------------------
@@ -133,7 +133,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'MythXDevelopersGuide.tex', 'MythX Contributor, Developer, and Partner Guide',
+    (master_doc, 'MythXDocs.tex', 'MythX Docs',
      'The MythX team', 'manual'),
 ]
 
@@ -143,7 +143,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'mythxdevelopersguide', 'MythX Contributor, Developer, and Partner Guide',
+    (master_doc, 'mythxdevelopersguide', 'MythX Docs',
      [author], 1)
 ]
 
@@ -154,8 +154,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'MythXDevelopersGuide', 'MythX Contributor, Developer and Partner Guide',
-     author, 'MythXDevelopersGuide', 'One line description of project.',
+    (master_doc, 'MythXDocs', 'MythX Contributor, Developer and Partner Guide',
+     author, 'MythXDocs', 'One line description of project.',
      'Miscellaneous'),
 ]
 

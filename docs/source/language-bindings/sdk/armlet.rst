@@ -8,6 +8,6 @@ For example, the library wraps API analysis requests into a promise.
 .. seealso::
 
   * `npm package <https://www.npmjs.com/package/armlet>`_
-  * `The github project <https://github.com/consensys/armlet`_
+  * `The github project <https://github.com/consensys/armlet>`_
   * `MythX API spec <https://staging.api.mythx.io/v1/openapi/>`_
   * `MythX JS SDK <sdk/mythx-js-sdk>`_
