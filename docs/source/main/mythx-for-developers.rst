@@ -15,8 +15,8 @@ is the specification and ultimate authority. Beyond that be dragons.
 .. contents:: :local:
 
 
-Using the API from the Shell
-----------------------------
+Using the API via `curl`
+------------------------
 
 We have written shell scripts to demonstrate how to use to the
 `MythX API <https://staging.api.mythx.io/v1/openapi/>`_ at the most
@@ -31,7 +31,7 @@ also in experimenting with MythX at the API level. Note however that
 some programming languages like JavaScript there is already a library
 that can simplify interaction with MythX.
 
-Check out the `API curl scripts <https://github.com/rocky/mythril-api-curl>`_.
+Check out the `API curl scripts <https://github.com/rocky/mythx-api-curl>`_.
 
 
 Requirements
@@ -48,20 +48,31 @@ Most OS's have these available. Run `./prerequisites.sh` to double check
 though.
 
 After ensuring you have the prerequistes programs, set
-`MYTHRIL_PASSWORD` to and one of `EMAIL` or `MYTHRIL_ETH_ADDRESS` to
+`MYTHX_PASSWORD` to and one of `EMAIL` or `MYTHX_ETH_ADDRESS` to
 values that have been registered. For example:
 
 .. code-block:: console
 
-  $ export MYTHRIL_PASSWORD=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  $ export MYTHX_PASSWORD=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
   $ # Only one of two below is needed:
   $ export EMAIL=me@example.com
-  $ export MYTHRIL_ETH_ADDRESS=0x.............
+  $ export MYTHX_ETH_ADDRESS=0x.............
 
 Above `MYTHRIL_API_URL` is optional and the default value is given above.
 We have however a number of API servers. If you are using one or using
-your own private version, set the URL host accordiatingly.
+your own private version, set the URL host accordingly.
+
+From the above, you now need to get a `MYTHX_ACCESS_TOKEN` environment
+variable set up. To do that run:
+
+```
+$ . ./login.sh
+Successfully logged into MythX
+```
+
+The scripts below will tthe environment variable `MYTHX_ACCESS_TOKEN`. At some point this
+access token will time out. So then just run `. ./login.sh` again.
 
 
 Examples
