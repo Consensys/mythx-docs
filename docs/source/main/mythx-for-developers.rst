@@ -59,17 +59,17 @@ values that have been registered. For example:
   $ export EMAIL=me@example.com
   $ export MYTHX_ETH_ADDRESS=0x.............
 
-Above `MYTHRIL_API_URL` is optional and the default value is given above.
+Above `MYTHX_API_URL` is optional and the default value is given above.
 We have however a number of API servers. If you are using one or using
 your own private version, set the URL host accordingly.
 
 From the above, you now need to get a `MYTHX_ACCESS_TOKEN` environment
 variable set up. To do that run:
 
-```
-$ . ./login.sh
-Successfully logged into MythX
-```
+.. code-block:: console
+
+   $ . ./login.sh
+   Successfully logged into MythX
 
 The scripts below will tthe environment variable `MYTHX_ACCESS_TOKEN`. At some point this
 access token will time out. So then just run `. ./login.sh` again.
