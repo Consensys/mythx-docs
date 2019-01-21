@@ -21,4 +21,4 @@ Usage
 
 .. seealso::
 
-  * `The github project <https://github.com/b-mueller/sabre>`_
+  * `The GitHub project <https://github.com/b-mueller/sabre>`_

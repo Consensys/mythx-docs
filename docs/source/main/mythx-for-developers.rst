@@ -47,7 +47,7 @@ programs:
 Most OS's have these available. Run `./prerequisites.sh` to double check
 though.
 
-After ensuring you have the prerequistes programs, set
+After ensuring you have the prerequisites programs, set
 `MYTHX_PASSWORD` to and one of `EMAIL` or `MYTHX_ETH_ADDRESS` to
 values that have been registered. For example:
 
@@ -71,7 +71,7 @@ variable set up. To do that run:
    $ . ./login.sh
    Successfully logged into MythX
 
-The scripts below will tthe environment variable `MYTHX_ACCESS_TOKEN`.
+The scripts below will the environment variable `MYTHX_ACCESS_TOKEN`.
 At some point this access token will time out. So then just run
 `. ./login.sh` again.
 
@@ -97,7 +97,7 @@ To submit a job for use `analyses.sh` for analysis:
   $ ./analyses.sh sample-json/PublicArray.js
   Issuing HTTP POST http://api.mythx.io/v1/analyses
     (with MYTHX_API_KEY and EVM bytecode)
-  curl completed sucessfully. Output follows...
+  curl completed successfully. Output follows...
   HTTP/1.1 200 OK
   {
     "result": "Queued",
@@ -113,7 +113,7 @@ To job status of a job run (UUID)
   $ ./analyses-status.sh "bf9fe267-d322-4641-aae2-a89e62f40770"
   Issuing HTTP GET http://api.mythx.io/v1/analyses/bf9fe267-d322-4641-aae2-a89e62f40770
     (with MYTHX_API_KEY)
-  curl completed sucessfully. Output follows...
+  curl completed successfully. Output follows...
   HTTP/1.1 200 OK
   {
     "result": "Finished",
@@ -128,7 +128,7 @@ To see the results of status:
 
   $ ./analyses-results.sh "bf9fe267-d322-4641-aae2-a89e62f40770"
   Issuing HTTP GET http://api.mythx.io/v1/analyses/bf9fe267-d322-4641-aae2-a89e62f40770/issues
-  curl completed sucessfully. Output follows...
+  curl completed successfully. Output follows...
   HTTP/1.1 200 OK
   [
     {
@@ -159,7 +159,7 @@ Get the API version number
 
   $ ./api-version.sh
   Issuing HTTP GET https://api.mythx.io/v1/version
-  curl completed sucessfully. Output follows...
+  curl completed successfully. Output follows...
   HTTP/1.1 200 OK
   v1.0.20
 
@@ -171,7 +171,7 @@ Get the OpenAPI specification
 
   $ ./get-openapi-spec.sh
   Issuing HTTP GET https://api.mythx.io/v1/openapi.yaml
-  curl completed sucessfully. Output follows...
+  curl completed successfully. Output follows...
   HTTP/1.1 200 OK
   -----------------------------------
   openapi: 3.0.1
@@ -181,7 +181,7 @@ Get the OpenAPI specification
 
 .. seealso::
 
-  * `The github project <https://github.com/rocky/mythx-api-curl>`_
+  * `The GitHub project <https://github.com/rocky/mythx-api-curl>`_
   * `MythX API spec <https://staging.api.mythx.io/v1/openapi/>`_
 
 
@@ -193,7 +193,7 @@ we have done to truffle in :ref:`Truffle Analyze Plugin`, or
 :ref:`VSCode Solidity Extension`, you can use the same libraries that we use.
 
 A thin wrapper around the MythX API is called `armlet`. We are also working on
-a more beefy software development kit for Javascript called `mythx-js-sdk`.
+a more beefy software development kit for JavaScript called `mythx-js-sdk`.
 
 .. toctree::
     :maxdepth: 1
@@ -222,14 +222,14 @@ Installation (unstable)
 Configuration
 ^^^^^^^^^^^^^
 
-You can put a config file in `$HOME/.config/.shard.yaml` containing your api
+You can put a config file in `$HOME/.config/.shard.yaml` containing your API
 key. `shard.yaml` contains:
 
 .. code-block:: yaml
 
     api-key: <put your api key here>
 
-This way you don't have to put it in the cli every time. Alternatively shard
+This way you don't have to put it in the CLI every time. Alternatively shard
 also looks in the current directory for a configuration file if it can't find
 one in the aforementioned directory.
 
@@ -329,7 +329,7 @@ truffle are planned so that in the future you can specify this globally.
 
 3. Set `MYTHX` environment variables.
 
-Get an ETH address from `MetaMask <https://metamask.io>`_. Set the following enviromment variables,
+Get an ETH address from `MetaMask <https://metamask.io>`_. Set the following environment variables,
 adjust for your ETH address and password:
 
 .. code-block:: bash
@@ -430,7 +430,7 @@ experiment with other styles. Here is an example of using the  `table` format:
 VSCode Solidity Extension
 -------------------------
 
-We are currently working with Juan Blanco to get this into his `VScode Solidity Extension <https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity>`_.
+We are currently working with Juan Blanco to get this into his `VSCode Solidity Extension <https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity>`_.
 The `current working code can be found on github <https://github.com/rocky/vscode-solidity>`_.
 
 

@@ -16,7 +16,7 @@ First, install ramuh package:
     $ npm i -g ramuh
 
 For using ramuh you need MythX platform credential, either as an API key
-or as a eth address and password pair. Ramuh expects these values to be set
+or as a ETH address and password pair. Ramuh expects these values to be set
 as the environment variables `MYTHX_API_KEY` or `MYTHX_ETH_ADDRESS` and
 `MYTHX_PASSWORD`.
 Then, start it indicating MythX platform access credentials and the
@@ -38,4 +38,4 @@ This video shows how all this works:
 
 .. seealso::
 
-  * `The github project <https://github.com/ConsenSys/ramuh>`_
+  * `The GitHub project <https://github.com/ConsenSys/ramuh>`_

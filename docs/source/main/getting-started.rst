@@ -35,7 +35,7 @@ and create a user account.
 
 .. image:: ../_static/mythx-main-page.png
 
-The signup process starts by clicking the “Login with Metamask” button on the
+The sign-up process starts by clicking the “Login with Metamask” button on the
 MythX website.
 
 .. image:: ../_static/mythx-metamask-login.jpg
@@ -47,7 +47,7 @@ On first login the user is asked to set up an API password. The user’s Ethereu
 address and API password later serve as credentials for accessing the API:
 
 - *Username:* The user’s Ethereum address
-- *Password:* Chosen by the user on first signup
+- *Password:* Chosen by the user on first sign-up
 
 .. image:: ../_static/mythx-password.png
 
