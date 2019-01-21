@@ -101,6 +101,30 @@ Contributing
 So you are an individual developer and you want to join this cool new MythX
 revolution? This is the section for you.
 
-* Gitcoin bounties.
-* Discord Channels
-* Links to "how to contribute" docs
+Gitcoin Bounties
+^^^^^^^^^^^^^^^^
+
+Gitcoin is an easy way to attach bounties to issues and features. We regularly
+open new bounties regarding the MythX platform and our open-source tools. To
+participate, simply head over to `the Gitcoin website <https://gitcoin.co/>`_
+and be on the lookout for bounties by ConsenSys.
+
+Discord
+^^^^^^^
+
+To communicate with our community and contributors more efficiently, we have set
+up a Discord server. This allows us to separate discussion topics into
+channels, keep things on-topic and quickly give support in case problems occur.
+Interested in speeding up your communication with us, whether it's about
+questions, support or contributions? Check out the
+`invite link <https://discord.gg/E3YrVtG>`_ and get typing!
+
+Contributing to this Document
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+We are hosting this developer guide in a public `Github repository
+<https://github.com/ConsenSys/mythx-developer-guide>`_. Found a typo? Decided to
+write a major section about your favourite part of our stack? Submit your own
+MythX-enabled tool? Simply fork the repository and open up a pull request for
+us. Want to make your reviewer smile? Check out the contribution guidelines
+and try to stick to them. They're short and simple, promise!
