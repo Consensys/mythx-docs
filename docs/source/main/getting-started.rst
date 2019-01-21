@@ -12,7 +12,7 @@ blockchain in a sustainable and secure way.
 
 Under the hood, MythX leverages `Mythril Classic <https://github.com/ConsenSys/mythril-classic/>`_
 as well as other tools we have developed in-house at `ConsenSys Diligence <https://consensys.net/diligence/>`_
-to make our auditors' life easier. MythX is out way of making the combined
+to make our auditors' life easier. MythX is our way of making the combined
 power of static and dynamic program analysis, as well as dynamic input
 fuzzing available to the community to maintain a high security standard in
 a rapidly progressing ecosystem.
@@ -90,16 +90,19 @@ see three example use cases showing how you as a developer can use MythX to
 thoroughly analyze your Ethereum smart contracts.
 
 
-Bug Tracker
------------
+Contributing and Getting Help
+-----------------------------
 
-.. TODO: Write a cheeky text referring to our support endpoint
+There are multiple ways to get in touch with us, whether you want to get
+help using MythX, you need support, or want to give feedback.
 
-Contributing
-------------
 
-So you are an individual developer and you want to join this cool new MythX
-revolution? This is the section for you.
+Official Support
+^^^^^^^^^^^^^^^^
+
+You can reach us officially at `support [at] mythx.io` to notify us of any
+issues or potential bugs you might run into regarding MythX.
+
 
 Gitcoin Bounties
 ^^^^^^^^^^^^^^^^
@@ -109,6 +112,7 @@ open new bounties regarding the MythX platform and our open-source tools. To
 participate, simply head over to `the Gitcoin website <https://gitcoin.co/>`_
 and be on the lookout for bounties by ConsenSys.
 
+
 Discord
 ^^^^^^^
 
@@ -117,7 +121,10 @@ up a Discord server. This allows us to separate discussion topics into
 channels, keep things on-topic and quickly give support in case problems occur.
 Interested in speeding up your communication with us, whether it's about
 questions, support or contributions? Check out the
-`invite link <https://discord.gg/E3YrVtG>`_ and get typing!
+`invite link <https://discord.gg/E3YrVtG>`_ and get typing! We are also
+using Discord to make regular announcements on improvements regarding MythX and
+the tools we are actively developing around it.
+
 
 Contributing to this Document
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
