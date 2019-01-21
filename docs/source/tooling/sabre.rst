@@ -9,8 +9,8 @@ Usage
 
 .. code-block:: console
 
-    $ export MYTHRIL_API_KEY=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-    $ export MYTHRIL_API_URL=https://api.myhthril.ai/
+    $ export MYTHX_API_KEY=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+    $ export MYTHX_API_URL=https://api.myhthril.ai/
     $ node sabre.js mycontract.sol
 
     __mycontract.sol __

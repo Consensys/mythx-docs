@@ -56,29 +56,29 @@ Picking a Plan
 
 New users will be directed to the license plans page. Here you can start with
 a free plan. Later you can have the option to upgrade to one of several paid
-plans which offer you unlimited analysis of smart contracts per day.
+plans which offer you various rates of smart contracts analyses per day.
 
 .. image:: ../_static/mythx-plans.jpg
 
-Payment and Getting Started
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. Payment and Getting Started
+.. ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Payment is accepted in Ether or DAI. Note that prices are pegged to DAI, so
-prices in other currencies are calculated dynamically and your payments is
-converted to DAI automatically upon the selection of your payment option.
+.. Payment is accepted in Ether or DAI. Note that prices are pegged to DAI, so
+.. prices in other currencies are calculated dynamically and your payments is
+.. converted to DAI automatically upon the selection of your payment option.
 
-.. image:: ../_static/mythx-payment.png
+.. .. image:: ../_static/mythx-payment.png
 
 
-*A Note on Payments:* When you purchase a plan any unused DAI will be refunded
-if and when the users chooses to cancels the subscription. For example:
+.. *A Note on Payments:* When you purchase a plan any unused DAI will be refunded
+.. if and when the users chooses to cancels the subscription. For example:
 
-A user can choose 10x daily plan which fills their “fuel tank” with 10 DAI.
-The MythX API tracks usage of the account and 1 DAI is burned for each 24
-hours activation. Unused DAI are refunded if and when a user cancels their
-subscription.
+.. A user can choose 10x daily plan which fills their “fuel tank” with 10 DAI.
+.. The MythX API tracks usage of the account and 1 DAI is burned for each 24
+.. hours activation. Unused DAI are refunded if and when a user cancels their
+.. subscription.
 
-.. image:: ../_static/mythx-account.png
+.. .. image:: ../_static/mythx-account.png
 
 What's Next?
 ^^^^^^^^^^^^

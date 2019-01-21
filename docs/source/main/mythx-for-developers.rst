@@ -9,7 +9,7 @@ of choice. Did not find what you were looking for? Check out how you can add
 your solution to this documentation in the contribution guidelines:
 :ref:`Submit Your Own Tool!`.
 
-Note that whatever you might find here, the `MythX OpenAPI Spec <https://staging.api.mythx.io/v1/openapi>`_
+Note that whatever you might find here, the `MythX OpenAPI Spec <https://api.mythx.io/v1/openapi>`_
 is the specification and ultimate authority. Beyond that be dragons.
 
 .. contents:: :local:
@@ -19,7 +19,7 @@ Using the API via `curl`
 ------------------------
 
 We have written shell scripts to demonstrate how to use to the
-`MythX API <https://staging.api.mythx.io/v1/openapi/>`_ at the most
+`MythX API <https://api.mythx.io/v1/openapi/>`_ at the most
 basic level using `curl <https://curl.haxx.se/download.html>`_. In
 using these scripts you will see the HTTP requests that get sent along
 with JSON output returned as a result of each request.
@@ -71,8 +71,9 @@ variable set up. To do that run:
    $ . ./login.sh
    Successfully logged into MythX
 
-The scripts below will tthe environment variable `MYTHX_ACCESS_TOKEN`. At some point this
-access token will time out. So then just run `. ./login.sh` again.
+The scripts below will tthe environment variable `MYTHX_ACCESS_TOKEN`.
+At some point this access token will time out. So then just run
+`. ./login.sh` again.
 
 
 Examples
@@ -84,8 +85,8 @@ Once you are set up, you can:
 * See the status of job using the UUID of a previously submitted analysis
 * Get the results of a previously finished analysis using the UUID
 * See a list of previously submitted analyses
-* Get the current versions of Mythril API and its core sub-modules
-* Get the OpenAPI specification
+* Get the current versions of MythX API and its core sub-modules
+* Get the `OpenAPI specification <https://api.mythx.io/v1/openapi/>`_
 
 
 To submit a job for use `analyses.sh` for analysis:
@@ -94,8 +95,8 @@ To submit a job for use `analyses.sh` for analysis:
 .. code-block:: console
 
   $ ./analyses.sh sample-json/PublicArray.js
-  Issuing HTTP POST http://api.mythril.ai/v1/analyses
-    (with MYTHRIL_API_KEY and EVM bytecode)
+  Issuing HTTP POST http://api.mythx.io/v1/analyses
+    (with MYTHX_API_KEY and EVM bytecode)
   curl completed sucessfully. Output follows...
   HTTP/1.1 200 OK
   {
@@ -110,8 +111,8 @@ To job status of a job run (UUID)
 .. code-block:: console
 
   $ ./analyses-status.sh "bf9fe267-d322-4641-aae2-a89e62f40770"
-  Issuing HTTP GET http://api.mythril.ai/v1/analyses/bf9fe267-d322-4641-aae2-a89e62f40770
-    (with MYTHRIL_API_KEY)
+  Issuing HTTP GET http://api.mythx.io/v1/analyses/bf9fe267-d322-4641-aae2-a89e62f40770
+    (with MYTHX_API_KEY)
   curl completed sucessfully. Output follows...
   HTTP/1.1 200 OK
   {
@@ -126,7 +127,7 @@ To see the results of status:
 .. code-block:: console
 
   $ ./analyses-results.sh "bf9fe267-d322-4641-aae2-a89e62f40770"
-  Issuing HTTP GET http://api.mythril.ai/v1/analyses/bf9fe267-d322-4641-aae2-a89e62f40770/issues
+  Issuing HTTP GET http://api.mythx.io/v1/analyses/bf9fe267-d322-4641-aae2-a89e62f40770/issues
   curl completed sucessfully. Output follows...
   HTTP/1.1 200 OK
   [
@@ -157,7 +158,7 @@ Get the API version number
 .. code-block:: console
 
   $ ./api-version.sh
-  Issuing HTTP GET https://api.mythril.ai/v1/version
+  Issuing HTTP GET https://api.mythx.io/v1/version
   curl completed sucessfully. Output follows...
   HTTP/1.1 200 OK
   v1.0.20
@@ -169,13 +170,13 @@ Get the OpenAPI specification
 .. code-block:: console
 
   $ ./get-openapi-spec.sh
-  Issuing HTTP GET https://api.mythril.ai/v1/openapi.yaml
+  Issuing HTTP GET https://api.mythx.io/v1/openapi.yaml
   curl completed sucessfully. Output follows...
   HTTP/1.1 200 OK
   -----------------------------------
   openapi: 3.0.1
   servers:
-    - url: 'https://api.mythril.ai/v1'
+    - url: 'https://api.mythx.io/v1'
   ...
 
 .. seealso::
@@ -209,12 +210,14 @@ Golang SDK
 Shard is a lightweight Golang CLI for MythX. It serves as a reference
 implementation.
 
+
 Installation (unstable)
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: console
 
     $ snap install --devmode --edge shard
+
 
 Configuration
 ^^^^^^^^^^^^^
@@ -230,6 +233,7 @@ This way you don't have to put it in the cli every time. Alternatively shard
 also looks in the current directory for a configuration file if it can't find
 one in the aforementioned directory.
 
+
 Using Shard
 ^^^^^^^^^^^
 
@@ -238,7 +242,7 @@ As any with any tool, the help command can be very useful
 .. code-block:: console
 
     $ shard
-    Shard is a mythril light client
+    Shard is a MythX light client
 
     Usage:
     shard [command]
@@ -286,6 +290,7 @@ truffle projects.
 account, and will be more generally distributed in the January-February
 time period.
 
+
 Quickstart
 ^^^^^^^^^^
 
@@ -298,6 +303,7 @@ Quickstart
     1:680  error  This binary multiply operation can result in integer overflow  SWC-101
 
   ✖ 3 problems (3 errors, 0 warnings)
+
 
 Setup
 ^^^^^
@@ -328,8 +334,9 @@ adjust for your ETH address and password:
 
 .. code-block:: bash
 
-    export MYTHRIL_ETH_ADDRESS=0x1234567891235678900000000000000000000000
-    export MYTHRIL_PASSWORD='Put your password in here!'
+    export MYTHX_ETH_ADDRESS=0x1234567891235678900000000000000000000000
+    export MYTHX_PASSWORD='Put your password in here!'
+
 
 Using Truffle Analyze
 ^^^^^^^^^^^^^^^^^^^^^
@@ -419,6 +426,7 @@ experiment with other styles. Here is an example of using the  `table` format:
 
 .. _VSCodeSolidity:
 
+
 VSCode Solidity Extension
 -------------------------
 
@@ -427,6 +435,7 @@ The `current working code can be found on github <https://github.com/rocky/vscod
 
 
 .. _VSCodeTruffle:
+
 
 VSCode Truffle Extension
 ------------------------

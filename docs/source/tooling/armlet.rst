@@ -25,10 +25,10 @@ used during registration and the password you created:
 
 .. code-block:: console
 
-  $ export MYTHRIL_PASSWORD=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+  $ export MYTHX_PASSWORD=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
   $ # Only one of two below is needed:
   $ export EMAIL=me@example.com
-  $ export MYTHRIL_ETH_ADDRESS=0x.............
+  $ export MYTHX_ETH_ADDRESS=0x.............
 
 Then to get the MythX analysis results with the promise returned by
 the exposed function:
@@ -38,9 +38,9 @@ the exposed function:
   const armlet = require('armlet')
   const client = new armlet.Client(
     {
-        password: process.env.MYTHRIL_PASSWORD,  // adjust this
+        password: process.env.MYTHX_PASSWORD,  // adjust this
         // Use one of the two options below
-        ethAddress: process.env.MYTHRIL_ETH_ADDRESS,
+        ethAddress: process.env.MYTHX_ETH_ADDRESS,
         email: process.env.EMAIL  // adjust this
     })
   const data = {
