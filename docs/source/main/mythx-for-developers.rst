@@ -15,6 +15,17 @@ is the specification and ultimate authority. Beyond that be dragons.
 .. contents:: :local:
 
 
+Submit Your Own Tool!
+---------------------
+
+Oh no! You *love* developing in `Piet <https://esolangs.org/wiki/Piet>`_ but
+there is no MythX library available? If you come up with your own cool
+solution, we would like to know about it. You can head on over to our developer
+guide `Github repository <https://github.com/ConsenSys/mythx-developer-guide>`_
+and make a Pull Request. Make sure to check out the contribution guidelines to
+get it merged even more quickly.
+
+
 Using the API via `curl`
 ------------------------
 
@@ -451,14 +462,3 @@ Remix is a powerful, open source tool that helps you write Solidity contracts st
 Read more about it `here <https://remix.readthedocs.io/en/latest/>`_.
 
 MythX integration into Remix should be done sometime this year.
-
-
-Submit Your Own Tool!
----------------------
-
-Oh no! You *love* developing in `Piet <https://esolangs.org/wiki/Piet>`_ but
-there is no MythX library available? If you come up with your own cool
-solution, we would like to know about it. You can head on over to our developer
-guide `Github repository <https://github.com/ConsenSys/mythx-developer-guide>`_
-and make a Pull Request. Make sure to check out the contribution guidelines to
-get it merged even more quickly.
