@@ -1,12 +1,7 @@
-MythX Smart Contract Security
-=============================
+MythX Documentation
+===================
 
-`MythX <https://mythx.io>`_ is a security analysis API for Ethereum Smart
-Contracts. It is aimed at smart contract developers to tailor security into
-their Software Development Lifecycle as well as Smart Contract auditors. By
-providing an easy-to-use endpoint to in-depth security analysis, MythX is
-meant to turbocharge the rapid development of applications for the Ethereum
-blockchain in a sustainable and secure way.
+`MythX <https://mythx.io>`_ is a security analysis API that allows anyone to create purpose-built security tools for smart contract developers. Tools built on MythX integrate seamlessly into the development environments and continuous integration pipelines used throughout the Ethereum ecosystem. 
 
 This guide covers all sorts of ways to use, develop and interact with MythX.
 It has been built for the following use cases:
