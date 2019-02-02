@@ -1,7 +1,7 @@
 MythX Developer and User Guide
 ==============================
 
-`MythX <https://mythx.io>`_ is a security analysis API that allows anyone to create purpose-built security tools for smart contract developers. Tools built on MythX integrate seamlessly into the development environments and continuous integration pipelines used throughout the Ethereum ecosystem. This guide has all the information you need if you want to:
+`MythX <https://mythx.io>`_ is a security analysis API that allows anyone to create purpose-built security tools for smart contract developers. Tools built on MythX integrate seamlessly into the development environments and continuous integration pipelines used throughout the Ethereum ecosystem. This guide will help get you started if you want to:
 
 - Use MythX tools to verify smart contract security in the development/project workflow.
 - Build your own tool, product or service using MythX API as the security analysis backend.

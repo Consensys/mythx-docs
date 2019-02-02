@@ -1,150 +1,124 @@
-MythX Partner Ecosystem
-=======================
+MythX API Developer Guide
+=========================
+
+This section of the guide is aimed at developers who want build security tools using the MythX API.
 
 .. contents:: :local:
 
-Integration partners are granted the right to use the MythX security analysis
-stack to power their own security systems, tools, plug-ins and power-ups.
-This allows them to build a wide variety of innovative and useful products and
-services without the high upfront cost for R&D. In turn, these products and
-services help drive usage of the MythX platform.
 
-MythX is an extensible platform that lends itself very well to integrating with
-various types of 3rd party partners.  We encourage co-development of platform
-features, and also act as an open REST API that partner tools and services can
-easily call in order to retrieve security analysis results for smart contracts
-or byte code.  We also have custom business development agreements with various
-entities but in general we have Platform Integration Partners and System
-Development Partners who have formal signed agreements with the MythX team.
+API Specification
+-----------------
+
+Besides whatever you might find in this guide, the `MythX OpenAPI Spec <https://api.mythx.io/v1/openapi>`_
+is the ultimate authority. Beyond that be dragons.
 
 
-Platform Integration Partner
+Language Bindings
+-----------------
+
+In most cases you'll want to use an existing client library that abstracts the low-level details of
+interacting with MythX.
+
+.. toctree::
+    :maxdepth: 1
+
+    ../SDK/armlet
+    ../SDK/sabre
+    ../SDK/shard
+
+
+Experimenting with MythX API
 ----------------------------
 
-Platform integration partners are granted the right to use the proprietary
-MythX Platform security analysis stack. This allows them to build a wide
-variety of innovative and useful products and services that leverage MythX
-without having to incur the high upfront cost for R&D. In turn, they help drive
-usage of the MythX Platform and increase overall security of Ethereum.
+The `MythX API curl scripts <https://github.com/rocky/mythx-api-curl>`_ demonstrate
+how clients interact with the API at the most basic level. The scripts will show
+you the HTTP requests that get sent as well with the JSON output returned as the result
+of each request.
+
+The process for analyzing a smart contract works as follows:
+
+* Submit a contract for analysis, creating a job run with a UUID
+* See the status of job using the UUID of a previously submitted analysis
+* Get the results of a previously finished analysis using the UUID
+
+After ensuring you have the prerequisites programs, set
+`MYTHX_PASSWORD` to and one of `EMAIL` or `MYTHX_ETH_ADDRESS` to
+values that have been registered. For example:
+
+.. code-block:: console
+
+  $ export MYTHX_PASSWORD=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+  $ # Only one of two below is needed:
+  $ export EMAIL=me@example.com
+  $ export MYTHX_ETH_ADDRESS=0x.............
+
+Above `MYTHX_API_URL` is optional and the default value is given above.
+We have however a number of API servers. If you are using one or using
+your own private version, set the URL host accordingly.
+
+From the above, you now need to get a `MYTHX_ACCESS_TOKEN` environment
+variable set up. To do that run:
+
+.. code-block:: console
+
+   $ . ./login.sh
+   Successfully logged into MythX
 
 
-System Development Partner
---------------------------
 
-System Development Partners are companies and organizations that are
-instrumental in building out MythX Platform. They contribute code to Mythril
-Classic (OSS) and Platform API, or even contribute new analysis modules that
-improve the quality of the platform.
+.. code-block:: console
 
-Agreements with system development partners may take many different forms or
-none at all in the Mythril Classic case. For example, the partner might provide
-some IP and/or resources for free or at a reduced rate. In exchange, the
-partner may earn a revenue share or other types of benefits.
-
-Partner Examples
-----------------
+  $ ./api-version.sh
+  Issuing HTTP GET https://api.mythx.io/v1/version
+  curl completed successfully. Output follows...
+  HTTP/1.1 200 OK
+  v1.0.20
 
 
-IDE Vendor
-^^^^^^^^^^
 
-IDEs such as Truffle or Visual Studio can build integrations with MythX
-Platform API to seamlessly include security verification into the Smart
-Contract Secure Development Life Cycle. For example, Truffle could integrate
-security analysis as a built-in command (e.g. "truffle analyze"). When a user
-executes this command, a new MythX user with the free plan is automatically
-created. The free plan allows users to execute the command up to a certain
-limit. Users who wish to increase the limit are asked to purchase a paid plan
-on the MythX website and enter their API password into the Truffle
-configuration file.
-
-
-CI Automation Service Providers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Companies such as SonarQube and GuardRails automate security in the CI
-pipeline. By integrating MythX platform these companies can add support for
-Ethereum projects to their products.
-
-
-Smart Contract Insurance Provider
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Smart contract insurance providers can integrate MythX API to verify base
-security requirements in the insured smart contracts.
-
-
-Security Services Provider
+Submitting an Analysis Job
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Partners who provide security services, smart contract assessments or audits
-can decide to take advantage of the full version of MythX API to enhance their
-security offerings.
+.. code-block:: console
+
+  $ ./analyses.sh sample-json/PublicArray.js
+  Issuing HTTP POST http://api.mythx.io/v1/analyses
+    (with MYTHX_API_KEY and EVM bytecode)
+  curl completed successfully. Output follows...
+  HTTP/1.1 200 OK
+  {
+    "result": "Queued",
+    "uuid": "bf9fe267-d322-4641-aae2-a89e62f40770"
+  }
 
 
-Monitoring Service
-^^^^^^^^^^^^^^^^^^
+Polling the API to Request Job Status
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Blockchain monitoring and visualization services such as Alethio and Etherscan
-can integrate with MythX API to verify changes in contracts deployed to MainNet
-and discover vulnerabilities or behavioral or transactional anomalies in live
-systems.
+.. code-block:: console
 
-
-Security Analysis R&D Partner
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Create additional security analysis modules that
-
-- Integrate with the existing stack
-- Contribute an additional security analysis modules and integrate into the
-  MythX Platform stack (e.g. ML-based)
-
-There is of course the option to execute joint research projects.
+  $ ./analyses-status.sh "bf9fe267-d322-4641-aae2-a89e62f40770"
+  Issuing HTTP GET http://api.mythx.io/v1/analyses/bf9fe267-d322-4641-aae2-a89e62f40770
+    (with MYTHX_API_KEY)
+  curl completed successfully. Output follows...
+  HTTP/1.1 200 OK
+  {
+    "result": "Finished",
+    "uuid": "bf9fe267-d322-4641-aae2-a89e62f40770"
+  }
 
 
-Implementation Partner
-^^^^^^^^^^^^^^^^^^^^^^
+Obtaining Analysis Results
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- Provide resources for outsourcing development tasks
-- Refactor and improve existing open-source and closed-source code
-- Write SDKs and reference tools that help MythX tool developers
-- Work on auxiliary projects, such as licensing systems and benchmarking suites
-- Manage bounty programs and bounty pools
+TODO
 
 
-Partner Program Perks
----------------------
-
-- Integrate MythX Platform API in commercial product(s) and/or service(s)
-- Early access to upcoming Platform revisions and opportunity to be a MythX
-  Launch Partner
-- Personal support and integration consulting via Discord and MythX Champs
-  program
+Writing a Simple MythX Client in JavaScript
+-------------------------------------------
 
 
-Use of the MythX Logo and "Powered by MythX" Badge
---------------------------------------------------
-
-- Quote from MythX for press releases or blog posts and other co-marketing
-  activities
-- Promotion of your company and products int he MythX Nexus Directory and
-  portal
-- Revenue sharing opportunity when your integrated tool drives usage of the
-  MythX API
-- Other business terms to be defined by both parties
 
 
-Nexus Portal and Directory
---------------------------
 
-MythX Nexus is a portal and directory for tenant products and services that
-would benefit from a command center and launch pad.  In the near future, any
-web3 dapp or service should want to have an entry in the Nexus to take
-advantage of features and services that remove friction from n-sided
-transactions. It is a directory that we will promote and an additional business
-channel for web3 entities.
-
-You may have your own canned security pipeline and you would like to take
-advantage of MythX's ability to authenticate, track and scale. If so contact
-us.
