@@ -1,7 +1,7 @@
 .. _DeveloperOverview:
 
-MythX for Developers
-====================
+Building Security Tools on MythX
+================================
 
 Welcome, fellow hackers! Here you will find an overview of how we make the
 MythX platform available in (hopefully) your programming language and IDE
