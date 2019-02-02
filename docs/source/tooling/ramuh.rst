@@ -1,5 +1,5 @@
-Ramuh, MythX Desktop Notifications
-==================================
+Ramuh - MythX Desktop Notifications
+===================================
 
 Ramuh brings the power of the MythX Platform API to your desktop.
 

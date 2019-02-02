@@ -1,5 +1,5 @@
-Sabre, a MythX CLI
-==================
+Minimum Viable JavaScript CLI
+=============================
 
 Sabre is a JavaScript-based CLI for the MythX platform. It has been
 implemented as a PoC for API integration.

@@ -10,28 +10,15 @@ providing an easy-to-use endpoint to in-depth security analysis, MythX is
 meant to turbocharge the rapid development of applications for the Ethereum
 blockchain in a sustainable and secure way.
 
-Under the hood, MythX leverages `Mythril Classic <https://github.com/ConsenSys/mythril-classic/>`_
-as well as other tools we have developed in-house at `ConsenSys Diligence <https://consensys.net/diligence/>`_
-to make our auditors' life easier. MythX is our way of making the combined
-power of static and dynamic program analysis, as well as dynamic input
-fuzzing available to the community to maintain a high security standard in
-a rapidly progressing ecosystem.
-
 For more information, announcements and support, consider joining the
 `MythX Discord <https://discord.gg/kktn8Wt>`_ server.
 
+Obtaining API Credentials
+-------------------------
 
-How do I sign up?
------------------
-
-To use the MythX platform, a user account is required. You can register on
-`our website <https://mythx.io>`_ with Metamask. Need a step-by-step guide?
-Continue reading, then. Did you already register successfully? Enjoy hacking
-away on our samples and tools in the developer documentation:
-:ref:`DeveloperOverview`.
-
-MythX is a SaaS product. You will need to navigate to https://mythx.io/
-and create a user account.
+A user account is required top use the MythX API. To get your free account, 
+you have to visit the the `MythX website <https://mythx.io>`_ with a web3-enabled
+browser. Need a step-by-step guide? Continue reading!
 
 .. image:: ../_static/mythx-main-page.png
 
@@ -40,82 +27,33 @@ MythX website.
 
 .. image:: ../_static/mythx-metamask-login.jpg
 
-Logging In
-^^^^^^^^^^
 
-On first login the user is asked to set up an API password. The user’s Ethereum
+On first login you'll be asked to set up an API password. You Ethereum
 address and API password later serve as credentials for accessing the API:
 
-- *Username:* The user’s Ethereum address
+- *Username:* Your Ethereum address
 - *Password:* Chosen by the user on first sign-up
 
 .. image:: ../_static/mythx-password.png
 
-Picking a Plan
-^^^^^^^^^^^^^^
-
-New users will be directed to the license plans page. Here you can start with
-a free plan. Later you can have the option to upgrade to one of several paid
-plans which offer you various rates of smart contracts analyses per day.
-
-.. image:: ../_static/mythx-plans.jpg
-
-.. Payment and Getting Started
-.. ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. Payment is accepted in Ether or DAI. Note that prices are pegged to DAI, so
-.. prices in other currencies are calculated dynamically and your payments is
-.. converted to DAI automatically upon the selection of your payment option.
-
-.. .. image:: ../_static/mythx-payment.png
+Once the password is set you should be redirected to a plans page. Only
+the free plan is available during the beta.
 
 
-.. *A Note on Payments:* When you purchase a plan any unused DAI will be refunded
-.. if and when the users chooses to cancels the subscription. For example:
-
-.. A user can choose 10x daily plan which fills their “fuel tank” with 10 DAI.
-.. The MythX API tracks usage of the account and 1 DAI is burned for each 24
-.. hours activation. Unused DAI are refunded if and when a user cancels their
-.. subscription.
-
-.. .. image:: ../_static/mythx-account.png
-
-What's Next?
-^^^^^^^^^^^^
-
-Now that you have created your MythX account and chosen a subscription plan
-you are ready to begin experiencing the power of the MythX. In the next
-section, :ref:`DeveloperOverview`, you will
-see three example use cases showing how you as a developer can use MythX to
-thoroughly analyze your Ethereum smart contracts.
-
-
-Contributing and Getting Help
------------------------------
-
+Getting Support
+---------------
 There are multiple ways to get in touch with us, whether you want to get
 help using MythX, you need support, or want to give feedback.
 
 
-Official Support
-^^^^^^^^^^^^^^^^
-
+Helpdesk
+^^^^^^^^
 You can reach us officially at `support [at] mythx.io` to notify us of any
 issues or potential bugs you might run into regarding MythX.
 
 
-Gitcoin Bounties
-^^^^^^^^^^^^^^^^
-
-Gitcoin is an easy way to attach bounties to issues and features. We regularly
-open new bounties regarding the MythX platform and our open-source tools. To
-participate, simply head over to `the Gitcoin website <https://gitcoin.co/>`_
-and be on the lookout for bounties by ConsenSys.
-
-
 Discord
 ^^^^^^^
-
 To communicate with our community and contributors more efficiently, we have set
 up a Discord server. This allows us to separate discussion topics into
 channels, keep things on-topic and quickly give support in case problems occur.
