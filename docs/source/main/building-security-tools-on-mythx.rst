@@ -23,62 +23,84 @@ interacting with MythX.
     :maxdepth: 1
 
     ../SDK/armlet
-    ../SDK/sabre
     ../SDK/shard
 
 
-Experimenting with MythX API
-----------------------------
+Low-Level Walkthrough
+---------------------
 
 The `MythX API curl scripts <https://github.com/rocky/mythx-api-curl>`_ demonstrate
-how clients interact with the API at the most basic level. The scripts will show
+interaction with MythX API at the most basic level. The scripts will show
 you the HTTP requests that get sent as well with the JSON output returned as the result
 of each request.
 
 The process for analyzing a smart contract works as follows:
 
-* Submit a contract for analysis, creating a job run with a UUID
-* See the status of job using the UUID of a previously submitted analysis
-* Get the results of a previously finished analysis using the UUID
+* Authenticate with Ethereum address and password to retrieve an access token;
+* Submit a contract for analysis, creating a job run with a UUID;
+* See the status of job using the UUID of a previously submitted analysis;
+* Get the results of a previously finished analysis using the UUID.
 
-After ensuring you have the prerequisites programs, set
-`MYTHX_PASSWORD` to and one of `EMAIL` or `MYTHX_ETH_ADDRESS` to
-values that have been registered. For example:
+Let's run through a basic example. Make sure that curl is installed and clone the
+Github repository to get started:
+
+.. code-block:: console
+
+  $ git clone https://github.com/rocky/mythx-api-curl
+  $ cd mythx-api-curl
+
+Authenticating
+~~~~~~~~~~~~~~
+
+MythX uses `JSON Web Token (JWT) <https://jwt.io>`_ authentication. In this authentication scheme,
+the user submits their username and password to the `login endpoint <https://api.mythx.io/v1/openapi#operation/login>`_.
+Upon successful login the server returns the following:
+
+- A timed access token. This token is needs to be sent by the client with every request to access the API.
+- A refresh token that can be used to request a new access token once the current one times out.
+
+To execute the login process on the shell, set the `MYTHX_PASSWORD` to and `MYTHX_ETH_ADDRESS` 
+environment vairables to your Ethereum address and API password:
 
 .. code-block:: console
 
   $ export MYTHX_PASSWORD=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-
-  $ # Only one of two below is needed:
-  $ export EMAIL=me@example.com
   $ export MYTHX_ETH_ADDRESS=0x.............
 
-Above `MYTHX_API_URL` is optional and the default value is given above.
-We have however a number of API servers. If you are using one or using
-your own private version, set the URL host accordingly.
-
-From the above, you now need to get a `MYTHX_ACCESS_TOKEN` environment
-variable set up. To do that run:
+Then run the login script as follows:
 
 .. code-block:: console
 
    $ . ./login.sh
    Successfully logged into MythX
 
-
+If authentication succeeds, the login script will set the `MYTHX_ACCESS_TOKEN` and `MYTHX_REFRESH_TOKEN`
+environment variables.
 
 .. code-block:: console
 
-  $ ./api-version.sh
-  Issuing HTTP GET https://api.mythx.io/v1/version
-  curl completed successfully. Output follows...
-  HTTP/1.1 200 OK
-  v1.0.20
+  $ echo $MYTHX_ACCESS_TOKEN
+    eyJhb(...)m38eVH7P2TRjM
+  $ echo $MYTHX_REFRESH_TOKEN
+    eyJhd(...)Ni00ODg5LTRjM
 
+With these variables set you can execute the remaining scripts. Test this by retrieving the API version:
+
+.. code-block:: console
+
+  $ ./api-version.sh 
+  Issuing HTTP GET https://api.mythx.io/v1/version
+  curl completed sucessfully. Output follows...
+  HTTP/2 200 
+  {
+    "api": "v1.3.2",
+    "maru": "0.3.2",
+    "mythril": "0.20.0"
+  }
 
 
 Submitting an Analysis Job
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: console
 
@@ -94,7 +116,7 @@ Submitting an Analysis Job
 
 
 Polling the API to Request Job Status
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: console
 
@@ -110,14 +132,23 @@ Polling the API to Request Job Status
 
 
 Obtaining Analysis Results
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 TODO
 
 
-Writing a Simple MythX Client in JavaScript
--------------------------------------------
+Writing a Minimal JavaScript Client
+-----------------------------------
 
+TODO
+
+Sabre is a JavaScript-based CLI for the MythX platform. It has been
+implemented as a PoC for API integration.
+
+
+.. seealso::
+
+  * `Sabre - Minimum Viable MythX Client <https://github.com/b-mueller/sabre>`_
 
 
 
