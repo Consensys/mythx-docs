@@ -4,14 +4,16 @@ Getting Started
 What is MythX?
 --------------
 `MythX <https://mythx.io>`_ is a security analysis API for Ethereum Smart
-Contracts. It is aimed at smart contract developers to tailor security into
-their Software Development Lifecycle as well as Smart Contract auditors. By
-providing an easy-to-use endpoint to in-depth security analysis, MythX is
-meant to turbocharge the rapid development of applications for the Ethereum
-blockchain in a sustainable and secure way.
+Contracts. It detects many common vulnerabilities in Solidity code and EVM
+bytecode. Anyone can use MythX to build purpose-built Ethereum security tools.
+
+Smart contract developers use MythX tools, such as Truffle plugins,
+IDE extensions and CI scripts, which are easy to install and work out-of-the-box. 
 
 For more information, announcements and support, consider joining the
 `MythX Discord <https://discord.gg/kktn8Wt>`_ server.
+
+.. _getting-started:
 
 Obtaining API Credentials
 -------------------------

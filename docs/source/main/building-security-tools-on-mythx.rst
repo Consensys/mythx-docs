@@ -158,18 +158,22 @@ Polling the API to Request Job Status
 Obtaining Analysis Results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-TODO
+.. code-block:: console
+
+  $ ./analyses-results.sh "bf9fe267-d322-4641-aae2-a89e62f40770"
 
 
 Example Code
 ------------
 
-`Sabre <https://github.com/b-mueller/sabre>`_ is a minimal MythX CLI written in JavaScript.
+`Sabre <https://github.com/b-mueller/sabre>`_ is a minimal MythX CLI written in JavaScript. 
+It shows how to compile a Solidity file using solc-js and submit the compiler output
+to MythX using the `armlet JavaScript library <https://github.com/ConsenSys/armlet>`_.
+
+
 
 .. seealso::
 
   * `Sabre - Minimum Viable MythX Client <https://github.com/b-mueller/sabre>`_
-
-
 
 
