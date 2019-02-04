@@ -1,6 +1,8 @@
 MythX Plugin for Truffle
 ========================
 
+The MythX plugin for Truffle framework.adds automated smart contract security analysis to the  It is based on MythX, the security analysis API for Ethereum smart contracts.
+
 Truffle is a world-class development environment, testing framework
 and asset pipeline for blockchains using the Ethereum Virtual Machine
 (EVM), aiming to make life as a developer easier. Read more about it
