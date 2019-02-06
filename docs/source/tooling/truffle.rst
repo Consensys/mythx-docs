@@ -3,11 +3,16 @@ MythX Plugin for Truffle
 
 The Mythx plugin adds automated smart contract security analysis to `Truffle framework <https://truffleframework.com>`_.
 
+Prerequisites
+^^^^^^^^^^^^^
+
+The MythX plugin is compatible with Truffle 5.0 or higher. Note that your Truffle project must compile
+successfully for the security analysis to work.
 
 Quickstart
 ^^^^^^^^^^
 
-The plugin is compatible with Truffle 5.0 and higher. Install it by running:
+Install the plugin by running:
 
 .. code-block:: console
 
@@ -50,4 +55,4 @@ Add the `--help` flag to display additional options:
 .. seealso::
 
   * `npm package <https://www.npmjs.com/package/truffle-analyze>`_
-  * `Truffle Security on Github <https://github.com/consensys/truffle-analyze>`_
+  * `Truffle Security on Github <https://github.com/consensys/truffle-security>`_
