@@ -7,8 +7,8 @@ It watches directories for changes on smart contract files, sends
 data to MythX security analysis platform and shows relevant security
 issues found on your code as desktop notifications.
 
-How to use
-----------
+Installation and Usage
+----------------------
 
 First, install ramuh package:
 .. code-block:: console

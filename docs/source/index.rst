@@ -13,10 +13,6 @@ MythX Developer and User Guide
    main/getting-started
    main/mythx-for-smart-contract-developers
    main/building-security-tools-on-mythx
-..    4all
-..    SmartContract-developer
-..    MythX-contributor
-..    MythX-extension
-..    vertical-integration
+   main/getting-support
 
 * :ref:`genindex`

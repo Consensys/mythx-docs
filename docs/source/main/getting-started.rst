@@ -42,20 +42,9 @@ Once the password is set you should be redirected to a plans page. Only
 the free plan is available during the beta.
 
 
-Getting Support
----------------
-There are multiple ways to get in touch with us, whether you want to get
-help using MythX, you need support, or want to give feedback.
+MythX Community Discord
+-----------------------
 
-
-Helpdesk
-^^^^^^^^
-You can reach us officially at `support [at] mythx.io` to notify us of any
-issues or potential bugs you might run into regarding MythX.
-
-
-Discord
-^^^^^^^
 To communicate with our community and contributors more efficiently, we have set
 up a Discord server. This allows us to separate discussion topics into
 channels, keep things on-topic and quickly give support in case problems occur.
@@ -65,9 +54,8 @@ questions, support or contributions? Check out the
 using Discord to make regular announcements on improvements regarding MythX and
 the tools we are actively developing around it.
 
-
 Contributing to this Document
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 We are hosting this developer guide in a public `Github repository
 <https://github.com/ConsenSys/mythx-developer-guide>`_. Found a typo? Decided to
@@ -75,3 +63,4 @@ write a major section about your favourite part of our stack? Submit your own
 MythX-enabled tool? Simply fork the repository and open up a pull request for
 us. Want to make your reviewer smile? Check out the contribution guidelines
 and try to stick to them. They're short and simple, promise!
+
