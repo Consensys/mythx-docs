@@ -26,8 +26,8 @@ interacting with MythX.
     ../SDK/shard
 
 
-Low-Level Walkthrough
----------------------
+API Walkthrough
+---------------
 
 The `MythX API curl scripts <https://github.com/rocky/mythx-api-curl>`_ demonstrate
 interaction with MythX API at the most basic level. The scripts will show
@@ -163,10 +163,20 @@ Obtaining Analysis Results
   $ ./analyses-results.sh "bf9fe267-d322-4641-aae2-a89e62f40770"
 
 
+API Details
+-----------
+
+Token Expiration Times
+~~~~~~~~~~~~~~~~~~~~~~
+
+Validity times for the Java Web Tokens are set as follows:
+
+- Access tokens are valid for 10 minutes;
+- Refresh tokens are valid for 4 weeks.
 
 
 Rate Limits
------------
+~~~~~~~~~~~
 
 API rate limits need to be considered when designing MythX tools as sending excessive requests may cause API errors. Currently the following rate limits apply:
 
@@ -199,7 +209,6 @@ Example Code
 `Sabre <https://github.com/b-mueller/sabre>`_ is a minimal MythX CLI written in JavaScript. 
 It shows how to compile a Solidity file using solc-js and submit the compiler output
 to MythX using the `armlet JavaScript library <https://github.com/ConsenSys/armlet>`_.
-
 
 
 .. seealso::
