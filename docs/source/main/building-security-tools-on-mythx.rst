@@ -139,8 +139,8 @@ of the analysis.
   }
 
 
-Polling the API to Request Job Status
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Polling the API to Obtain Job Status
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: console
 
@@ -173,6 +173,24 @@ API rate limits need to be considered when designing MythX tools as sending exce
 - The client can submit up to **2 requests per second.**
 - The API can queue up to **10 analysis jobs** per client. However, a maximum of **four workers** will be allocated to a single client. It is therefore recommended to limit the number of parallel analysis jobs to four.
 - The client can perform up to **10,000 API requests within 24 hours.**
+
+
+Compiler Settings
+-----------------
+
+It is recommended to activate optimization when compiling source code for analysis. This reduces the complexity of the bytecode, allowing for better performance in the fuzzing and symbolic analysis steps and increasing code coverage.
+
+For example, when using `solcjs`, add the following to the compiler settings:
+
+.. code-block:: javascript
+
+    settings: {
+        (...)
+        optimizer: {
+          enabled: true,
+          runs: 200
+        }
+    }
 
 
 Example Code
