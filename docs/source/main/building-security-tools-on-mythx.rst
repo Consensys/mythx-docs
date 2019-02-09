@@ -163,6 +163,18 @@ Obtaining Analysis Results
   $ ./analyses-results.sh "bf9fe267-d322-4641-aae2-a89e62f40770"
 
 
+
+
+Rate Limits
+-----------
+
+API rate limits need to be considered when designing MythX tools as sending excessive requests may cause API errors. Currently the following rate limits apply:
+
+- The client can submit up to **2 requests per second.**
+- The API can queue up to **10 analysis jobs** per client. However, a maximum of **four workers** will be allocated to a single client. It is therefore recommended to limit the number of parallel analysis jobs to four.
+- The client can perform up to **10,000 API requests within 24 hours.**
+
+
 Example Code
 ------------
 
