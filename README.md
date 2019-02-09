@@ -1,7 +1,6 @@
-# MythX Developer, Partner, and Contributor Guide
+# MythX Developer and User Guide
 
-A guide for MythX contributors, partners, and developers.
-
+A guide for MythX tool developers and end users.
 
 ## Setup for working on the docs
 
