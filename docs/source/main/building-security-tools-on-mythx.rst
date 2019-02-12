@@ -68,8 +68,23 @@ Github repository to get started:
   $ git clone https://github.com/rocky/mythx-api-curl
   $ cd mythx-api-curl
 
+To verify that you can connect to the API run the api-version script:
 
-Authenticating
+.. code-block:: console
+
+  $ ./api-version.sh 
+    Running: curl -v GET https://api.mythx.io/v1/version
+    curl completed sucessfully. See /tmp/curljs.err53890 for verbose logs.
+    Processed output from /tmp/curljs.out53890 follows...
+    {
+      "api": "v1.3.3",
+      "maru": "0.3.4",
+      "mythril": "0.20.0",
+      "harvey": "0.0.7"
+    }
+
+
+Authentication
 ~~~~~~~~~~~~~~
 
 MythX uses `JSON Web Token (JWT) <https://jwt.io>`_ authentication. In this authentication scheme,
@@ -104,19 +119,7 @@ environment variables.
   $ echo $MYTHX_REFRESH_TOKEN
     eyJhd(...)Ni00ODg5LTRjM
 
-With these variables set you can execute the remaining scripts. Test this by retrieving the API version:
-
-.. code-block:: console
-
-  $ ./api-version.sh 
-  Issuing HTTP GET https://api.mythx.io/v1/version
-  curl completed sucessfully. Output follows...
-  HTTP/2 200 
-  {
-    "api": "v1.3.2",
-    "maru": "0.3.2",
-    "mythril": "0.20.0"
-  }
+With these variables set you can sumbit security analysis jobs.
 
 
 Submitting an Analysis Job
@@ -163,7 +166,7 @@ The input JSON contains the following fields:
 - sources: A dictionary containing the original source code of each code file.
 - contractName: The name of the main contract class to be analyzed.
 
-**Note that both source code and bytecode MUST be submitted to receive complete results.**
+**Note that both source code and bytecode must be submitted to receive complete results.**
 
 The `analysisMode` field is used to select the type of analysis. Currently two modes are supported:
 
@@ -175,7 +178,7 @@ of the analysis.
 
 .. code-block:: console
 
-  $ ./analyses.sh sample-json/PublicArray.js
+  $ ./analyses.sh sample-json/Token.json
   Issuing HTTP POST http://api.mythx.io/v1/analyses
     (with MYTHX_API_KEY and EVM bytecode)
   curl completed successfully. Output follows...
@@ -189,10 +192,12 @@ of the analysis.
 Polling the API to Obtain Job Status
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+You can determined the status of your analysis by sending a GET request to `/analyses/<UUID>`:
+
 .. code-block:: console
 
-  $ ./analyses-status.sh "bf9fe267-d322-4641-aae2-a89e62f40770"
-  Issuing HTTP GET http://api.mythx.io/v1/analyses/bf9fe267-d322-4641-aae2-a89e62f40770
+  $ ./analyses-status.sh bf9fe267-d322-4641-aae2-a89e62f40770
+  Issuing HTTP GET https://api.mythx.io/v1/analyses/bf9fe267-d322-4641-aae2-a89e62f40770
     (with MYTHX_API_KEY)
   curl completed successfully. Output follows...
   HTTP/1.1 200 OK
@@ -202,12 +207,70 @@ Polling the API to Obtain Job Status
   }
 
 
+- Queued: Your job is in the queue but has not been started yet. Note that you can queue
+  up to 10 jobs at a time.
+- Running: Your job is currently running. In quick mode, the job will remain in running state
+  for approximately one minute. In full mode, the analysis may take up to two hours depending
+  on the complexity of the code.
+- Finished: The job has been completed successfully and the results can be retrieved.
+
+
 Obtaining Analysis Results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Once the job is in "finished:" state the result can be obtained using as follows:
+
 .. code-block:: console
 
-  $ ./analyses-results.sh "bf9fe267-d322-4641-aae2-a89e62f40770"
+  $ ./analyses-results.sh 8a15c859-3245-4d73-bdef-77bf53c5b9b2
+  Issuing HTTP GET https://api.mythx.io/v1/analyses/8a15c859-3245-4d73-bdef-77bf53c5b9b2/issues
+    (with MYTHX_ACCESS_TOKEN)
+
+  curl completed sucessfully. See /tmp/curljs.err54326 for verbose logs.
+  Processed output from /tmp/curljs.out54326 follows...
+  [
+    {
+      "issues": [
+        {
+          "swcID": "SWC-101",
+          "swcTitle": "Integer Overflow and Underflow",
+          "description": {
+            "head": "The binary subtraction can underflow.",
+            "tail": "The operands of the subtraction operation are not sufficiently constrained. The subtraction could therefore result in an integer underflow. Prevent the underflow by checking inputs or ensure sure that the underflow is caught by an assertion."
+          },
+          "severity": "High",
+          "locations": [
+            {
+              "sourceMap": "296:29:0"
+            }
+          ],
+          "extra": {}
+        },
+      (...)
+      ],
+      "sourceType": "solidity-file",
+      "sourceFormat": "text",
+      "sourceList": [
+        "token.sol"
+      ],
+      "meta": {
+        "coveredInstructions": 213,
+        "coveredPaths": 10,
+        "error": "",
+        "selected_compiler": "0.5.0",
+        "warning": []
+      }
+    }
+  ]
+
+The output contains a list of issues with title, short description and long description and source mappings, as well as additional information:
+
+- The `swcID` field contains a reference to the
+  `Smart Contract Weakness Classification Registry <https://smartcontractsecurity.github.io/SWC-registry/>`_.
+- The `locations` list contain one or more solc-style `sourceMap` entries that contain bytecode offsets into the provided 
+  source code files. This source mapping format is described in the `solc documentation <https://solidity.readthedocs.io/en/latest/miscellaneous.html#source-mappings>`_. The notation `s:l:f` where  `s` is the byte-offset to the start of the range in the source file, `l` is the length of the source range in bytes and `f` is the index of the source code file in the `sourceList`.
+- The `meta` field contains meta information about the analysis run.
+
 
 
 API Details
@@ -241,13 +304,13 @@ For example, when using `solcjs`, add the following to the compiler settings:
 
 .. code-block:: javascript
 
-    settings: {
-        (...)
-        optimizer: {
-          enabled: true,
-          runs: 200
-        }
-    }
+  settings: {
+      (...)
+      optimizer: {
+        enabled: true,
+        runs: 200
+      }
+  }
 
 
 Example Code
