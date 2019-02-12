@@ -25,19 +25,6 @@ Some examples for potential MythX tools are:
 Feel free however to experiment with the API in any way you want!
 
 
-Revenue Sharing Program
------------------------
-
-We are planning to share 15% of all revenue received from paid API subscriptions back to tool developers. This
-will apply from the day paid subscriptions go live, which will tentatively happen in May. Keep in mind though
-that our project is still in an early stage and we can't guarantee the future success of MythX and/or Ethereum.
-
-The amount revenue share you receive will depend on the number of daily active paying users of your tool. This
-means that we have to keep track of usage statistic. Please make sure to pick a unique tool name and send
-it in the `clientToolName field <https://api.mythx.io/v1/openapi#operation/submitAnalysis>`_ of
-every API request.
-
-
 API Specification
 -----------------
 
@@ -274,5 +261,18 @@ to MythX using the `armlet JavaScript library <https://github.com/ConsenSys/arml
 .. seealso::
 
   * `Sabre - Minimum Viable MythX Client <https://github.com/b-mueller/sabre>`_
+
+
+Revenue Sharing Program
+-----------------------
+
+We are planning to share 15% of all revenue received from paid API subscriptions back to tool developers. This
+will apply from the day paid subscriptions go live, which will tentatively happen in May. Keep in mind though
+that our project is still in an early stage and we can't guarantee the future success of MythX and/or Ethereum.
+
+The amount revenue share you receive will depend on the number of daily active paying users of your tool. This
+means that we have to keep track of usage statistic. Please make sure to pick a unique tool name and send
+it in the `clientToolName field <https://api.mythx.io/v1/openapi#operation/submitAnalysis>`_ of
+every API request.
 
 
