@@ -329,13 +329,9 @@ to MythX using the `armlet JavaScript library <https://github.com/ConsenSys/arml
 Revenue Sharing Program
 -----------------------
 
-We are planning to share 15% of all revenue received from paid API subscriptions back to tool developers. This
-will apply from the day paid subscriptions go live, which will tentatively happen in May. Keep in mind though
-that our project is still in an early stage and we can't guarantee the future success of MythX and/or Ethereum.
+Once paid subscription plans for MythX go live, we'll share back some of the revenue from subscription fees back to tool builders.
 
-The amount revenue share you receive will depend on the number of daily active paying users of your tool. This
-means that we have to keep track of usage statistic. Please make sure to pick a unique tool name and send
-it in the `clientToolName field <https://api.mythx.io/v1/openapi#operation/submitAnalysis>`_ of
-every API request.
+The amount revenue share you receive will depend on the number of daily active paying users of your tool.  In your tool, set the `clientToolName field <https://api.mythx.io/v1/openapi#operation/submitAnalysis>`_ to a unique name of your choice when submitting analysis requests. That way we can keep track of usage statistic.
 
+More details about this program will be announced during the beta in Q2/2019. 
 
