@@ -209,10 +209,36 @@ You can determined the status of your analysis by sending a GET request to `/ana
 
 - Queued: Your job is in the queue but has not been started yet. Note that you can queue
   up to 10 jobs at a time.
-- Running: Your job is currently running. In quick mode, the job will remain in running state
+- In Progress: Your job is currently running. In quick mode, the job will remain in running state
   for approximately one minute. In full mode, the analysis may take up to two hours depending
   on the complexity of the code.
 - Finished: The job has been completed successfully and the results can be retrieved.
+
+
+Estimating Analysis Duration
+++++++++++++++++++++++++++++
+
+How long an analysis takes to complete depends on the analysis mode ("quick" or "full") and overall API load.
+
+**Analysis mode**
+
+- In "quick" mode, the analysis finishes takes at least 30 and at most 5 minute to complete after entering "in progress" state.
+- In "full" mode, the anlysis may take up to 2-5 hours. Note that "full" mode is still highly experimental.
+
+**Overall API load**
+
+We aim to process all incoming requests immediately. However, in times of high load, our jobs might remain in the queue for some time before a worker becomes available.
+
+Polling Recommentations
++++++++++++++++++++++++
+
+In order to help users keep below their rate limits (and not overload the API too much), we recommend implementing the following polling algorithm:
+
+- Set an intial delay before sending the first poll after submitting an analysis. Even in quick mode, results rarely are ready in less than 45 seconds. In full mode, results will usually only be ready after 2 hours or more.
+
+- After the initial delay has passed, poll in reasonable regular intervals (e.g. every 8 seconds in "quick" mode and once per minute in "full" mode). Alternatively, start with a low timeout that increases geometrically over time.
+
+- Also set an overall timeout. If a job has been in "in progress" state for more than 12 hours, it is reasonable to assume that there's a problem on the API side and return an error message to the user. Include the job UUID in the error message. API bugs can be submitted via one of our `support channels <https://github.com/ConsenSys/mythx-developer-support/blob/master/README.md>`_
 
 
 Obtaining Analysis Results
