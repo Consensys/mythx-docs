@@ -222,7 +222,7 @@ How long an analysis takes to complete depends on the analysis mode ("quick" or 
 
 **Analysis mode**
 
-- In "quick" mode, the analysis finishes takes at least 30 and at most 5 minute to complete after entering "in progress" state.
+- In "quick" mode, the analysis finishes takes between 30 seconds 5 minute to complete after entering the "in progress" state.
 - In "full" mode, the anlysis may take up to 2-5 hours. Note that "full" mode is still highly experimental.
 
 **Overall API load**
