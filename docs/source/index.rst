@@ -14,5 +14,6 @@ MythX Developer and User Guide
    main/mythx-for-smart-contract-developers
    main/building-security-tools-on-mythx
    main/getting-support
+   main/release-notes
 
 * :ref:`genindex`
