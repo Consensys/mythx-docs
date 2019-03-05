@@ -12,6 +12,7 @@ you analyze and verify Ethereum smart contracts during development and deploymen
     ../tooling/truffle
     ../tooling/vscode-solidity
     ../tooling/ramuh
+    ../tooling/mythos
 
 Submit Your Own Tool!
 ---------------------
