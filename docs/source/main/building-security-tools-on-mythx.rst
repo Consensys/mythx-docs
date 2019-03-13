@@ -293,6 +293,10 @@ The output contains a list of issues with title, short description and long desc
 
 - The `swcID` field contains a reference to the
   `Smart Contract Weakness Classification Registry <https://smartcontractsecurity.github.io/SWC-registry/>`_.
+- The `description` field describes the found issue in two entries.
+
+  - `head` is the summary of the found issue.
+  - `tail` contains the details on what causes the issue well as any possible remediation.
 - The `locations` list contain one or more solc-style `sourceMap` entries that contain bytecode offsets into the provided 
   source code files. This source mapping format is described in the `solc documentation <https://solidity.readthedocs.io/en/latest/miscellaneous.html#source-mappings>`_. The notation `s:l:f` where  `s` is the byte-offset to the start of the range in the source file, `l` is the length of the source range in bytes and `f` is the index of the source code file in the `sourceList`.
 - The `meta` field contains meta information about the analysis run.
