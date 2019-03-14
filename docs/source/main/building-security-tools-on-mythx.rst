@@ -302,27 +302,28 @@ The output contains a list of issues with title, short description and long desc
 - The `meta` field contains meta information about the analysis run.
 
 
-It is recommended that users submit both bytecode and source code to obtain a full analysis, but in the case that no source code is provided, ie: only the submitting the deployed bytecode. MythX will return the following result:
+We recommend that users submit both bytecode and source code to obtain a full analysis. If only the creation bytecode is given, and not the source code, MythX will return a result like the folllowing:
 
 .. code-block:: json
 
   [
     {
       "issues": [
-        {
-          ...
-          sourceType: 'raw-bytecode',
-          sourceFormat: 'evm-byzantium-bytecode',
-          sourceList:
-            [ '0x98d243270da47b324377a628b45e42110ba7520280b8e13ac94aad07501fbb2e' ],
-          meta: { coveredInstructions: 111, coveredPaths: 5 },
-        },
-        ...
-      ]
+        (...)
+      ],
+      "sourceType": "raw-bytecode",
+      "sourceFormat": "evm-byzantium-bytecode",
+      "sourceList": [
+        "0x98d243270da47b324377a628b45e42110ba7520280b8e13ac94aad07501fbb2e"
+      ],
+      "meta": {
+        "coveredInstructions": 111,
+        "coveredPaths": 5
+      },
     }
   ]
 
-In this instance, `sourceList: [0x98...]` refers to the Keccak256 hash of the runtime bytecode within which the issue was found.
+In this instance, ``sourceList: [0x98...]`` refers to the Keccak256 hash of the runtime bytecode within which the issue(s) weres found.
 
 API Details
 -----------
