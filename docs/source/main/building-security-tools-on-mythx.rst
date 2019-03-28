@@ -168,6 +168,9 @@ The input JSON contains the following fields:
 
 **Note that both source code and bytecode must be submitted to receive complete results.**
 
+**Note that the order of the files in the `sourceList` field is crucial for receiving correct issue locations
+and should match the order that the compiler used to build the source maps.**
+
 The `analysisMode` field is used to select the type of analysis. Currently two modes are supported:
 
 - quick: Perform static analysis and shallow symbolic analysis and input fuzzing. Returns a result within 90 seconds.
