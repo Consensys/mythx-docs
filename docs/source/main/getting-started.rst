@@ -3,11 +3,11 @@ Getting Started
 
 What is MythX?
 --------------
-`MythX <https://mythx.io>`_ is a security analysis API for Ethereum Smart
-Contracts. It detects many common vulnerabilities in Solidity code and EVM
+`MythX <https://mythx.io>`_ is a security analysis API for Ethereum smart
+contracts. It detects many common vulnerabilities in Solidity code and EVM
 bytecode. Anyone can use MythX to build purpose-built Ethereum security tools.
 
-Smart contract developers use MythX tools, such as Truffle plugins,
+Smart contract developers use MythX tools, such as plugins,
 IDE extensions and CI scripts, which are easy to install and work out-of-the-box. 
 
 For more information, announcements and support, consider joining the
@@ -57,9 +57,9 @@ the tools we are actively developing around it.
 Contributing to this Document
 -----------------------------
 
-We are hosting this developer guide in a public `Github repository
+We are hosting this developer guide in a public `GitHub repository
 <https://github.com/ConsenSys/mythx-developer-guide>`_. Found a typo? Decided to
-write a major section about your favourite part of our stack? Submit your own
+write a major section about your favorite part of our stack? Submit your own
 MythX-enabled tool? Simply fork the repository and open up a pull request for
 us. Want to make your reviewer smile? Check out the contribution guidelines
 and try to stick to them. They're short and simple, promise!
