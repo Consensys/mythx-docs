@@ -334,7 +334,7 @@ API Details
 Token Expiration Times
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Validity times for the Java Web Tokens are set as follows:
+Validity times for the `JSON Web Tokens <https://jwt.io>`_ are set as follows:
 
 - Access tokens are valid for 10 minutes;
 - Refresh tokens are valid for 4 weeks.
