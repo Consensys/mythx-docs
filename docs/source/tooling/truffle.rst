@@ -46,7 +46,7 @@ launch a security analysis of your project by running:
 Note that the project must compile successfully in order for security
 analysis to work.
 
-Add the `--help` flag to display additional options:
+Add the ``--help`` flag to display additional options:
 
 .. code-block:: console
 
