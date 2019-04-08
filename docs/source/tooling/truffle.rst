@@ -1,59 +1,166 @@
-MythX Security Analysis plugin for Truffle
-==========================================
+.. _tooling.truffle:
 
-MythX Security Analysis plugin for Truffle adds automated smart contract security analysis to the `Truffle framework <https://truffleframework.com>`_.
+Truffle
+=======
 
-Prerequisites
-^^^^^^^^^^^^^
+**MythX for Truffle** is a `Truffle plugin <https://truffleframework.com/docs/truffle/getting-started/writing-external-scripts#third-party-plugin-commands>`_ that adds automated smart contract security analysis to the `Truffle framework <https://truffleframework.com>`_.
 
-The MythX plugin is compatible with Truffle 5.0 or higher. Note that your Truffle project must compile
+The MythX plugin requires Truffle 5.0 or higher. Note that your Truffle project must compile
 successfully for the security analysis to work.
 
-Quickstart
-^^^^^^^^^^
+Installation
+------------
 
-Install the plugin by running:
+You can install the plugin on a per-project basis or globally.
 
-.. code-block:: console
+Individual projects
+^^^^^^^^^^^^^^^^^^^
 
-  $ npm install truffle-security
-
-Currently, the plugin must be activated on a per-project basis. Add the following to `truffle.js` in your Truffle project directory:
-
-.. code-block:: console
-
-  module.exports = {
-      plugins: [ "truffle-security" ]
-  };
-
-By default, the plugin is configured with a MythX trial account that
-allows for limited access. Sign up for a free account to get
-full access (see :ref:`getting-started`).
+Install the plugin on an individual Truffle project by running the following inside the root of your Truffle project:
 
 .. code-block:: console
 
-  export MYTHX_ETH_ADDRESS=0x1234567891235678900000000000000000000000
-  export MYTHX_PASSWORD='Put your password in here!'
+   npm install truffle-security
 
+The plugin will install for that Truffle project only. In addition, the plugin will **edit the project's configuration file** (``truffle-config.js``) to add the necessary plugin configuration.
 
-Installing the plugin adds the `truffle run verify` command. You can
-launch a security analysis of your project by running:
+.. note:: If you have existing plugins activated for the project, they will not be affected.
 
-.. code-block:: console
+Global installation
+^^^^^^^^^^^^^^^^^^^
 
-    $ truffle run verify
-
-Note that the project must compile successfully in order for security
-analysis to work.
-
-Add the `--help` flag to display additional options:
+Install the plugin globally so that it is accessible to all projects:
 
 .. code-block:: console
 
-    $ truffle run verify --help
+   npm install truffle-security
+
+If you install MythX for Truffle in this maaner, **you will in addition need to edit each project's configuration file** (``truffle-config.js``) to add the necessary plugin:
+
+.. code-block:: javascript
+
+   module.exports = {
+
+     // ... 
+ 
+       plugins: [ "truffle-security" ],
+ 
+     // ... 
+
+   };
+
+Running
+-------
+
+To run MythX for Truffle, run the following command in the root of your configured Truffle project:
+
+.. code-block:: console
+
+   truffle run verify
+
+.. note:: The project must compile successfully in order for the plugin to run. If the project hasn't been compiled yet, MythX for Truffle will try to compile it first.
+
+By default, all contracts in the project will be analyzed. To analyze only some of the contracts, append them to the command:
+
+.. code-block:: console
+
+   truffle run verify MyContract MyContract2
+
+The above command will analyze only the ``MyContract`` and ``MyContract2`` contracts.
+
+
+Command options
+---------------
+
+To see the various command options available to you, run the following:
+
+.. code-block:: console
+
+   truffle run verify --help
+
+
+``--debug``
+^^^^^^^^^^^
+
+Provides additional debug output. Use ``--debug=2`` for more verbose output
+
+``--uuid <UUID>``
+^^^^^^^^^^^^^^^^^
+
+*(Experimental)* Prints in YAML results from a prior run having ``<UUID>``
+
+``--mode { quick | full }``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Performs quick or in-depth (full) analysis.
+
+``--style { stylish | unix | json | table | tap | ... }``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Outputs the report in the given es-lint style. See https://eslint.org/docs/user-guide/formatters/ for a full list.
+
+``--timeout <S>``
+^^^^^^^^^^^^^^^^^
+
+Limits MythX analyses time to ``<S>`` seconds. The default is 120 seconds.
+
+``--limit <N>``
+^^^^^^^^^^^^^^^
+
+Limit the pending analysis requests to no more than ``<N>`` at a time. As results come back, remaining contracts are submitted. The default is 10 contracts, the maximum value, but you can set this lower.
+
+``--version``
+^^^^^^^^^^^^^
+
+Show package and MythX version information.
+
+``--no-progress``
+^^^^^^^^^^^^^^^^^
+
+Will not display progress bars during analysis.
+
+
+Accounts and access
+-------------------
+
+*You do not need to sign up for a MythX account in order to use the MythX plugin for Truffle.*
+
+By default the plugin runs in Trial mode. **Trial mode returns a limited report**, with not all vulnerabilities listed. To get access to an unrestricted report, sign up for an account at https://mythx.io.
+
+.. note:: Both free and paid plans are available. See :ref:`getting-started` for more details.
+
+Once you have signed up for an account, you will need to add your account and password as environment variables on your system.
+
+.. list-table::
+   :header-rows: 1
+
+   * - Environment variable
+     - Value
+   * - ``MYTHX_ETH_ADDRESS``
+     - Your MythX account (Ethereum address)
+   * - ``MYTHX_PASSWORD``
+     - Your MythX password
+
+You can temporarily add these environment variables to your terminal with the following commands (which will need to be customized with your account information):
+
+* **Linux / macOS**:
+
+  .. code-block:: console
+
+     export MYTHX_ETH_ADDRESS=0x1234567891235678900000000000000000000000
+     export MYTHX_PASSWORD='Put your password in here!'
+
+* **Windows**:
+
+  .. code-block:: console
+
+     set MYTHX_ETH_ADDRESS=0x1234567891235678900000000000000000000000
+     set MYTHX_PASSWORD='Put your password in here!'
+
+
 
 .. seealso::
 
-  * `npm package <https://www.npmjs.com/package/truffle-security>`_
-  * `GitHub repository <https://github.com/consensys/truffle-security>`_
+  * `MythX for Truffle (npm package) <https://www.npmjs.com/package/truffle-security>`_
+  * `MythX for Truffle (GitHub) <https://github.com/consensys/truffle-security>`_
   
