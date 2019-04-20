@@ -11,6 +11,7 @@ Installation and Usage
 ----------------------
 
 First, install ramuh package:
+
 .. code-block:: console
 
     $ npm i -g ramuh
@@ -21,6 +22,7 @@ as the environment variables `MYTHX_API_KEY` or `MYTHX_ETH_ADDRESS` and
 `MYTHX_PASSWORD`.
 Then, start it indicating MythX platform access credentials and the
 directory to watch:
+
 .. code-block:: console
 
     $ ramuh -contractspath /path/to/contracts

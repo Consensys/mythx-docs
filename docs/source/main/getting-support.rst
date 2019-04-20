@@ -18,7 +18,7 @@ following channels:
 Alternatively, contact our helpdesk at  at `support [at] mythx.io`.
 
 For MythX Tool Users
-=======
+~~~~~~~~~~~~~~~~~~~~
 
 To get support for third-party tools built it is usually best to communicate
 directly with the tool developers. For example, if you run into an issue with the MythX Security Analysis plugin for Truffle, create an issue in the `repository <https://github.com/ConsenSys/truffle-security>`_. You can also get help at:
