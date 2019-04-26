@@ -3,13 +3,13 @@ Python Library
 
 PythX is a Python library for the `MythX API <https://mythx.io/v1/openapi>`_.
 
-It's goal is to facilitate development of use cases that go beyond bare API
+Its goal is to facilitate development of use cases that go beyond bare API
 interaction by making it easy for developers to hook into high-level
 interfaces.
 When writing a complex tool around MythX you shouldn't have to worry about
 refreshing your JWT tokens regularly or basic consistency checking of your
-requests. PythX tries to take these tedious tasks away from you - unless you
-explicitly tell it not to.
+requests. PythX takes these tedious tasks away from you - unless you explicitly
+tell it not to.
 
 
 Installation

@@ -2,12 +2,12 @@ PythX - A Python MythX CLI
 ==========================
 
 The `PythX package <https://pypi.org/project/pythx/>`_ does not only provide
-a kickass Python library, but it also ships with a command line interface by
+a kickass Python library, but also ships with a command line interface by
 default. While it initially was meant as an example to show developers how easy
 it is to implement complex behaviour with the PythX library, it has since taken
-a life on its own. While the focus clearly is on the library side of PythX, we
-have decided to also maintain the CLI part of it as a low-level entrypoint to
-new users who just want to play around with the API.
+on a life on its own. While the focus clearly is on the library side of PythX,
+we have decided to also maintain the CLI part of it as a low-level entrypoint
+to new users who just want to play around with the API.
 
 
 Installation
@@ -22,8 +22,8 @@ To get started, simply run
 
 The PythX CLI
 -------------
-The PythX CLI aims to be a simple example implementation to show developers on
-a practical example how PythX can be used in action. It provides a simple (and
+The PythX CLI aims to be a simple example implementation to show developers by
+practical example how PythX can be used in action. It provides a simple (and
 pretty!) interface to list analyses, submit new ones, check the status of a
 job, and get report data on the found issues.
 
