@@ -17,10 +17,12 @@ You can install the plugin on a per-project basis or globally.
 
    **Windows users** have reported potential issues with installation. You may have to install the following dependencies:
 
-   * `Python <https://www.python.org/>`_ (version 3 or higher)
+   * `Git <https://git-scm.com/>`_
    * `Windows Build Tools npm package <https://www.npmjs.com/package/windows-build-tools>`_::
 
        npm install --global --production windows-build-tools
+
+     (This will need to be installed with Adminstrator privileges.)
 
 Individual project
 ^^^^^^^^^^^^^^^^^^
@@ -161,5 +163,4 @@ Once you have done this, the MythX plugin should recognize your credentials and 
 .. seealso::
 
   * `MythX for Truffle (npm) <https://www.npmjs.com/package/truffle-security>`_
-  * `MythX for Truffle (GitHub) <https://github.com/consensys/truffle-security>`_
-  
+  * `MythX for Truffle (GitHub) <https://github.com/consensys/truffle-security>`_  
