@@ -1,20 +1,20 @@
-# MythX Developer and User Guide
+# MythX User and Developer Guide
 
-A guide for MythX tool developers and end users.
+Documentation for MythX users and tool developers.
 
-## Setup for working on the docs
+## Setup
 
-Have Python installed. Then
+Have Python/pip installed. Then install Sphinx and the Read the Docs Sphinx Theme:
 
 ```console
 $ pip install sphinx sphinx_rtd_theme
 ```
 
-## Previewing changes
+## Building the documentation locally
 
 ```console
 $ cd docs
 $ make html
 ```
 
-The resulting top-level HTML page will be in `docs/build/html/SmartContract-developer.html`.
+The resulting HTML will be in `docs/build/html/`.
