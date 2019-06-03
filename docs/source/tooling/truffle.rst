@@ -56,8 +56,8 @@ If you install MythX for Truffle in this manner, **you will in addition need to 
 
    };
 
-Running
--------
+Usage
+-----
 
 To run MythX for Truffle, run the following command in the root of your configured Truffle project::
 
@@ -65,12 +65,23 @@ To run MythX for Truffle, run the following command in the root of your configur
 
 .. note:: The project must compile successfully in order for the plugin to run. If the project hasn't been compiled yet, MythX for Truffle will try to compile it first.
 
-By default, all contracts in the project will be analyzed. To analyze only some of the contracts, append them to the command::
+By default, all contracts in the project will be analyzed. To analyze only some of the contracts, use the following syntax::
 
-  truffle run verify MyContract MyContract2
+  truffle run verify contract.sol
 
-The above command will analyze only the ``MyContract`` and ``MyContract2`` contracts.
+This will analyse all the contracts found in the file ``contract.sol``.
 
+You can also analyze a specific contract::
+
+  truffle run verify contract.sol:MyContract
+
+This will analyse the contract named ``MyContract`` found in the file ``contract.sol``.
+
+.. warning::
+
+   The following syntax has been deprecated and should not be used::
+
+     truffle run verify MyContract
 
 Command options
 ---------------
