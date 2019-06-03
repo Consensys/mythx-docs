@@ -13,16 +13,22 @@ Installation
 
 You can install the plugin on a per-project basis or globally.
 
-.. warning:: 
+.. warning::
 
-   **Windows users** have reported potential issues with installation. You may have to install the following dependencies:
+   **Windows users** need to install the following dependencies:
 
    * `Git <https://git-scm.com/>`_
    * `Windows Build Tools npm package <https://www.npmjs.com/package/windows-build-tools>`_::
 
        npm install --global --production windows-build-tools
 
-     (This will need to be installed with Adminstrator privileges.)
+   Both will need to be installed with Administrator privileges.
+
+   In addition, those using **Windows PowerShell** may need to set the `Execution Policy <https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy>`_ to Unrestricted in order to install the Windows Build Tools package::
+
+     Set-ExecutionPolicy Unrestricted
+
+   This will also need to be run with Administrator privileges.
 
 Individual project
 ^^^^^^^^^^^^^^^^^^
