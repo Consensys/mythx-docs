@@ -37,7 +37,6 @@ the exposed function:
   const client = new armlet.Client(
     {
         password: process.env.MYTHX_PASSWORD,  // adjust this
-        // Use one of the two options below
         ethAddress: process.env.MYTHX_ETH_ADDRESS,
     })
   const data = {
