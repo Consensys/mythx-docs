@@ -36,8 +36,8 @@ the exposed function:
   const armlet = require('armlet')
   const client = new armlet.Client(
     {
-        password: process.env.MYTHX_PASSWORD,  // adjust this
         ethAddress: process.env.MYTHX_ETH_ADDRESS,
+        password: process.env.MYTHX_PASSWORD,
     })
   const data = {
     contractName: 'TestMe',
