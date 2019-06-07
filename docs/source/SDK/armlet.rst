@@ -26,8 +26,6 @@ used during registration and the password you created:
 .. code-block:: console
 
   $ export MYTHX_PASSWORD=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-  $ # Only one of two below is needed:
-  $ export EMAIL=me@example.com
   $ export MYTHX_ETH_ADDRESS=0x.............
 
 Then to get the MythX analysis results with the promise returned by
@@ -38,10 +36,8 @@ the exposed function:
   const armlet = require('armlet')
   const client = new armlet.Client(
     {
-        password: process.env.MYTHX_PASSWORD,  // adjust this
-        // Use one of the two options below
         ethAddress: process.env.MYTHX_ETH_ADDRESS,
-        email: process.env.EMAIL  // adjust this
+        password: process.env.MYTHX_PASSWORD,
     })
   const data = {
     contractName: 'TestMe',
@@ -97,7 +93,7 @@ done (the default is 10 seconds). For instance, to wait up to 5 seconds:
 
 .. code-block:: javascript
 
-  client.analyze({data, timeout: 5000})
+  client.analyze({data}, 5000)
     .then(issues => {
       console.log(issues)
     }).catch(err => {

@@ -46,7 +46,7 @@ Global installation
 
 Install the plugin globally so that it is accessible to all projects::
 
-  npm install truffle-security
+  npm install -g truffle-security
 
 If you install MythX for Truffle in this manner, **you will in addition need to edit each project's configuration file** (``truffle-config.js``) to add the necessary plugin:
 
@@ -62,8 +62,11 @@ If you install MythX for Truffle in this manner, **you will in addition need to 
 
    };
 
-Running
--------
+Usage
+-----
+
+Analyzing an entire project
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 To run MythX for Truffle, run the following command in the root of your configured Truffle project::
 
@@ -71,12 +74,41 @@ To run MythX for Truffle, run the following command in the root of your configur
 
 .. note:: The project must compile successfully in order for the plugin to run. If the project hasn't been compiled yet, MythX for Truffle will try to compile it first.
 
-By default, all contracts in the project will be analyzed. To analyze only some of the contracts, append them to the command::
+Analyzing whole contract files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-  truffle run verify MyContract MyContract2
+By default, all contracts in all contract files in the project will be analyzed. To analyze only a single contract file, use the following syntax::
 
-The above command will analyze only the ``MyContract`` and ``MyContract2`` contracts.
+  truffle run verify contract.sol
 
+This will analyze all the contracts found in the file ``contract.sol``.
+
+Multiple contract files can be specified here as well::
+
+  truffle run verify contract1.sol contract2.sol
+
+All contracts inside both ``contract1.sol`` and ``contract2.sol`` will be analyzed.
+
+Analyzing specific contracts
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+You can also analyze a specific contract::
+
+  truffle run verify contract.sol:MyContract
+
+This will analyze the contract named ``MyContract`` found in the file ``contract.sol``.
+
+Multiple contracts can be specified here too. For example::
+
+  truffle run verify contract1.sol:MyContract1 contract2.sol:MyContract2
+
+This will analyze both ``MyContract1`` and ``MyContract2``, which are found in the ``contract1.sol`` and ``contract2.sol`` files respectively.
+
+.. warning::
+
+   The following syntax has been deprecated and should not be used::
+
+     truffle run verify MyContract
 
 Command options
 ---------------
