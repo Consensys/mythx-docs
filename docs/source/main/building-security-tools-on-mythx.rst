@@ -1,5 +1,7 @@
-MythX API Developer Guide
-=========================
+.. _devguide:
+
+Developer Guide
+===============
 
 This section of the guide is aimed at developers who want build security tools using the MythX API.
 

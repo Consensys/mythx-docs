@@ -1,19 +1,38 @@
-MythX Developer and User Guide
-==============================
+MythX User Guide
+================
 
-`MythX <https://mythx.io>`_ is a security analysis API that allows anyone to create purpose-built security tools for smart contract developers. Tools built on MythX integrate seamlessly into the development environments and continuous integration pipelines used throughout the Ethereum ecosystem. This guide will help get you started if you want to:
+`MythX <https://mythx.io>`_ is a security analysis API for Ethereum smart contracts. It allows any developer or developer team to integrate advanced security analysis directly into development environments and build pipelines. It detects many common Solidity vulnerabilities and EVM bytecode vulnerabilities automatically.
 
-- Use MythX tools to verify smart contract security in the development/project workflow.
-- Build your own tool, product or service using MythX API as the security analysis backend.
+MythX is integrated into popular developer tools you use today such as :ref:`Truffle <tooling.truffle>`. Plus, you can integrate MythX into your own security tools, apps, and existing blockchain services.
+
+MythX has multiple target audiences:
+
+* **Developers and dev teams** who wish to verify smart contract security as part of their project workflow.
+* **Tool creators and integrators** who wish to build a new MythX tool or integrate the MythX API into their product or service.
+
+Please continue on to learn more about MythX.
+
+Contents
+--------
+
+:ref:`start`
+     Start here. Sign up for an API key and learn about the workflow.
+
+:ref:`tools`
+     All the current and evolving tools that can be used with MythX.
+
+:ref:`devguide`
+     Information about the MythX API, for developers who wish to build their own tools or integrate MythX into their product or service.
+
+:ref:`support`
+     How to get support and engage with the MythX community.
+
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :hidden:
 
    main/getting-started
    main/mythx-for-smart-contract-developers
    main/building-security-tools-on-mythx
    main/getting-support
    main/release-notes
-
-* :ref:`genindex`

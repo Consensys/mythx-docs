@@ -1,4 +1,6 @@
-Getting Support
+.. _support:
+
+Getting support
 ===============
 
 There are multiple ways to get in touch with us, whether you want to get
