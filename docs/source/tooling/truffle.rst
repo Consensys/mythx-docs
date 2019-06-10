@@ -135,7 +135,7 @@ Minimum amount of time (in seconds) to wait before attempting a first status pol
 ``--json``
 ^^^^^^^^^^
 
-Dump results in unprocessed JSON format. This disables providing any es-lint style reports. See also ``--yaml``.
+Output results in unprocessed JSON format. Differs from ``--style=json`` which provides an es-lint compatible output format. See also ``--yaml``.
 
 ``--limit <N>``
 ^^^^^^^^^^^^^^^
@@ -146,6 +146,8 @@ Limit the number of parallel analysis requests to no more than ``<N>``. As resul
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ignore SWCs below the designated severity level. Options are ``warning`` or ``error``.
+
+.. note:: Currently, the only severity levels are ``warning`` and ``error``, so choosing ``warning`` here has no effect (ignores nothing). Future versions may add support for an ``info`` severity level, which would be ignored.
 
 ``--mode <MODE>``
 ^^^^^^^^^^^^^^^^^
@@ -190,7 +192,7 @@ Show package and MythX version information.
 ``--yaml``
 ^^^^^^^^^^
 
-Dump results in unprocessed YAML format. This disables providing any es-lint style reports. See also ``--json``.
+Output results in unprocessed YAML format. Differs from ``--style=yaml`` which provides an es-lint compatible output format. See also ``--json``.
 
 
 Accounts and access
