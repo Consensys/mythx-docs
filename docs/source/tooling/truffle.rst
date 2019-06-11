@@ -117,46 +117,82 @@ To see the various command options available to you, run the following::
 
   truffle run verify --help
 
+``--all``
+^^^^^^^^^
+
+Compile all contracts. Without this, only the contracts changed since last compile will be recompiled.
 
 ``--debug``
 ^^^^^^^^^^^
 
-Provides additional debug output. Use ``--debug=2`` for more verbose output.
+Provide additional debug output. Use ``--debug=2`` for more verbose output. Implies ``--no-progress``.
 
-``--uuid <UUID>``
-^^^^^^^^^^^^^^^^^
+``--initial-delay <N>``
+^^^^^^^^^^^^^^^^^^^^^^^
 
-*(Experimental)* Prints in YAML results from a prior run having ``<UUID>``.
+Minimum amount of time (in seconds) to wait before attempting a first status poll. Default is 45 seconds. `Read more about improving polling response <https://github.com/ConsenSys/armlet#improving-polling-response>`_.
 
-``--mode``
+``--json``
 ^^^^^^^^^^
 
-Performs ``quick`` or in-depth (``full``) analysis.
-
-``--style``
-^^^^^^^^^^^
-
-Outputs the report in the given `es-lint <https://eslint.org/docs/user-guide/formatters/>`_ style.
-
-``--timeout <S>``
-^^^^^^^^^^^^^^^^^
-
-Limits MythX analyzes time to ``<S>`` seconds. The default is 120 seconds.
+Output results in unprocessed JSON format. Differs from ``--style=json`` which provides an es-lint compatible output format. See also ``--yaml``.
 
 ``--limit <N>``
 ^^^^^^^^^^^^^^^
 
-Limit the pending analysis requests to no more than ``<N>`` at a time. As results come back, remaining contracts are submitted. The default is 10 contracts, the maximum value, but you can set this lower.
+Limit the number of parallel analysis requests to no more than ``<N>``. As results come back, remaining contracts are submitted. The default and mamximum is 4, but this can be set lower.
+
+``--min-severity <LEVEL>``
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ignore SWCs below the designated severity level. Options are ``warning`` or ``error``.
+
+.. note:: Currently, the only severity levels are ``warning`` and ``error``, so choosing ``warning`` here has no effect (ignores nothing). Future versions may add support for an ``info`` severity level, which would be ignored.
+
+``--mode <MODE>``
+^^^^^^^^^^^^^^^^^
+
+Perform ``quick`` or in-depth (``full``) analysis.
+
+``--no-color``
+^^^^^^^^^^^^^^
+
+Disable output coloring.
+
+``--no-progress``
+^^^^^^^^^^^^^^^^^
+
+Disable progress bars during analysis.
+
+``--style <STYLE>``
+^^^^^^^^^^^^^^^^^^^
+
+Output the report in the given `es-lint <https://eslint.org/docs/user-guide/formatters/>`_ style. Options include ``stylish``, ``json``, ``table``, ``tap``, ``unix``, and ``markdown``.
+
+``--swc-blacklist <LIST>``
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ignore a specific SWC or list of SWCs. Use the number only (``107`` instead of ``SWC-107``). If using a list, use commas and no spaces to separate the SWCs (``103,111,115``).
+
+``--timeout <N>``
+^^^^^^^^^^^^^^^^^
+
+Limit MythX analyses time to ``<N>`` seconds. The default is 300 seconds.
+
+``--uuid <UUID>``
+^^^^^^^^^^^^^^^^^
+
+*(Experimental)* Display results from a prior analysis with the given UUID. Result is in YAML.
 
 ``--version``
 ^^^^^^^^^^^^^
 
 Show package and MythX version information.
 
-``--no-progress``
-^^^^^^^^^^^^^^^^^
+``--yaml``
+^^^^^^^^^^
 
-Will not display progress bars during analysis.
+Output results in unprocessed YAML format. Differs from ``--style=yaml`` which provides an es-lint compatible output format. See also ``--json``.
 
 
 Accounts and access
