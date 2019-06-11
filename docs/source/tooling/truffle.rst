@@ -110,12 +110,23 @@ This will analyze both ``MyContract1`` and ``MyContract2``, which are found in t
 
      truffle run verify MyContract
 
-Command options
----------------
+Options
+-------
 
 To see the various command options available to you, run the following::
 
   truffle run verify --help
+
+You can pass options to the tool in two ways:
+
+* Command line options (``--option``)
+* Configuration file (``truffle-security.json``)
+
+Command line options take precedence over any options specified in the configuration file.
+
+
+Command line options
+--------------------
 
 ``--all``
 ^^^^^^^^^
@@ -193,6 +204,34 @@ Show package and MythX version information.
 ^^^^^^^^^^
 
 Output results in unprocessed YAML format. Differs from ``--style=yaml`` which provides an es-lint compatible output format. See also ``--json``.
+
+Configuration file
+------------------
+
+In addition to command line options, you can specify a configuration file named ``truffle-security.json``. Placed in the root of the project, this file can contain a list of options and values. Every option available on the command line is available here.
+
+An example format of this file is as follows:
+
+.. code-block:: json
+
+   {
+     "style": "table",
+     "mode": "quick",
+     "min-severity": "warning",
+     "swc-blacklist": [103,111]
+   }
+
+For arguments that don't take a value (such as ``no-progress``) use the format:
+
+.. code-block:: json
+  
+   {
+     "no-format": true
+   }
+
+For arguments that take a list (such as ``swc-blacklist``), brackets for the values are optional.
+
+.. note:: Command line options take precedence over any options specified in the configuration file.
 
 
 Accounts and access
