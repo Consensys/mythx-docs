@@ -38,16 +38,20 @@ To get the full functionality of MythX, you need to create an account.
 
 #. Go to https://mythx.io and slick the :guilabel:`Sign Up` button on the top right.
 
-#. Fill out the registration form. You will need to supply a valid email address and a password.
+#. Fill out the registration form. You will need to supply a valid email address.
 
    .. image:: img/registration.png
 
 #. When finished, click :guilabel:`Complete Registration`.
 
-
 #. A MetaMask popup will display, asking for confirmation. Click :guilabel:`Sign` to continue.
 
    .. image:: img/metamasksignup.png
+      :width: 50%
+
+#. An API key will be generated for you and displayed. Please copy this key down, as you will not be able to retrieve it later. (You can generate a new one in your account dashboard if necessary.)
+
+   .. image:: img/apikey.png
       :width: 50%
 
 #. You will be sent an email to verify your address. You will need to verify your email address before you can use the MythX service.
@@ -59,7 +63,7 @@ Linking your account with tools
 
 Your account, once verified, is on the Free plan. This means that you can receive the complete report of vulnerabilities when running scans.
 
-.. note:: MythX offers both free and paid plans. For information on plans and features, please see our `Pricing <https://mythx.io/pricing/>`_ page.
+.. note:: MythX offers both free and paid plans. For information on plans and features, please see our `Plans <https://mythx.io/plans/>`_ page.
 
 If using one of the :ref:`tools`, you will need to link your account to the tool to take advantage of your account's plan.
 
@@ -73,6 +77,6 @@ While the specifics of each tool differ, most tools will pick up your account in
    * - ``MYTHX_ETH_ADDRESS``
      - Your MythX account (Ethereum address)
    * - ``MYTHX_PASSWORD``
-     - Your MythX password
+     - API key supplied to you during registration
 
 Please see :ref:`the specific page for your tool <tools>` to see more details about linking your account.
