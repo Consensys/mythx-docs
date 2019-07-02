@@ -15,8 +15,8 @@ Please continue on to learn more about MythX.
 Contents
 --------
 
-:ref:`start`
-     Start here. Sign up for an API key and learn about the workflow.
+:ref:`getting-started`
+     Test out the service, sign up for an API key, and learn about the workflow.
 
 :ref:`tools`
      All the current and evolving tools that can be used with MythX.
@@ -31,7 +31,7 @@ Contents
 .. toctree::
    :hidden:
 
-   main/getting-started
+   getting-started/index
    main/mythx-for-smart-contract-developers
    main/building-security-tools-on-mythx
    main/getting-support
