@@ -12,6 +12,7 @@ Current tools
    :maxdepth: 1
 
    ../tooling/truffle
+   ../tooling/remix
    ../tooling/mythos
    ../tooling/pythx-cli
 
