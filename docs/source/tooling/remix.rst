@@ -12,7 +12,7 @@ Setup
 
 .. note:: These instructions will show the Remix interface that is current as of mid-2019. We recommend everyone use this interface.
 
-Because Remix is a web-based interface, no local installation in required. However, MythX will need to be activated specifically before use.
+Because Remix is a web-based interface, no local installation is required. However, MythX will need to be specifically activated from within the Remix Plugin Manager before use.
 
 To activate MythX in Remix:
 
@@ -26,11 +26,11 @@ To activate MythX in Remix:
 
    .. figure:: img/mythxpluginlist.png
 
-   If done correctly, the plugin will be listed under :guilabel:`Active Modules` and the MythX logo will be shown in the sidebar.
+   If done correctly, the plugin will be listed under :guilabel:`Active Modules` and the MythX icon will be shown in the sidebar.
 
    .. figure:: img/activemodules.png
 
-#. *(Optional but recommended)* Click the MythX logo and enter your MythX credentials. This consists of your Ethereum address (also known as User ID) and the password supplied to you when you created your account. When done, click :guilabel:`Save`.
+#. *(Optional but recommended)* Click the MythX logo and enter your MythX credentials. This consists of your Ethereum address (also known as User ID) and the password supplied to you when you created your account at `mythx.io <https://mythx.io>`_. When done, click :guilabel:`Save`.
 
    .. figure:: img/mythxcreds.png
 
@@ -49,7 +49,7 @@ To perform an analysis:
 
    .. figure:: img/analyze.png
 
-   .. note:: The contract may need to be compiled first, depending on the current Remix settings.
+   .. note:: The contract may need to be compiled first, depending on the current Remix settings. Make sure the :guilabel:`Solidity Compiler` plugin for Remix is activated in your project. You will have to click the Solidity icon and then click the :guilabel:`Compile` button for your contract.
 
 #. The analysis may take a few minutes. When completed, a list of vulnerabilities will be displayed, along with a link to the `SWC Registry <https://smartcontractsecurity.github.io/SWC-registry/>`_ for each vulnerability found.
 
