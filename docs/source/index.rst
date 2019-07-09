@@ -34,4 +34,4 @@ Contents
    getting-started/index
    main/mythx-for-smart-contract-developers
    main/building-security-tools-on-mythx
-   main/getting-support
+   getting-support/index
