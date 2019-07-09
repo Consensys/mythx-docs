@@ -18,7 +18,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'MythX Documentation'
+project = 'MythX'
 copyright = '2019, MythX'
 author = 'MythX'
 
@@ -144,7 +144,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'mythxdevelopersguide', 'MythX Docs',
+    (master_doc, 'mythxdocs', 'MythX Docs',
      [author], 1)
 ]
 
