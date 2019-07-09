@@ -18,15 +18,15 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'MythX Docs'
-copyright = '2019, The MythX team'
-author = 'The MythX Team'
+project = 'MythX'
+copyright = '2019, MythX'
+author = 'MythX'
 
 # The short X.Y version
 version = ''
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.2'
+release = ''
 
 # -- General configuration ---------------------------------------------------
 
@@ -144,7 +144,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'mythxdevelopersguide', 'MythX Docs',
+    (master_doc, 'mythxdocs', 'MythX Docs',
      [author], 1)
 ]
 
@@ -155,8 +155,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'MythXDocs', 'MythX Contributor, Developer and Partner Guide',
-     author, 'MythXDocs', 'One line description of project.',
+    (master_doc, 'MythXDocs', 'MythX Docs',
+     author, 'MythXDocs', 'User and developer guide for MythX',
      'Miscellaneous'),
 ]
 
