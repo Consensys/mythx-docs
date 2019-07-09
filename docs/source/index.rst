@@ -1,5 +1,5 @@
-MythX User Guide
-================
+MythX User and Developer Guide
+==============================
 
 `MythX <https://mythx.io>`_ is a security analysis API for Ethereum smart contracts. It allows any developer or developer team to integrate advanced security analysis directly into development environments and build pipelines. It detects many common Solidity vulnerabilities and EVM bytecode vulnerabilities automatically.
 
