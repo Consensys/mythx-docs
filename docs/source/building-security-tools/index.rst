@@ -1,9 +1,12 @@
-.. _devguide:
+.. _building-security-tools:
 
-Developer Guide
-===============
+Building security tools using MythX
+===================================
 
 This section of the guide is aimed at developers who want build security tools using the MythX API.
+
+Contents
+--------
 
 .. contents:: :local:
 

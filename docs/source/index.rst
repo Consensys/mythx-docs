@@ -21,7 +21,7 @@ Contents
 :ref:`tools`
      All the current and evolving tools that can be used with MythX.
 
-:ref:`devguide`
+:ref:`building-security-tools`
      Information about the MythX API, for developers who wish to build their own tools or integrate MythX into their product or service.
 
 :ref:`support`
@@ -33,5 +33,5 @@ Contents
 
    getting-started/index
    tools/index
-   main/building-security-tools-on-mythx
+   building-security-tools/index
    getting-support/index
