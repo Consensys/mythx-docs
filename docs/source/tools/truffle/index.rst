@@ -1,4 +1,4 @@
-.. _tooling.truffle:
+.. _tools.truffle:
 
 Truffle
 =======

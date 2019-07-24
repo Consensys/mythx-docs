@@ -1,3 +1,5 @@
+.. _tools.pythx:
+
 PythX - A Python MythX CLI
 ==========================
 
