@@ -3,8 +3,10 @@
 PythX - A Python MythX CLI
 ==========================
 
+PythX is a Python CLI for MythX.
+
 The `PythX package <https://pypi.org/project/pythx/>`_ does not only provide
-a kickass Python library, but also ships with a command line interface by
+a powerful Python library, but also ships with a command line interface by
 default. While it initially was meant as an example to show developers how easy
 it is to implement complex behaviour with the PythX library, it has since taken
 on a life on its own. While the focus clearly is on the library side of PythX,
