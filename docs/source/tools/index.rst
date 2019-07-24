@@ -11,11 +11,11 @@ Current tools
 .. toctree::
    :maxdepth: 1
 
-   ../tooling/truffle
-   ../tooling/remix
-   ../tooling/guardrails/index
-   ../tooling/mythos
-   ../tooling/pythx-cli
+   truffle/index
+   remix/index
+   guardrails/index
+   mythos/index
+   pythx/index
 
 New tools wanted
 ----------------

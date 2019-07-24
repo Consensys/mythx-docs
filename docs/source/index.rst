@@ -32,6 +32,6 @@ Contents
    :hidden:
 
    getting-started/index
-   main/mythx-for-smart-contract-developers
+   tools/index
    main/building-security-tools-on-mythx
    getting-support/index
