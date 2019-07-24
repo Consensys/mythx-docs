@@ -1,6 +1,6 @@
 .. _tools:
 
-MythX Tools
+MythX tools
 ===========
 
 Welcome! Here you will find an overview of the most common tools that you can use to interact with the MythX API.

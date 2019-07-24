@@ -1,6 +1,6 @@
 .. _getting-started:
 
-Getting Started
+Getting started
 ===============
 
 This page will show how to start using MythX in the shortest number of steps.
