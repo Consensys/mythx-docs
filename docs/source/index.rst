@@ -3,7 +3,7 @@ MythX User and Developer Guide
 
 `MythX <https://mythx.io>`_ is a security analysis API for Ethereum smart contracts. It allows any developer or developer team to integrate advanced security analysis directly into development environments and build pipelines. It detects many common Solidity vulnerabilities and EVM bytecode vulnerabilities automatically.
 
-MythX is integrated into popular developer tools you use today such as :ref:`Truffle <tooling.truffle>`. Plus, you can integrate MythX into your own security tools, apps, and existing blockchain services.
+MythX is integrated into popular developer tools you use today such as :ref:`Truffle <tools.truffle>`. Plus, you can integrate MythX into your own security tools, apps, and existing blockchain services.
 
 MythX has multiple target audiences:
 
@@ -21,7 +21,7 @@ Contents
 :ref:`tools`
      All the current and evolving tools that can be used with MythX.
 
-:ref:`devguide`
+:ref:`building-security-tools`
      Information about the MythX API, for developers who wish to build their own tools or integrate MythX into their product or service.
 
 :ref:`support`
@@ -32,6 +32,6 @@ Contents
    :hidden:
 
    getting-started/index
-   main/mythx-for-smart-contract-developers
-   main/building-security-tools-on-mythx
+   tools/index
+   building-security-tools/index
    getting-support/index

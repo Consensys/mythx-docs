@@ -1,6 +1,6 @@
 .. _getting-started:
 
-Getting Started
+Getting started
 ===============
 
 This page will show how to start using MythX in the shortest number of steps.
@@ -8,9 +8,9 @@ This page will show how to start using MythX in the shortest number of steps.
 Quickstart
 ----------
 
-The quickest way to see MythX in action is by using a MythX tool such as the :ref:`MythX for Truffle <tooling.truffle>` plugin.
+The quickest way to see MythX in action is by using a MythX tool such as the :ref:`MythX for Truffle <tools.truffle>` plugin.
 
-No registration is required for this, though the results will be limited. See the section on :ref:`using MythX for Truffle <tooling.truffle>` for more details.
+No registration is required for this, though the results will be limited. See the section on :ref:`using MythX for Truffle <tools.truffle>` for more details.
 
 #. In a terminal, navigate to the root of your local Truffle project.
 

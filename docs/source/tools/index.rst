@@ -1,6 +1,6 @@
 .. _tools:
 
-MythX Tools
+MythX tools
 ===========
 
 Welcome! Here you will find an overview of the most common tools that you can use to interact with the MythX API.
@@ -11,11 +11,11 @@ Current tools
 .. toctree::
    :maxdepth: 1
 
-   ../tooling/truffle
-   ../tooling/remix
-   ../tooling/guardrails/index
-   ../tooling/mythos
-   ../tooling/pythx-cli
+   truffle/index
+   remix/index
+   guardrails/index
+   mythos/index
+   pythx/index
 
 New tools wanted
 ----------------

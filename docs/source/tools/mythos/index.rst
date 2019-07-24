@@ -1,5 +1,7 @@
-Mythos - MythX Simple CLI Client
-===================================
+.. _tools.mythos:
+
+Mythos
+======
 
 Mythos helps you run scans right in your console, returning the output with source code mapping.
 
