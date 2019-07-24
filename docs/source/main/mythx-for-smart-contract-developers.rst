@@ -13,6 +13,7 @@ Current tools
 
    ../tooling/truffle
    ../tooling/remix
+   ../tooling/guardrails
    ../tooling/mythos
    ../tooling/pythx-cli
 
