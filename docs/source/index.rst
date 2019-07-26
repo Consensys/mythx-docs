@@ -10,6 +10,10 @@ MythX has multiple target audiences:
 * **Developers and dev teams** who wish to verify smart contract security as part of their project workflow.
 * **Tool creators and integrators** who wish to build a new MythX tool or integrate the MythX API into their product or service.
 
+.. note::
+
+   While MythX is designed with Ethereum in mind, the service should be compatible with any chain that uses the EVM (such as VeChain and Tron). In most cases, you will just have to change a setting in your development environments to deploy to the different blockchain and then you can proceed to analyzing your contracts.
+
 Please continue on to learn more about MythX.
 
 Contents
