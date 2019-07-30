@@ -14,6 +14,7 @@ Current tools
    truffle/index
    remix/index
    guardrails/index
+   mythxjs/index
    mythos/index
    pythx/index
 
