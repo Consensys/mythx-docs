@@ -269,7 +269,7 @@ You can temporarily add these environment variables to your terminal with the fo
   .. code-block:: console
 
      set MYTHX_ETH_ADDRESS=0x1234567891235678900000000000000000000000
-     set MYTHX_PASSWORD='Put your password in here!'
+     set MYTHX_PASSWORD="Put your password in here!"
 
 Once you have done this, the MythX plugin should recognize your credentials and elevate your privileges.
 
