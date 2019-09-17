@@ -105,5 +105,5 @@ done (the default is 10 seconds). For instance, to wait up to 5 seconds:
 
   * `npm package <https://www.npmjs.com/package/armlet>`_
   * `The GitHub project <https://github.com/consensys/armlet>`_
-  * `MythX API spec <https://staging.api.mythx.io/v1/openapi/>`_
+  * `MythX API spec <https://api.mythx.io/v1/openapi/>`_
   * `MythX JS SDK <sdk/mythx-js-sdk>`_
