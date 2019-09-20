@@ -48,7 +48,6 @@ interacting with MythX.
 
     ../SDK/armlet
     ../SDK/pythx
-    ../SDK/shard
 
 
 API Walkthrough
