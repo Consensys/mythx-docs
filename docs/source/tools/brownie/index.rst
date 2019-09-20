@@ -21,13 +21,13 @@ Scanning for Security Vulnerabilities
 -------------------------------------
 
 To prevent vulnerabilities from being introduced to the code base, Brownie a
-plugin that integrates automated security scans using the
-`MythX <https://mythx.io/>`_ analysis API. Simply run :code:`brownie analyze`
-on your compiled project directory. This will send the compiled build
-artifacts to MythX for analysis. By default no login is required and the
-analysis is going to be executed as a trial user. To access more vulerability
-information, register for free on the MythX website and pass your login data
-via environment variables or command options.
+plugin that integrates automated security scans using the MythX analysis API.
+Simply run :code:`brownie analyze` on your compiled project directory. This
+will send the compiled build artifacts to MythX for analysis. By default no
+login is required and the analysis is going to be executed as a trial user.
+To access more vulerability information, register for free on the MythX
+website and pass your login data via environment variables or command
+options.
 
 .. code-block::
 
