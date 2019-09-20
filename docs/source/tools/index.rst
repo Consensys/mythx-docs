@@ -12,11 +12,11 @@ Current tools
    :maxdepth: 1
 
    truffle/index
+   mythx-cli/index
    remix/index
    guardrails/index
    mythxjs/index
    mythos/index
-   pythx/index
 
 New tools wanted
 ----------------
