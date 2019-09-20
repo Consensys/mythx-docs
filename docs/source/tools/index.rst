@@ -15,7 +15,6 @@ Current tools
    mythx-cli/index
    remix/index
    guardrails/index
-   mythxjs/index
    mythos/index
 
 New tools wanted
