@@ -1,3 +1,5 @@
+.. _tools.mythx-cli:
+
 =========
 MythX CLI
 =========
