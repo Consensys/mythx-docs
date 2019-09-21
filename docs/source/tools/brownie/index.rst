@@ -20,14 +20,14 @@ interaction and deployment.
 Scanning for Security Vulnerabilities
 -------------------------------------
 
-To prevent vulnerabilities from being introduced to the code base, Brownie a
-plugin that integrates automated security scans using the MythX analysis API.
-Simply run :code:`brownie analyze` on your compiled project directory. This
-will send the compiled build artifacts to MythX for analysis. By default no
-login is required and the analysis is going to be executed as a trial user.
-To access more vulerability information, register for free on the MythX
-website and pass your login data via environment variables or command
-options.
+To prevent vulnerabilities from being introduced to the code base, Brownie
+includes a plugin that integrates automated security scans using the MythX
+analysis API. Simply run :code:`brownie analyze` on your compiled project
+directory. This will send the compiled build artifacts to MythX for
+analysis. By default no login is required and the analysis is going to be
+executed as a trial user. To access more vulnerability information, register
+for free on the MythX website and pass your login data via environment
+variables or command line arguments.
 
 .. code-block::
 
@@ -45,8 +45,8 @@ options.
       --password              The password of your MythX account
       --help -h               Display this message
 
-    Use analyze to submit your project to the MythX API for smart contract
-    security analysis.
+    Use the analyze command to submit your project to the MythX API for smart
+    contract security analysis.
 
     To authenticate with the MythX API, it is recommended that you provide
     the MythX JWT access token. It can be obtained on the MythX dashboard
