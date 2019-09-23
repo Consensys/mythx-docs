@@ -1,8 +1,18 @@
-JavaScript Library
-==================
+Armlet
+======
 
-Armlet is a thin wrapper around the `MythX API <https://mythx.io/v1/openapi>`_ written in JavaScript which simplifies interaction with MythX.
-For example, the library wraps API analysis requests into a promise.
+Armlet is a thin wrapper around the `MythX API <https://mythx.io/v1/openapi>`_
+written in JavaScript which simplifies interaction with MythX. For example,
+the library wraps API analysis requests into a promise.
+
+
+.. warning::
+
+  Please note that as of August 2019 the Armlet library has been
+  **deprecated** in favour of the newer and more advanced
+  ``mythxjs`` library whose documentation can be found
+  :ref:`here <tools.mythxjs>`.
+
 
 
 Installation

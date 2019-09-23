@@ -46,9 +46,9 @@ interacting with MythX.
 .. toctree::
     :maxdepth: 1
 
-    ../SDK/armlet
+    ../SDK/mythxjs
     ../SDK/pythx
-    ../SDK/shard
+    ../SDK/armlet
 
 
 API Walkthrough
