@@ -3,8 +3,8 @@
 
 .. _support:
 
-Getting support
-===============
+MythX support
+=============
 
 There are multiple ways to get in touch with us, whether you want to get help using MythX, you want to develop an integration, or you want to give feedback.
 

@@ -3,8 +3,8 @@
 
 .. _tools.mythos:
 
-Mythos
-======
+Mythos Guide: Installation & Usage
+==================================
 
 Mythos helps you run scans right in your console, returning the output with source code mapping.
 

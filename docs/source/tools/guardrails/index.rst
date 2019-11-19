@@ -3,8 +3,8 @@
 
 .. _tools.guardrails:
 
-GuardRails
-==========
+GuardRails Guide: Installation & Usage
+======================================
 
 GuardRails is a service that provides continuous security feedback for your GitHub repositories.
 

@@ -3,8 +3,8 @@
 
 .. _tools.mythx-cli:
 
-MythX CLI
-=========
+MythX CLI Guide: Installation & Usage
+=====================================
 
 The `MythX CLI <https://github.com/dmuhs/mythx-cli/>`_ Python package aims to
 provide a simple to use command line interface for the MythX API. It's main

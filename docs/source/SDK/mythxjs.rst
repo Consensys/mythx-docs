@@ -3,8 +3,8 @@
 
 .. _tools.mythxjs:
 
-MythXJS
-=======
+MythXJS Guide: Installation & Usage
+===================================
 
 `MythXJS <https://github.com/ConsenSys/mythxjs>`_ is a JavaScript library for interacting with the MythX API.
 

@@ -3,8 +3,8 @@
 
 .. _tools.truffle:
 
-Truffle
-=======
+Truffle integration with MythX
+==============================
 
 **MythX for Truffle** is a `Truffle plugin <https://truffleframework.com/docs/truffle/getting-started/writing-external-scripts#third-party-plugin-commands>`_ that adds automated smart contract security analysis to the `Truffle framework <https://truffleframework.com>`_. With this plugin, you can run security analysis directly from your Truffle development environment.
 

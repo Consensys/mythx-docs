@@ -3,8 +3,8 @@
 
 .. _tools.pythx:
 
-PythX
-=====
+PythX Guide: Installation & Usage
+=================================
 
 PythX is a Python library for the MythX API.
 
