@@ -3,8 +3,8 @@
 
 .. _getting-started:
 
-Getting started
-===============
+Getting started with MythX security tools
+=========================================
 
 This page will show how to start using MythX in the shortest number of steps.
 

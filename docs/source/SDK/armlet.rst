@@ -3,8 +3,8 @@
 
 .. _tools.armlet:
 
-Armlet
-======
+Armlet Guide: Installation & Usage
+==================================
 
 Armlet is a thin wrapper around the `MythX API <https://mythx.io/v1/openapi>`_
 written in JavaScript which simplifies interaction with MythX. For example,

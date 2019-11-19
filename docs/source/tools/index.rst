@@ -3,8 +3,8 @@
 
 .. _tools:
 
-MythX tools
-===========
+MythX tools & integrations
+==========================
 
 Welcome! Here you will find an overview of the most common tools that you can use to interact with the MythX API.
 
@@ -14,12 +14,12 @@ Current tools
 .. toctree::
    :maxdepth: 1
 
-   truffle/index
-   mythx-cli/index
-   remix/index
-   guardrails/index
-   mythos/index
-   brownie/index
+   Truffle <truffle/index>
+   MythX CLI <mythx-cli/index>
+   Remix <remix/index>
+   GuardRails <guardrails/index>
+   Mythos <mythos/index>
+   Brownie <brownie/index>
 
 .. Make sure to change the Meta description when new tools are added!
 

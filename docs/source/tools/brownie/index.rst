@@ -3,8 +3,8 @@
 
 .. _tools.brownie:
 
-Brownie
-=======
+Brownie Guide: Installation & Usage
+===================================
 
 Brownie is a Python framework for Ethereum smart contract testing,
 interaction and deployment.

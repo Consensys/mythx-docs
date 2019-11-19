@@ -3,8 +3,8 @@
 
 .. _tools.remix:
 
-Remix
-=====
+Remix integration with MythX
+============================
 
 MythX is available as a plugin for `Remix <https://remix.ethereum.org>`_, a popular web-based IDE for smart contract development and deployment, created and hosted by the Ethereum Foundation.
 
