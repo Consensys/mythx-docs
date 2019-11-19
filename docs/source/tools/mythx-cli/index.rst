@@ -1,6 +1,8 @@
+.. meta::
+   :description: How to use the MythX CLI Python package to provide a simple-to-use command line interface for the MythX API.
+
 .. _tools.mythx-cli:
 
-=========
 MythX CLI
 =========
 

@@ -1,3 +1,6 @@
+.. meta::
+   :description: Learn how to install and use MythXJS, a JavaScript library for interacting with the MythX API for securing smart contracts.
+
 .. _tools.mythxjs:
 
 MythXJS

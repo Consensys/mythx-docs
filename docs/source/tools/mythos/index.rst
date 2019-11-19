@@ -1,3 +1,6 @@
+.. meta::
+   :description: How to use and install Mythos, which helps you run security scans on a smart contract right in your console, returning the output with source code mapping.
+
 .. _tools.mythos:
 
 Mythos

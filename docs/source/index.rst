@@ -1,3 +1,6 @@
+.. meta::
+   :description: Learn how to integrate MythX advanced security analysis directly into development environments and build pipelines. Detect common Solidity vulnerabilities and EVM bytecode vulnerabilities automatically.
+
 MythX User and Developer Guide
 ==============================
 

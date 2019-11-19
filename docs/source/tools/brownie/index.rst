@@ -1,3 +1,6 @@
+.. meta::
+   :description: How to use Brownie to scan smart contracts for vulnerabilities. Brownie is a Python framework for Ethereum smart contract testing, interaction and deployment.
+
 .. _tools.brownie:
 
 Brownie
