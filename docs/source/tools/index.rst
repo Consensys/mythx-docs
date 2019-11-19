@@ -1,3 +1,6 @@
+.. meta::
+   :description: The most common tools that you can use to interact with the MythX API including Truffle, MythX CLI, Remix, Guardrails, Mythos & Brownie.
+
 .. _tools:
 
 MythX tools
@@ -18,6 +21,7 @@ Current tools
    mythos/index
    brownie/index
 
+.. Make sure to change the Meta description when new tools are added!
 
 New tools wanted
 ----------------

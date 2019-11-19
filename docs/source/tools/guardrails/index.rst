@@ -1,6 +1,9 @@
+.. meta::
+   :description: Learn how to setup & use GuardRails, a service that provides continuous security feedback for your GitHub repositories
+
 .. _tools.guardrails:
 
-Guardrails
+GuardRails
 ==========
 
 GuardRails is a service that provides continuous security feedback for your GitHub repositories.
@@ -10,7 +13,7 @@ GuardRails is a service that provides continuous security feedback for your GitH
 What is GuardRails?
 -------------------
 
-`Guardrails <https://guardrails.io>`_ makes open-source security tools easily available in your GitHub pull requests. It has been tuned to keep the noise low and only report high-impact and relevant security issues.
+`GuardRails <https://guardrails.io>`_ makes open-source security tools easily available in your GitHub pull requests. It has been tuned to keep the noise low and only report high-impact and relevant security issues.
 
 Installing and configuring security tools, even for one repository, typically takes a lot of time and effort. GuardRails makes that process painless and rewarding for developers.
 

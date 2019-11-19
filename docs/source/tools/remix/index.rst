@@ -1,3 +1,6 @@
+.. meta::
+   :description: How to activate the MythX plugin for Remix, a popular web-based IDE for smart contract development and deployment, which is created and hosted by the Ethereum Foundation.
+
 .. _tools.remix:
 
 Remix

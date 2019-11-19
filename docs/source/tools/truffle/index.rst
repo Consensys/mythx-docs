@@ -1,3 +1,6 @@
+.. meta::
+   :description: Run security analysis directly from your Truffle development environment with the MythX plugin. Learn how to run security analysis directly from your Truffle dev environment.
+
 .. _tools.truffle:
 
 Truffle

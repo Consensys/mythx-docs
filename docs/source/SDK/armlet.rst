@@ -1,3 +1,8 @@
+.. meta::
+   :description: Learn how to use and install Armlet, a thin JavaScript wrapper which simplifies interaction with the MythX API & smart contract security tools.
+
+.. _tools.armlet:
+
 Armlet
 ======
 

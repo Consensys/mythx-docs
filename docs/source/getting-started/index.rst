@@ -1,3 +1,6 @@
+.. meta::
+   :description: How to start using MythX in the shortest number of steps including creating your account with MetaMask and linking available API tools.
+
 .. _getting-started:
 
 Getting started

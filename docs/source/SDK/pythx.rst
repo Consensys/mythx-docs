@@ -1,4 +1,8 @@
-=====
+.. meta::
+   :description: How to use PythX, a Python library for the MythX API which provides an easy-to-use interface to the official MythX API & smart contract security tools.
+
+.. _tools.pythx:
+
 PythX
 =====
 

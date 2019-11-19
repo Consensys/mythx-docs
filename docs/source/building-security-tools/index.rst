@@ -1,3 +1,6 @@
+.. meta::
+   :description: Developer guide for building security tools using the MythX API to find bugs in smart contracts for Ethereum or compatible blockchains such as Tron and Quorum. Currently, we support Solidity code and EVM bytecode.
+
 .. _building-security-tools:
 
 Building security tools using MythX
