@@ -37,8 +37,8 @@ Setup
 -----
 After installing the extension please enter your registered MythX ethAddress and password in VSCode user settings. These fields are properties of MythXvsc as shown in the screenshots below:
 
-IMG1.. image:: img/remix.jpg
-IMG2.. image:: img/remix.jpg
+.. image:: installation.png
+.. image:: user_settings.png
 
 **Please note that the credentials stored this way are exposed to VSCode. Be sure to understand the security risk this entails or contact the extension developers if you don't. We are working on a more robust log-in implementation via a single-token.**
 
@@ -49,14 +49,13 @@ Usage
 
 Now simply open a ‘.sol’ file from inside a folder or workspace, and click on the MythX Analyze Smart Contract button that you will see in the top right of your IDE window. Otherwise right click with your mouse on the contract name and you will see the Analyze command.
 
-IMG3.. image:: img/remix.jpg
-IMG4.. image:: img/remix.jpg
+.. image:: button_mythx.png
+.. image:: right_click.png
 
 Once the solidity compilation is done, you will be asked to pick a contract from a dropdown list of contracts that exist in the compiled ast. Please make sure to pick the main contract to avoid inconsistent results. 
 
-IMG5.. image:: img/remix.jpg
+.. image:: contract_picker.png
 
 Now you can just sit back and wait for MythX to do its magic :) Once the analysis is over, you will see your smart contract issues highlighted in your code. This should take no longer than three minutes.
 
-IMG6
-
+.. image:: finished_analysis.png
