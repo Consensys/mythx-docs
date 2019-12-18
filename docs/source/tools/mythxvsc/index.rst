@@ -1,14 +1,14 @@
 .. meta::
-   :description: MythXvsc is an extension for running MythX smart contract analysis from your favourite IDE.
-
+   :description: MythXvsc is an extension for running MythX smart contract analysis from VS Code. 
+   
 .. _tools.mythxvsc:
 
-MythXvsc
-============================
+VS Code
+=======
 
-MythXvsc is an extension for running MythX smart contract analysis from your favourite IDE.
+MythXvsc is an extension for running MythX smart contract analysis from your VS Code.
 
-The extensions provides:
+The extension provides:
 
 - Smart contract compilation (via solidity VSCode extension)
 - Log in to MythX platform
@@ -20,29 +20,29 @@ The extensions provides:
 
 
 Dependencies
------
+------------
 
-The MythXvsc extension depends on Juan Blanco’s solidity extension_. Make sure to download this from Visual Studio Code Marketplace before installing MythXvsc.
+The MythXvsc extension depends on the `Solidity extension`_ by Juan Blanco. Make sure to download this from Visual Studio Code Marketplace before installing MythXvsc.
 
-.. _extension: https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity
+.. _Solidity extension: https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity
 
 Installation
------
+------------
 
-Install from the Visual Studio marketplace here_.
+Install_ from the Visual Studio marketplace.
 
-.. _here: https://marketplace.visualstudio.com/items?itemName=mirkogarozzo.mythxvsc
+.. _Install: https://marketplace.visualstudio.com/items?itemName=mirkogarozzo.mythxvsc
 
 Setup
 -----
-After installing the extension please enter your registered MythX ethAddress and password in VSCode user settings. These fields are properties of MythXvsc as shown in the screenshots below:
+After installing the extension please enter your registered MythX Ethereum Address and password in VSCode user settings. These fields are properties of MythXvsc as shown in the screenshots below:
 
 .. image:: installation.png
 .. image:: user_settings.png
 
-**Please note that the credentials stored this way are exposed to VSCode. Be sure to understand the security risk this entails or contact the extension developers if you don't. We are working on a more robust log-in implementation via a single-token.**
+.. warning:: Please note that the credentials stored this way are exposed to VSCode. Be sure to understand the security risk this entails or contact the extension developers if you don't. We are working on a more robust log-in implementation via a single-token.
 
-If no ethAddress and password provided the extension will fallback to use default trial credentials for MythX.
+If no Ethereum Address and/or password are provided, the extension will fallback to use default trial credentials for MythX.
 
 Usage
 -----
@@ -52,10 +52,10 @@ Now simply open a ‘.sol’ file from inside a folder or workspace, and click o
 .. image:: button_mythx.png
 .. image:: right_click.png
 
-Once the solidity compilation is done, you will be asked to pick a contract from a dropdown list of contracts that exist in the compiled ast. Please make sure to pick the main contract to avoid inconsistent results. 
+Once the solidity compilation is done, you will be asked to pick a contract from a dropdown list of contracts that exist in the compiled AST. Please make sure to pick the main contract to avoid inconsistent results. 
 
 .. image:: contract_picker.png
 
-Now you can just sit back and wait for MythX to do its magic :) Once the analysis is over, you will see your smart contract issues highlighted in your code. This should take no longer than three minutes.
+Once the analysis is over, you will see your smart contract issues highlighted in your code. This should take no longer than three minutes.
 
 .. image:: finished_analysis.png
