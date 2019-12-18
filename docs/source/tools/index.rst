@@ -20,7 +20,7 @@ Current tools
    GuardRails <guardrails/index>
    Mythos <mythos/index>
    Brownie <brownie/index>
-   MythXvsc <mythxvsc/index>
+   VS Code <mythxvsc/index>
 
 .. Make sure to change the Meta description when new tools are added!
 
