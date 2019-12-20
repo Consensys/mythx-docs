@@ -49,7 +49,7 @@ Usage
 
 Now simply open a ‘.sol’ file from inside a folder or workspace, and click on the MythX Analyze Smart Contract button that you will see in the top right of your IDE window. Otherwise right click with your mouse on the contract name and you will see the Analyze command.
 
-.. image:: button_mythx.png
+.. image:: img/button_one.png
 .. image:: right_click.png
 
 Once the solidity compilation is done, you will be asked to pick a contract from a dropdown list of contracts that exist in the compiled AST. Please make sure to pick the main contract to avoid inconsistent results. 
