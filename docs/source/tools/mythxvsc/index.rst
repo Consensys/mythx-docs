@@ -51,7 +51,7 @@ If no Ethereum address and/or password are provided, the extension will fallback
 Usage
 -----
 
-Open a Solidity file from inside a folder or workspace, and click the :guilabel:``MythX: Analyze smart contract`` button that you will see in the top right of your IDE window. Otherwise, right click with your mouse on the contract name and you will see the command there.
+Open a Solidity file from inside a folder or workspace, and click the :guilabel:`MythX: Analyze smart contract` button that you will see in the top right of your IDE window. Otherwise, right click with your mouse on the contract name and you will see the command there.
 
 .. image:: img/button_one.png
 .. image:: img/right_click.png
@@ -62,6 +62,6 @@ Once the solidity compilation is done, you will be asked to pick a contract from
 
 Once the analysis is over, you will see your smart contract issues highlighted in your code. The exact time it takes to perform an analysis will depend on the plan associated with your account.
 
-.. note:: Please see the ``MythX Pricing <https://mythx.io/plans>``_ page for details on plans.
+.. note:: Please see the `MythX Pricing <https://mythx.io/plans>`_ page for details on plans.
 
 .. image:: img/finished_analysis.png
