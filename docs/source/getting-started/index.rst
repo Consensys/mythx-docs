@@ -27,7 +27,7 @@ To use MythX, you need to create an account.
    .. image:: img/success.png
       :width: 50%
 
-.. note:: You can link your Ethereum account through `MetaMask <https://metamask.io>`_, a browser-based wallet application, by navigating to your *profile* section and clicking the "Link Ethereum Address" link. After you sign the request, the active address will be associated with your account and be used for any plans you may purchase using crypto.
+.. note:: It is recommended that you link your Ethereum account to your profile as you will use this credential along with your password to access the MythX Api via client tools such as Remix.
 
    .. image:: img/metamask1.png
       :width: 50%
@@ -91,9 +91,7 @@ This key can be passed to the MythX Security tool as an environment variable :co
 Using Address and Password (not recommended)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Alternatively, username and password can be used for authentication.
-This is not recommended as a potential attacker can get access to the MythX
-account as a whole if these credentials are leaked.
+Alternatively, Eth Address, or username and password can be used for authentication. This is not recommended, as a potential attacker can get access to the MythX account as a whole if these credentials are leaked.
 For compatibility reasons this functionality has been included, however it
 is to be expected that this API feature will be disabled in the future.
 
@@ -102,6 +100,11 @@ registered under, and the password is the one that has been set during
 registration, or separately in the MythX dashboard.
 Both can be passed by setting the
 :code:`MYTHX_USERNAME` and :code:`MYTHX_PASSWORD` environment variables.
+
+.. image:: img/remixaddress.png
+
+.. image:: img/mythxemail.png
+
 
 Note that if username and password, as well as an API token are given,
 the API token will always take precedence and no login action using
