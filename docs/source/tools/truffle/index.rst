@@ -64,6 +64,112 @@ If you install MythX for Truffle in this manner, **you will in addition need to 
      // ... 
 
    };
+   
+Accounts and access
+-------------------
+
+You need to sign up for a MythX account in order to use the MythX plugin for Truffle. Your account, once verified, is on the Free plan. This means that you can receive the complete report of vulnerabilities when running scans.
+
+MythX offers both free and paid plans. For information on plans and features, please see our `plans <https://mythx.io/plans/>`_ page. Truffle will pick up your account information when stored in your system's environment variables.
+
+
+.. list-table::
+   :header-rows: 1
+
+   * - Environment variable
+     - Value
+   * - ``MYTHX_API_KEY``
+     - JWT Token
+   * - ``MYTHX_USERNAME``
+     - Your MythX Email address
+   * - ``MYTHX_PASSWORD``
+     - Your MythX password
+   * - ``MYTHX_ETH_ADDRESS``
+     - Your MythX account (Ethereum address)
+
+
+Authentication
+--------------
+
+Once your account is set up, head over to the `dashboard <https://dashboard.mythx.io/>`_.
+In the *Profile* and *Tools* sections, various means of authentication are presented.
+
+Using API Token (Recommended)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+This is the recommended way of authenticating with the MythX smart contract analysis API. In the *Tools* section of your dashboard, there is an element labeled "MythX API Key". To generate a new API key, the account password must be entered:
+
+.. image:: img/api-key-password.png
+
+On successful authentication, a new JWT token is generated, which can be used for further authentication by API clients. It will only be shown once and can be copied using the icon on the right of the truncated secret string. If the token is lost, a new one can be generated again in the same way as explained above.
+
+.. image:: img/api-key.png
+
+This key can be passed to the MythX Security tool as an environment variable ``MYTHX_API_KEY``.
+
+* **Linux / macOS**:
+
+  .. code-block:: console
+
+     export MYTHX_API_KEY=‘put your API key here!’
+
+* **Windows**:
+
+  .. code-block:: console
+
+     set MYTHX_API_KEY=‘put your API key here!’
+     
+They API key can also be passed as a command line argument using ``—apiKey`` 
+
+  .. code-block:: console
+
+     --apiKey {‘put your API key here’}
+     
+     
+Using Username and Password
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Alternatively, username and password can be used for authentication. This is not recommended, as a potential attacker can get access to your MythX account if these credentials are leaked. 
+
+The Username corresponds to the MythX email address the account has been registered under, and the password is the one that has been set during registration, or separately in the MythX dashboard. Both can be passed by setting the ``MYTHX_USERNAME`` and ``MYTHX_PASSWORD`` environment variables.
+
+You can temporarily add these environment variables to your terminal with the following commands (which will need to be customized with your account information):
+
+* **Linux / macOS**:
+
+  .. code-block:: console
+
+     export MYTHX_USERNAME='your Mythx account’s email address'
+     export MYTHX_PASSWORD='Put your password in here!'
+
+* **Windows**:
+
+  .. code-block:: console
+
+     set MYTHX_USERNAME='your Mythx account’s email address'
+     set MYTHX_PASSWORD='Put your password in here!'
+     
+     
+Using ETH Address and Password (Not recommended)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Lastly, ETH Address and password can be used for authentication. This authentication method is also not recommended, as a potential attacker can get access to your MythX account as a whole if these credentials are leaked. In order to authenticate using ETH Address, you will need to link your MythX account to your Ethereum account through the *Profile* section of the dashboard. For compatibility reasons, this functionality has been included, however it is to be expected that this API feature will be disabled in the future.
+
+The ETH Address corresponds to the Ethereum address associated with your MythX account, and the password is the one that has been set during registration, or separately in the MythX dashboard. Both can be passed by setting the ``MYTHX_ETH_ADDRESS`` and ``MYTHX_PASSWORD`` environment variables.
+
+You can temporarily add these environment variables to your terminal with the following commands (which will need to be customized with your account information):
+
+* **Linux / macOS**:
+
+  .. code-block:: console
+
+     export MYTHX_ETH_ADDRESS=‘your Mythx account’s Ethereum address'
+     export MYTHX_PASSWORD='Put your password in here!'
+
+* **Windows**:
+
+  .. code-block:: console
+
+     set MYTHX_ETH_ADDRESS=‘your Mythx account’s Ethereum address'
+     set MYTHX_PASSWORD='Put your password in here!'
+
 
 Usage
 -----
@@ -133,80 +239,81 @@ Command line options
 
 ``--all``
 ^^^^^^^^^
-
 Compile all contracts. Without this, only the contracts changed since last compile will be recompiled.
 
 ``--debug``
 ^^^^^^^^^^^
-
 Provide additional debug output. Use ``--debug=2`` for more verbose output. Implies ``--no-progress``.
 
 ``--initial-delay <N>``
 ^^^^^^^^^^^^^^^^^^^^^^^
-
 Minimum amount of time (in seconds) to wait before attempting a first status poll. Default is 45 seconds. `Read more about improving polling response <https://github.com/ConsenSys/armlet#improving-polling-response>`_.
 
 ``--json``
 ^^^^^^^^^^
-
 Output results in unprocessed JSON format. Differs from ``--style=json`` which provides an es-lint compatible output format. See also ``--yaml``.
 
 ``--limit <N>``
 ^^^^^^^^^^^^^^^
-
 Limit the number of parallel analysis requests to no more than ``<N>``. As results come back, remaining contracts are submitted. The default and mamximum is 4, but this can be set lower.
 
 ``--min-severity <LEVEL>``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 Ignore SWCs below the designated severity level. Options are ``warning`` or ``error``.
 
 .. note:: Currently, the only severity levels are ``warning`` and ``error``, so choosing ``warning`` here has no effect (ignores nothing). Future versions may add support for an ``info`` severity level, which would be ignored.
 
 ``--mode <MODE>``
 ^^^^^^^^^^^^^^^^^
-
-Perform ``quick`` or in-depth (``full``) analysis.
+Perform ``quick``, ``standard``, or ``deep`` analysis. Refer to the `plans <https://mythx.io/plans/>`_ page to see which plan you need for each mode. 
 
 ``--no-color``
 ^^^^^^^^^^^^^^
-
 Disable output coloring.
 
 ``--no-progress``
 ^^^^^^^^^^^^^^^^^
-
 Disable progress bars during analysis.
 
 ``--style <STYLE>``
 ^^^^^^^^^^^^^^^^^^^
-
 Output the report in the given `es-lint <https://eslint.org/docs/user-guide/formatters/>`_ style. Options include ``stylish``, ``json``, ``table``, ``tap``, ``unix``, and ``markdown``.
 
 ``--swc-blacklist <LIST>``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 Ignore a specific SWC or list of SWCs. Use the number only (``107`` instead of ``SWC-107``). If using a list, use commas and no spaces to separate the SWCs (``103,111,115``).
 
 ``--timeout <N>``
 ^^^^^^^^^^^^^^^^^
-
 Limit MythX analyses time to ``<N>`` seconds. The default is 300 seconds.
 
 ``--uuid <UUID>``
 ^^^^^^^^^^^^^^^^^
-
 *(Experimental)* Display results from a prior analysis with the given UUID. Result is in YAML.
 
 ``--version``
 ^^^^^^^^^^^^^
-
 Show package and MythX version information.
 
 ``--yaml``
 ^^^^^^^^^^
-
 Output results in unprocessed YAML format. Differs from ``--style=yaml`` which provides an es-lint compatible output format. See also ``--json``.
+
+``--mythx-logs`` ``--no-mythx-logs``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Enable/disable MythX logs.
+
+``--ci``
+^^^^^^^^
+Blocking non zero return for CI integrations to throw an error (non-zero exit code).
+
+``--ci-whitelist { 101 | 103,111,115 | ... }``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+List of allowed SWCs that will not throw an error (non-zero exit code).
+
+``--apiKey {api key generated from profile dashboard}``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Authenticate with api key instead of login details.
 
 Configuration file
 ------------------
@@ -236,45 +343,6 @@ For arguments that take a list (such as ``swc-blacklist``), brackets for the val
 
 .. note:: Command line options take precedence over any options specified in the configuration file.
 
-
-Accounts and access
--------------------
-
-*You do not need to sign up for a MythX account in order to use the MythX plugin for Truffle.*
-
-By default the plugin runs in Trial mode. **Trial mode returns a limited report**, with not all vulnerabilities listed. To get access to an unrestricted report, sign up for an account at https://mythx.io.
-
-.. note:: Both free and paid plans are available. See :ref:`getting-started` for more details.
-
-Once you have signed up for an account, you will need to add your account and password as environment variables on your system.
-
-.. list-table::
-   :header-rows: 1
-
-   * - Environment variable
-     - Value
-   * - ``MYTHX_ETH_ADDRESS``
-     - Your MythX account (Ethereum address)
-   * - ``MYTHX_PASSWORD``
-     - Your MythX password
-
-You can temporarily add these environment variables to your terminal with the following commands (which will need to be customized with your account information):
-
-* **Linux / macOS**:
-
-  .. code-block:: console
-
-     export MYTHX_ETH_ADDRESS=0x1234567891235678900000000000000000000000
-     export MYTHX_PASSWORD='Put your password in here!'
-
-* **Windows**:
-
-  .. code-block:: console
-
-     set MYTHX_ETH_ADDRESS=0x1234567891235678900000000000000000000000
-     set MYTHX_PASSWORD="Put your password in here!"
-
-Once you have done this, the MythX plugin should recognize your credentials and elevate your privileges.
 
 .. seealso::
 
