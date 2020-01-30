@@ -68,43 +68,23 @@ If you install MythX for Truffle in this manner, **you will in addition need to 
 Accounts and access
 -------------------
 
-You need to sign up for a MythX account in order to use the MythX plugin for Truffle. Your account, once verified, is on the Free plan. This means that you can receive the complete report of vulnerabilities when running scans.
+You need to sign up for a MythX account in order to use the MythX plugin for Truffle. Your account, once verified, is on the Free plan.
 
 MythX offers both free and paid plans. For information on plans and features, please see our `plans <https://mythx.io/plans/>`_ page. Truffle will pick up your account information when stored in your system's environment variables.
-
-
-.. list-table::
-   :header-rows: 1
-
-   * - Environment variable
-     - Value
-   * - ``MYTHX_API_KEY``
-     - JWT Token
-   * - ``MYTHX_USERNAME``
-     - Your MythX Email address
-   * - ``MYTHX_PASSWORD``
-     - Your MythX password
-   * - ``MYTHX_ETH_ADDRESS``
-     - Your MythX account (Ethereum address)
 
 
 Authentication
 --------------
 
-Once your account is set up, head over to the `dashboard <https://dashboard.mythx.io/>`_.
-In the *Profile* and *Tools* sections, various means of authentication are presented.
-
-Using API Token (Recommended)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-This is the recommended way of authenticating with the MythX smart contract analysis API. In the *Tools* section of your dashboard, there is an element labeled "MythX API Key". To generate a new API key, the account password must be entered:
+MythX uses an API key for authentication. Once your account is set up, head over to the `dashboard <https://dashboard.mythx.io/>`_. In the *Profile* section there is an element labeled :guilabel:`MythX API Key`. Generate a new API key by entering your account password:
 
 .. image:: img/api-key-password.png
 
-On successful authentication, a new JWT token is generated, which can be used for further authentication by API clients. It will only be shown once and can be copied using the icon on the right of the truncated secret string. If the token is lost, a new one can be generated again in the same way as explained above.
+On successful authentication, a new API key is generated, which can be used for further authentication by API clients. It will only be shown once, and can be copied using the icon on the right of the truncated secret string. If the token is lost, a new one can be generated again in the same way as explained above.
 
 .. image:: img/api-key.png
 
-This key can be passed to the MythX Security tool as an environment variable ``MYTHX_API_KEY``.
+This key can be passed to MythX as an environment variable ``MYTHX_API_KEY``.
 
 * **Linux / macOS**:
 
@@ -124,52 +104,7 @@ They API key can also be passed as a command line argument using ``—apiKey``
 
      --apiKey {‘put your API key here’}
      
-     
-Using Username and Password
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Alternatively, username and password can be used for authentication. This is not recommended, as a potential attacker can get access to your MythX account if these credentials are leaked. 
-
-The Username corresponds to the MythX email address the account has been registered under, and the password is the one that has been set during registration, or separately in the MythX dashboard. Both can be passed by setting the ``MYTHX_USERNAME`` and ``MYTHX_PASSWORD`` environment variables.
-
-You can temporarily add these environment variables to your terminal with the following commands (which will need to be customized with your account information):
-
-* **Linux / macOS**:
-
-  .. code-block:: console
-
-     export MYTHX_USERNAME='your Mythx account’s email address'
-     export MYTHX_PASSWORD='Put your password in here!'
-
-* **Windows**:
-
-  .. code-block:: console
-
-     set MYTHX_USERNAME='your Mythx account’s email address'
-     set MYTHX_PASSWORD='Put your password in here!'
-     
-     
-Using ETH Address and Password (Not recommended)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Lastly, ETH Address and password can be used for authentication. This authentication method is also not recommended, as a potential attacker can get access to your MythX account as a whole if these credentials are leaked. In order to authenticate using ETH Address, you will need to link your MythX account to your Ethereum account through the *Profile* section of the dashboard. For compatibility reasons, this functionality has been included, however it is to be expected that this API feature will be disabled in the future.
-
-The ETH Address corresponds to the Ethereum address associated with your MythX account, and the password is the one that has been set during registration, or separately in the MythX dashboard. Both can be passed by setting the ``MYTHX_ETH_ADDRESS`` and ``MYTHX_PASSWORD`` environment variables.
-
-You can temporarily add these environment variables to your terminal with the following commands (which will need to be customized with your account information):
-
-* **Linux / macOS**:
-
-  .. code-block:: console
-
-     export MYTHX_ETH_ADDRESS=‘your Mythx account’s Ethereum address'
-     export MYTHX_PASSWORD='Put your password in here!'
-
-* **Windows**:
-
-  .. code-block:: console
-
-     set MYTHX_ETH_ADDRESS=‘your Mythx account’s Ethereum address'
-     set MYTHX_PASSWORD='Put your password in here!'
-
+.. note:: Authentication via Ethereum address/Username and password is deprecated. 
 
 Usage
 -----
