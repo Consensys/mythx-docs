@@ -37,9 +37,9 @@ To activate MythX in Remix:
 Authentication
 --------------
 
-#. Click the MythX logo and enter your MythX credentials. This consists of your Ethereum address (also known as User ID) and your account password  `mythx.io <https://mythx.io>`_. When done, click :guilabel:`Save`.
+#. Click the MythX logo and enter your MythX credentials. This consists of your Ethereum address (You can also enter your email) and your account password  `mythx.io <https://mythx.io>`_. When done, click :guilabel:`Save`.
 
-   .. figure:: img/mythxcreds.png
+   .. figure:: img/mythxcreds2.png
 
    .. note::  You need to link your Ethereuem account to your MythX account (can be setup via https://mythx.io) to use MythX with Remix. 
 
@@ -52,9 +52,10 @@ To perform an analysis:
 
 #. Click the MythX logo on the sidebar to open the MythX control panel (if it isn't already open).
 
-#. Below the credentials section, there will be a select box containing a list of all applicable contracts. Select the one you wish to analyze and click the :guilabel:`Analyze` button.
+#. Below the credentials section, there will be a select box containing a list of all applicable contracts. Select the contract you wish to analyze and click the :guilabel:`Analyze` button. You can also select the scan mode as shown below:
 
-   .. figure:: img/analyze.png
+   .. figure:: img/remixscanmodes.png
+  
 
    .. note:: The contract may need to be compiled first, depending on the current Remix settings. Make sure the :guilabel:`Solidity Compiler` plugin for Remix is activated in your project. You will have to click the Solidity icon and then click the :guilabel:`Compile` button for your contract.
 
