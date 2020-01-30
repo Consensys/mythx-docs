@@ -71,7 +71,7 @@ On successful authentication, a new API key is generated, which can be used for 
 
 This key can be passed to the MythX Security tool as an environment variable :code:`MYTHX_API_KEY`.
 
-.. note:: Although using the API key is the recommended means of authentication, there are certain tools that do net yet support the API token (for example, Remix). For these tools, you can authenticate via ETH address/Username and Password. 
+.. note:: Although using the API key is the recommended means of authentication, there are certain tools that do net yet support the API token (for example, Remix). For these tools, you can authenticate via Ethereum address/Username and Password. 
 
 
 Please see :ref:`the specific page for your tool <tools>` to see more details about linking your account.
