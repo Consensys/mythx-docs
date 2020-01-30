@@ -27,7 +27,7 @@ To use MythX, you need to create an account.
    .. image:: img/success.png
       :width: 50%
 
-.. note:: It is recommended that you link your Ethereum account to your profile as you will use this credential along with your password to access the MythX Api via client tools such as Remix.
+.. note:: It is recommended that you link your Ethereum account to your profile as you will use this credential along with your password to access the MythX API via client tools such as Remix.
 
    .. image:: img/metamask1.png
       :width: 50%
@@ -41,7 +41,7 @@ To use MythX, you need to create an account.
 Linking your account with tools
 -------------------------------
 
-Your account, once verified, is on the Free plan. This means that you can receive the complete report of vulnerabilities when running scans.
+Your account, once verified, is on the Free plan.
 
 .. note:: MythX offers both free and paid plans. For information on plans and features, please see our `Plans <https://mythx.io/plans/>`_ page.
 
@@ -55,60 +55,24 @@ While the specifics of each tool differ, most tools will pick up your account in
    * - Environment variable
      - Value
    * - ``MYTHX_API_KEY``
-     - JWT Token
-   * - ``MYTHX_ETH_ADDRESS``
-     - Your MythX account (Ethereum address)
-   * - ``MYTHX_PASSWORD``
-     - Password set during registration
-     
+     - API Key
+    
+
 Authentication
---------------
+~~~~~~~~~~~~~~
 
-Once your account is set up, head over to the `dashboard <https://dashboard.mythx.io/>`_.
-In the *Profile* section, various means of authentication are presented.
-
-
-Using API Tokens
-~~~~~~~~~~~~~~~~
-
-This is the recommended way of authenticating with the MythX smart contract
-analysis API. In the *Profile* section there is an elements labeled "MythX API Key".
-To generate a new API key, the account password must be entered:
+MythX uses an API key for authentication. Once your account is set up, head over to the `dashboard <https://dashboard.mythx.io/>`_. In the *Profile* section there is an element labeled :guilabel:`MythX API Key`. Generate a new API key by entering your account password:
 
 .. image:: img/api-key-password.png
 
-On successful authentication a new JWT token is generated, which can be
-used for further authentication by API clients. It will only be shown once
-and can be copied using the icon on the right of the truncated secret string.
-If the token is lost, a new one can be generated again in the same way as
-explained above.
+On successful authentication, a new API key is generated, which can be used for further authentication by API clients. It will only be shown once, and can be copied using the icon on the right of the truncated secret string. If the token is lost, a new one can be generated again in the same way as explained above.
 
 .. image:: img/api-key.png
 
 This key can be passed to the MythX Security tool as an environment variable :code:`MYTHX_API_KEY`.
 
+.. note:: Although using the API key is the recommended means of authentication, there are certain tools that do net yet support the API token (for example, Remix). For these tools, you can authenticate via ETH address/Username and Password. 
 
-Using Address and Password (not recommended)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Alternatively, Eth Address, or username and password can be used for authentication. This is not recommended, as a potential attacker can get access to the MythX account as a whole if these credentials are leaked.
-For compatibility reasons this functionality has been included, however it
-is to be expected that this API feature will be disabled in the future.
-
-The username corresponds to the Ethereum address the MythX account has been
-registered under, and the password is the one that has been set during
-registration, or separately in the MythX dashboard.
-Both can be passed by setting the
-:code:`MYTHX_USERNAME` and :code:`MYTHX_PASSWORD` environment variables.
-
-.. image:: img/remixaddress.png
-
-.. image:: img/mythxemail.png
-
-
-Note that if username and password, as well as an API token are given,
-the API token will always take precedence and no login action using
-the provided credentials will be performed.
 
 Please see :ref:`the specific page for your tool <tools>` to see more details about linking your account.
 
