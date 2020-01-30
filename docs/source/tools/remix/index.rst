@@ -55,7 +55,8 @@ To perform an analysis:
 #. Below the credentials section, there will be a select box containing a list of all applicable contracts. Select the contract you wish to analyze and click the :guilabel:`Analyze` button. You can also select the scan mode as shown below:
 
    .. figure:: img/remixscanmodes.png
-  
+   
+Refer to the `plans <https://mythx.io/plans/>`_ page to see which plan you need for each mode. 
 
    .. note:: The contract may need to be compiled first, depending on the current Remix settings. Make sure the :guilabel:`Solidity Compiler` plugin for Remix is activated in your project. You will have to click the Solidity icon and then click the :guilabel:`Compile` button for your contract.
 
