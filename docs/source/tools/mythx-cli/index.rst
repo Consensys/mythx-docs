@@ -6,6 +6,8 @@
 MythX CLI Guide: Installation & Usage
 =====================================
 
+.. note:: See the `MythX CLI documentation <https://mythx-cli.readthedocs.io>`_ for full details on usage.
+
 The `MythX CLI <https://github.com/dmuhs/mythx-cli/>`_ Python package aims to
 provide a simple to use command line interface for the MythX API. It's main
 purpose is to demonstrate how advanced features can be implemented using the
@@ -47,14 +49,14 @@ Installation
 
 The MythX CLI runs on Python 3.6+, including 3.8-dev and pypy.
 
-To get started, simply run
+To get started, run:
 
 .. code-block:: console
 
     $ pip install mythx-cli
 
 
-Advanced Usage
+Advanced usage
 --------------
 
 For in-depth details on how to use the MythX CLI, alternative ways to install
@@ -68,12 +70,12 @@ For more information on how to get involved, check out our
 `Contribution guidelines <https://mythx-cli.readthedocs.io/en/latest/contributing.html>`_.
 
 
-Useful Links
+Useful links
 ------------
 
 .. list-table::
 
-    *   - Github repository
+    *   - GitHub repository
         - https://github.com/dmuhs/mythx-cli/
     *   - Documentation
         - https://mythx-cli.readthedocs.io/

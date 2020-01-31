@@ -19,7 +19,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'MythX'
-copyright = '2019, MythX'
+copyright = '2020, MythX'
 author = 'MythX'
 
 # The short X.Y version

@@ -13,7 +13,7 @@ MythX is available as a plugin for `Remix <https://remix.ethereum.org>`_, a popu
 Setup
 -----
 
-.. note:: These instructions will show the Remix interface that is current as of early-2020. We recommend everyone use this interface.
+.. note:: These instructions will show the Remix interface that is current as of early 2020. We recommend everyone use this interface.
 
 Because Remix is a web-based interface, no local installation is required. However, MythX will need to be specifically activated from within the Remix Plugin Manager before use.
 
@@ -37,11 +37,11 @@ To activate MythX in Remix:
 Authentication
 --------------
 
-#. Click the MythX logo and enter your MythX credentials. This consists of your Ethereum address (You can also enter your email) and your account password  `mythx.io <https://mythx.io>`_. When done, click :guilabel:`Save`.
+#. Click the MythX logo and enter your MythX credentials. This consists of your Ethereum address and your account password. (You can also enter your registered email address instead of your Ethereum address.) When done, click :guilabel:`Save`.
 
    .. figure:: img/mythxcreds2.png
 
-   .. note::  You need to link your Ethereuem account to your MythX account (can be setup via https://mythx.io) to use MythX with Remix. 
+   .. note:: You need to link your Ethereum account to your MythX account to use MythX with Remix. See the :ref:`getting-started` page for more details.
 
 Usage
 -----
@@ -52,11 +52,11 @@ To perform an analysis:
 
 #. Click the MythX logo on the sidebar to open the MythX control panel (if it isn't already open).
 
-#. Below the credentials section, there will be a select box containing a list of all applicable contracts. Select the contract you wish to analyze and click the :guilabel:`Analyze` button. You can also select the scan mode as shown below:
+#. Below the credentials section, there will be a box containing a list of all applicable contracts. Select the contract you wish to analyze and click the :guilabel:`Analyze` button. You can also select the scan mode as shown below:
 
    .. figure:: img/remixscanmodes.png
    
-Refer to the `plans <https://mythx.io/plans/>`_ page to see which plan you need for each mode. 
+   .. note:: Different plans have access to different modes. Please refer to the MythX `Pricing <https://mythx.io/plans/>`_ page to see which plan you need for each mode.
 
    .. note:: The contract may need to be compiled first, depending on the current Remix settings. Make sure the :guilabel:`Solidity Compiler` plugin for Remix is activated in your project. You will have to click the Solidity icon and then click the :guilabel:`Compile` button for your contract.
 

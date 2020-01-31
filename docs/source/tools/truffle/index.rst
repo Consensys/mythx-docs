@@ -65,24 +65,21 @@ If you install MythX for Truffle in this manner, **you will in addition need to 
 
    };
    
-Accounts and access
--------------------
-
-You need to sign up for a MythX account in order to use the MythX plugin for Truffle. Your account, once verified, is on the Free plan.
-
-MythX offers both free and paid plans. For information on plans and features, please see our `plans <https://mythx.io/plans/>`_ page. Truffle will pick up your account information when stored in your system's environment variables.
-
 
 Authentication
 --------------
 
-MythX uses an API key for authentication. Once your account is set up, head over to the `dashboard <https://dashboard.mythx.io/>`_. In the *Profile* section there is an element labeled :guilabel:`MythX API Key`. Generate a new API key by entering your account password:
+You need to sign up for a MythX account in order to use the MythX plugin for Truffle. Your account, once verified, is on the Free plan.
 
-.. image:: img/api-key-password.png
+.. note:: MythX offers both free and paid plans. For information on plans and features, please see our `Pricing <https://mythx.io/plans/>`_ page. Truffle will pick up your account information when stored in your system's environment variables.
+
+MythX uses an API key for authentication. This API key can be generated in your `dashboard <https://dashboard.mythx.io/>`_. In the Profile tab there is a section titled :guilabel:`MythX API Key`. Generate a new API key by entering your account password:
+
+.. figure:: img/api-key-password.png
 
 On successful authentication, a new API key is generated, which can be used for further authentication by API clients. It will only be shown once, and can be copied using the icon on the right of the truncated secret string. If the token is lost, a new one can be generated again in the same way as explained above.
 
-.. image:: img/api-key.png
+.. figure:: img/api-key.png
 
 This key can be passed to MythX as an environment variable ``MYTHX_API_KEY``.
 
@@ -90,21 +87,21 @@ This key can be passed to MythX as an environment variable ``MYTHX_API_KEY``.
 
   .. code-block:: console
 
-     export MYTHX_API_KEY=‘put your API key here!’
+     export MYTHX_API_KEY='put your API key here!'
 
 * **Windows**:
 
   .. code-block:: console
 
-     set MYTHX_API_KEY=‘put your API key here!’
+     set MYTHX_API_KEY='put your API key here!'
      
-They API key can also be passed as a command line argument using ``—apiKey`` 
+They API key can also be passed as a command line argument using ``--apiKey`` flag:
 
   .. code-block:: console
 
-     --apiKey {‘put your API key here’}
+     --apiKey {'put your API key here'}
      
-.. note:: Authentication via Ethereum address/Username and password is deprecated. 
+.. warning:: Authentication via Ethereum address or user name and password is deprecated.
 
 Usage
 -----
@@ -176,6 +173,18 @@ Command line options
 ^^^^^^^^^
 Compile all contracts. Without this, only the contracts changed since last compile will be recompiled.
 
+``--apiKey {api key generated from profile dashboard}``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Authenticate with api key instead of login details.
+
+``--ci``
+^^^^^^^^
+Blocking non zero return for CI integrations to throw an error (non-zero exit code).
+
+``--ci-whitelist { 101 | 103,111,115 | ... }``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+List of allowed SWCs that will not throw an error (non-zero exit code).
+
 ``--debug``
 ^^^^^^^^^^^
 Provide additional debug output. Use ``--debug=2`` for more verbose output. Implies ``--no-progress``.
@@ -200,7 +209,11 @@ Ignore SWCs below the designated severity level. Options are ``warning`` or ``er
 
 ``--mode <MODE>``
 ^^^^^^^^^^^^^^^^^
-Perform ``quick``, ``standard``, or ``deep`` analysis. Refer to the `plans <https://mythx.io/plans/>`_ page to see which plan you need for each mode. 
+Perform ``quick``, ``standard``, or ``deep`` analysis. Refer to the `plans <https://mythx.io/plans/>`_ page to see details about the different scan types. Note that not every scan type is available with every plan.
+
+``--mythx-logs`` ``--no-mythx-logs``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Enable/disable MythX logs.
 
 ``--no-color``
 ^^^^^^^^^^^^^^
@@ -234,21 +247,12 @@ Show package and MythX version information.
 ^^^^^^^^^^
 Output results in unprocessed YAML format. Differs from ``--style=yaml`` which provides an es-lint compatible output format. See also ``--json``.
 
-``--mythx-logs`` ``--no-mythx-logs``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Enable/disable MythX logs.
 
-``--ci``
-^^^^^^^^
-Blocking non zero return for CI integrations to throw an error (non-zero exit code).
 
-``--ci-whitelist { 101 | 103,111,115 | ... }``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-List of allowed SWCs that will not throw an error (non-zero exit code).
 
-``--apiKey {api key generated from profile dashboard}``
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Authenticate with api key instead of login details.
+
+
+
 
 Configuration file
 ------------------

@@ -15,26 +15,18 @@ Current tools
    :maxdepth: 1
 
    Truffle <truffle/index>
-   MythX CLI <mythx-cli/index>
    Remix <remix/index>
+   VS Code <mythxvsc/index>
+   MythX CLI <mythx-cli/index>
    GuardRails <guardrails/index>
    Mythos <mythos/index>
    Brownie <brownie/index>
-   VS Code <mythxvsc/index>
 
 .. Make sure to change the Meta description when new tools are added!
 
 New tools wanted
 ----------------
 
-Are you working on an integration with an IDE, a web interface, or something
-else that's super useful? If you are building on MythX, we want to know about
-it!
+Are you working on an integration with an IDE, a web interface, or something else that's super useful? If you are building on MythX, we want to know about it!
 
-Please join our community on `Discord <https://discord.gg/kktn8Wt>`_ and
-reach out to the team for more information.
-
-.. note::
-
-    We plan to offer a revenue sharing system for qualifying tools. More
-    details will be announced soon.
+Please join our `MythX Community <https://community.mythx.io>`_ and reach out to the team for more information.
