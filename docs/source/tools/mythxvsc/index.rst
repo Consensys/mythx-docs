@@ -17,12 +17,11 @@ The extension provides:
 - Displaying analysis result in VS Code in a linting fashion
 
 
-Accounts and access
--------------------
 
 You need to sign up for a MythX account in order to use the MythX extension for VS Code. Your account, once verified, is on the Free plan.
 
 MythX offers both free and paid plans. For information on plans and features, please see our `plans <https://mythx.io/plans/>`_ page. 
+
 
 Dependencies
 ------------
@@ -58,6 +57,7 @@ After installing the extension, copy the token and paste it in the VS Code user 
 
  Authentication via Ethereum address/Username and password is deprecated. Please note that the credentials stored this way are exposed to VS Code. Be sure to understand the security risk this entails or contact the extension developers if you don’t.
 
+
 Usage
 -----
 
@@ -65,6 +65,7 @@ Open a Solidity file from inside a folder or workspace, and click the :guilabel:
 
 .. image:: img/button_one.png
 .. image:: img/right_click.png
+
 
 MythX allows users to choose from three different scan modes. This extension supports all three. 
 
@@ -76,6 +77,6 @@ Once the solidity compilation is done, you will be asked to pick a contract from
 
 .. image:: img/contract_picker.png
 
-Once the analysis is over, you will see your smart contract issues highlighted in your code. The exact time it takes to perform an analysis will depend on the mode selected.
+Once the analysis is over, you will see your smart contract issues highlighted in your code. The exact time it takes to perform an analysis will depend on the mode selected & the plan associated with your account.
 
 .. image:: img/finished_analysis.png
