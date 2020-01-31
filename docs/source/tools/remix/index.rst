@@ -13,7 +13,7 @@ MythX is available as a plugin for `Remix <https://remix.ethereum.org>`_, a popu
 Setup
 -----
 
-.. note:: These instructions will show the Remix interface that is current as of mid-2019. We recommend everyone use this interface.
+.. note:: These instructions will show the Remix interface that is current as of early-2020. We recommend everyone use this interface.
 
 Because Remix is a web-based interface, no local installation is required. However, MythX will need to be specifically activated from within the Remix Plugin Manager before use.
 
@@ -33,11 +33,15 @@ To activate MythX in Remix:
 
    .. figure:: img/activemodules.png
 
-#. *(Optional but recommended)* Click the MythX logo and enter your MythX credentials. This consists of your Ethereum address (also known as User ID) and the password supplied to you when you created your account at `mythx.io <https://mythx.io>`_. When done, click :guilabel:`Save`.
 
-   .. figure:: img/mythxcreds.png
+Authentication
+--------------
 
-   .. note:: Without MythX credentials, you will be running in Trial Mode, which will only return a limited report of vulnerabilities. You can go to https://mythx.io to create a free account which will offer an unrestricted report.
+#. Click the MythX logo and enter your MythX credentials. This consists of your Ethereum address (You can also enter your email) and your account password  `mythx.io <https://mythx.io>`_. When done, click :guilabel:`Save`.
+
+   .. figure:: img/mythxcreds2.png
+
+   .. note::  You need to link your Ethereuem account to your MythX account (can be setup via https://mythx.io) to use MythX with Remix. 
 
 Usage
 -----
@@ -48,18 +52,17 @@ To perform an analysis:
 
 #. Click the MythX logo on the sidebar to open the MythX control panel (if it isn't already open).
 
-#. Below the credentials section, there will be a select box containing a list of all applicable contracts. Select the one you wish to analyze and click the :guilabel:`Analyze` button.
+#. Below the credentials section, there will be a select box containing a list of all applicable contracts. Select the contract you wish to analyze and click the :guilabel:`Analyze` button. You can also select the scan mode as shown below:
 
-   .. figure:: img/analyze.png
+   .. figure:: img/remixscanmodes.png
+   
+Refer to the `plans <https://mythx.io/plans/>`_ page to see which plan you need for each mode. 
 
    .. note:: The contract may need to be compiled first, depending on the current Remix settings. Make sure the :guilabel:`Solidity Compiler` plugin for Remix is activated in your project. You will have to click the Solidity icon and then click the :guilabel:`Compile` button for your contract.
 
-#. The analysis may take a few minutes. When completed, a list of vulnerabilities will be displayed, along with a link to the `SWC Registry <https://smartcontractsecurity.github.io/SWC-registry/>`_ for each vulnerability found.
+#. Depending on the scan mode selected, the analysis may take a few minutes. When completed, a list of vulnerabilities will be displayed, along with a link to the `SWC Registry <https://smartcontractsecurity.github.io/SWC-registry/>`_ for each vulnerability found.
 
    .. figure:: img/results.png
-
-   .. warning:: If you are running in Trial Mode, you will see a response here saying so. This means that some vulnerabilities may not be shown in the output.
-
 
 .. seealso::
 

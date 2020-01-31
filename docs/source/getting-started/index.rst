@@ -8,63 +8,40 @@ Getting started with MythX security tools
 
 This page will show how to start using MythX in the shortest number of steps.
 
-Quickstart
-----------
-
-The quickest way to see MythX in action is by using a MythX tool such as the :ref:`MythX for Truffle <tools.truffle>` plugin.
-
-No registration is required for this, though the results will be limited. See the section on :ref:`using MythX for Truffle <tools.truffle>` for more details.
-
-#. In a terminal, navigate to the root of your local Truffle project.
-
-#. Install the MythX plugin:
-
-     .. code-block:: console
-
-        npm install truffle-security
-
-#. Analyze all the contracts in the project with MythX:
-
-     .. code-block:: console
-
-        truffle run verify
-
-This will run a security analysis in Trial Mode, which limits the returned results to three vulnerabilities only. For a more complete report, you will need to create an account with MythX.
-
-
 Creating an account
 -------------------
 
-To get the full functionality of MythX, you need to create an account.
+To use MythX, you need to create an account.
 
-.. note:: MythX requires `MetaMask <https://metamask.io>`_, a browser-based wallet application, in order to create accounts. You must be logged in to MetaMask before continuing. The active address will be associated with your account and be used for any plans you may purchase.
-
-#. Go to https://mythx.io and slick the :guilabel:`Sign Up` button on the top right.
+#. Go to https://mythx.io and click the :guilabel:`Sign Up` button on the top right.
 
 #. Fill out the registration form. You will need to supply a valid email address.
 
-   .. image:: img/registration.png
-
+   .. image:: img/registration2.png
+    :width: 50%
+    
 #. When finished, click :guilabel:`Complete Registration`.
 
-#. A MetaMask popup will display, asking for confirmation. Click :guilabel:`Sign` to continue.
+#. A success message will show, indicating your account has been created successfully. You will be sent an email to verify your email address. 
 
+   .. image:: img/success.png
+      :width: 50%
+
+.. note:: It is recommended that you link your Ethereum account to your profile as you will use this credential along with your password to access the MythX API via client tools such as Remix.
+
+   .. image:: img/metamask1.png
+      :width: 50%
+      
    .. image:: img/metamasksignup.png
-      :width: 50%
-
-#. An API key will be generated for you and displayed. Please copy this key down, as you will not be able to retrieve it later. (You can generate a new one in your account dashboard if necessary.)
-
-   .. image:: img/apikey.png
-      :width: 50%
-
-#. You will be sent an email to verify your address. You will need to verify your email address before you can use the MythX service.
+    :width: 50%
 
    .. Verify this
+
 
 Linking your account with tools
 -------------------------------
 
-Your account, once verified, is on the Free plan. This means that you can receive the complete report of vulnerabilities when running scans.
+Your account, once verified, is on the Free plan.
 
 .. note:: MythX offers both free and paid plans. For information on plans and features, please see our `Plans <https://mythx.io/plans/>`_ page.
 
@@ -77,9 +54,25 @@ While the specifics of each tool differ, most tools will pick up your account in
 
    * - Environment variable
      - Value
-   * - ``MYTHX_ETH_ADDRESS``
-     - Your MythX account (Ethereum address)
-   * - ``MYTHX_PASSWORD``
-     - API key supplied to you during registration
+   * - ``MYTHX_API_KEY``
+     - API Key
+    
+
+Authentication
+~~~~~~~~~~~~~~
+
+MythX uses an API key for authentication. Once your account is set up, head over to the `dashboard <https://dashboard.mythx.io/>`_. In the *Profile* section there is an element labeled :guilabel:`MythX API Key`. Generate a new API key by entering your account password:
+
+.. image:: img/api-key-password.png
+
+On successful authentication, a new API key is generated, which can be used for further authentication by API clients. It will only be shown once, and can be copied using the icon on the right of the truncated secret string. If the token is lost, a new one can be generated again in the same way as explained above.
+
+.. image:: img/api-key.png
+
+This key can be passed to the MythX Security tool as an environment variable :code:`MYTHX_API_KEY`.
+
+.. note:: Although using the API key is the recommended means of authentication, there are certain tools that do net yet support the API token (for example, Remix). For these tools, you can authenticate via Ethereum address/Username and Password. 
+
 
 Please see :ref:`the specific page for your tool <tools>` to see more details about linking your account.
+
