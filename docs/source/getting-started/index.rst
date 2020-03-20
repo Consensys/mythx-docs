@@ -8,7 +8,7 @@ Getting started with MythX security tools
 
 This page will show how to start using MythX in the shortest number of steps.
 
-Creating an account
+Creating an Account
 -------------------
 
 To use MythX, you need to create an account.
