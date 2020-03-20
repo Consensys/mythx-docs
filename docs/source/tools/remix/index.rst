@@ -27,11 +27,11 @@ To activate MythX in Remix:
 
 #. The full list of plugins for Remix will be displayed. Scroll down to the entry titled :guilabel:`MythX Security Verification` and click :guilabel:`Activate`.
 
-   .. figure:: img/mythxpluginlist.png
+   .. figure:: img/Remix image module not activated.png
 
    If done correctly, the plugin will be listed under :guilabel:`Active Modules` and the MythX icon will be shown in the sidebar.
 
-   .. figure:: img/activemodules.png
+   .. figure:: img/Remix image module activated.png
 
 
 Authentication
