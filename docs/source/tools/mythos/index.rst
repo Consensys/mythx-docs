@@ -15,7 +15,7 @@ You must have nodejs_ and npm_ installed on your system.
 
 .. code-block:: console
 
-    $ npm install @cleanunicorn/mythos
+    $ npm -g install @cleanunicorn/mythos
 
 
 Usage
