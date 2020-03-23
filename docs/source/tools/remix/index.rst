@@ -27,11 +27,11 @@ To activate MythX in Remix:
 
 #. The full list of plugins for Remix will be displayed. Scroll down to the entry titled :guilabel:`MythX Security Verification` and click :guilabel:`Activate`.
 
-   .. figure:: img/mythxpluginlist.png
+   .. figure:: img/remix-module-deactivated.png
 
    If done correctly, the plugin will be listed under :guilabel:`Active Modules` and the MythX icon will be shown in the sidebar.
 
-   .. figure:: img/activemodules.png
+   .. figure:: img/remix-module-activated.png
 
 
 Authentication
@@ -55,7 +55,7 @@ To perform an analysis:
 #. Below the credentials section, there will be a box containing a list of all applicable contracts. Select the contract you wish to analyze and click the :guilabel:`Analyze` button. You can also select the scan mode as shown below:
 
    .. figure:: img/remixscanmodes.png
-   
+
    .. note:: Different plans have access to different modes. Please refer to the MythX `Pricing <https://mythx.io/plans/>`_ page to see which plan you need for each mode.
 
    .. note:: The contract may need to be compiled first, depending on the current Remix settings. Make sure the :guilabel:`Solidity Compiler` plugin for Remix is activated in your project. You will have to click the Solidity icon and then click the :guilabel:`Compile` button for your contract.
