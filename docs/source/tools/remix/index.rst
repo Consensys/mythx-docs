@@ -37,11 +37,17 @@ To activate MythX in Remix:
 Authentication
 --------------
 
-#. Click the MythX logo and enter your MythX credentials. This consists of your Ethereum address and your account password. (You can also enter your registered email address instead of your Ethereum address.) When done, click :guilabel:`Save`.
+#. Click the MythX logo and then MythX settings within the plugin to enter your MythX credentials. 
 
-   .. figure:: img/mythxcreds2.png
+MythX uses an API key for authentication. This API key can be generated in your `dashboard <https://dashboard.mythx.io/>`_. In the Profile tab there is a section titled :guilabel:`MythX API Key`. Generate a new API key by entering your account password:
 
-   .. note:: You need to link your Ethereum account to your MythX account to use MythX with Remix. See the :ref:`getting-started` page for more details.
+.. figure:: img/API key.png
+
+On successful authentication, a new API key is generated, which can be used for further authentication by API clients. It will only be shown once, and can be copied using the icon on the right of the truncated secret string. If the token is lost, a new one can be generated again in the same way as explained above.
+
+.. figure:: img/API key2.png
+
+
 
 Usage
 -----
