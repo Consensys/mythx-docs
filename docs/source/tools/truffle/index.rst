@@ -69,9 +69,9 @@ If you install MythX for Truffle in this manner, **you will in addition need to 
 Authentication
 --------------
 
-You need to sign up for a MythX account in order to use the MythX plugin for Truffle. Your account, once verified, is on the Free plan.
+You need to sign up for a MythX account in order to use the MythX plugin for Truffle. 
 
-.. note:: MythX offers both free and paid plans. For information on plans and features, please see our `Pricing <https://mythx.io/plans/>`_ page. Truffle will pick up your account information when stored in your system's environment variables.
+.. note:: MythX offers a range of paid plans. For information on plans and features, please see our `Pricing <https://mythx.io/plans/>`_ page. Truffle will pick up your account information when stored in your system's environment variables.
 
 MythX uses an API key for authentication. This API key can be generated in your `dashboard <https://dashboard.mythx.io/>`_. In the Profile tab there is a section titled :guilabel:`MythX API Key`. Generate a new API key by entering your account password:
 
