@@ -396,12 +396,5 @@ to MythX using the `armlet JavaScript library <https://github.com/ConsenSys/arml
   * `Sabre - Minimum Viable MythX Client <https://github.com/b-mueller/sabre>`_
 
 
-Revenue Sharing Program
------------------------
 
-Once paid subscription plans for MythX go live, we'll share back some of the revenue from subscription fees back to tool builders.
-
-The amount revenue share you receive will depend on the number of daily active paying users of your tool.  In your tool, set the `clientToolName field <https://api.mythx.io/v1/openapi#operation/submitAnalysis>`_ to a unique name of your choice when submitting analysis requests. That way we can keep track of usage statistic.
-
-More details about this program will be announced during the beta in 2019.
 

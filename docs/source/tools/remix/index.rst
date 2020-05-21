@@ -48,7 +48,6 @@ On successful authentication, a new API key is generated, which can be used for 
 .. figure:: img/API key2.png
 
 
-
 Usage
 -----
 
