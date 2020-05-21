@@ -17,9 +17,9 @@ The extension provides:
 - Displaying analysis result in VS Code in a linting fashion
 
 
-You need to sign up for a MythX account in order to use the MythX extension for VS Code. Your account, once verified, is on the Free plan.
+You need to sign up for a MythX account in order to use the MythX extension for VS Code. 
 
-MythX offers both free and paid plans. For information on plans and features, please see our `plans <https://mythx.io/plans/>`_ page. 
+For information on plans and features, please see our `plans <https://mythx.io/plans/>`_ page. 
 
 
 Dependencies
