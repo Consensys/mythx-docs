@@ -41,7 +41,7 @@ Authentication
 
    .. figure:: img/mythxcreds2.png
 
-   .. note:: You need to link your Ethereum account to your MythX account to use MythX with Remix. See the :ref:`getting-started` page for more details.
+
 
 Usage
 -----
