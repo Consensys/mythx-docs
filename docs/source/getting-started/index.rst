@@ -44,9 +44,7 @@ To use MythX, you need to create an account.
 Linking your account with tools
 -------------------------------
 
-Your account, once verified, is on the Free plan.
-
-.. note:: MythX offers both free and paid plans. For information on plans and features, please see our `Pricing <https://mythx.io/plans/>`_ page.
+.. note:: MythX offers a range of paid plans. For information on plans and features, please see our `Pricing <https://mythx.io/plans/>`_ page.
 
 If using one of the :ref:`tools`, you will need to link your account to the tool to take advantage of your account's plan.
 
